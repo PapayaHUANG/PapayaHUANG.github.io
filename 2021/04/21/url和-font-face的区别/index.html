@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/04/21/url和-font-face的区别/">
+      CSS字体之@import和@font-face的区别
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-04-21 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p> @import和@font-face都是CSS的内置规则，@import和@font-face都可以为网页添加web字体。但两个内置规则的实现方式有所不同。</p>
+<span id="more"></span>
+
+<h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3><ul>
+<li>句法结构：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line"></span><br><span class="line">  font-family: &quot;You can define the name of the font here&quot;;</span><br><span class="line"></span><br><span class="line">  src: url(&quot;font url&quot;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>实现方式：</li>
+</ul>
+<p>浏览器从WEB字体文件所在的服务器下载字体，@font-face规则告诉浏览器需要加载src URL内的指定文字字体，一旦加载，会把这个字体分配到font-family属性中指定的名字所在的选择器所指。</p>
+<h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><ul>
+<li>句法结构：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import url（&quot;font-url&quot;）;</span><br></pre></td></tr></table></figure>
+<p>@import规则必须放置在样式表顶部，位于其他任何规则之上。</p>
+<ul>
+<li>实现方式：</li>
+</ul>
+<p>根据URL的地址，导入其他CSS stylesheet（样式表）。</p>
+<h4 id="使用web字体的好处："><a href="#使用web字体的好处：" class="headerlink" title="使用web字体的好处："></a>使用web字体的好处：</h4><p>可以在审美上让字体更加多样化，可以呈现出用户设备字体库没有的字体。</p>
+<h4 id="使用web字体的坏处："><a href="#使用web字体的坏处：" class="headerlink" title="使用web字体的坏处："></a>使用web字体的坏处：</h4><p>增加了页面加载的时长，增加了字体管理的复杂度，web字体的设备兼容性不行。</p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/《HEAD-FIRST》读书笔记/">《HEAD FIRST》读书笔记</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/css/">css</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

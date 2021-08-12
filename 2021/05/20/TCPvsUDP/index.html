@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/05/20/TCPvsUDP/">
+      TCP vs UDP
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-05-20 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p> TCP和UDP都属于TCP/IP族内的协议，他们在传输层，负责对报文进行分组和重组，并以TCP或者UDP协议格式进行封装。</p>
+<span id="more"></span>
+
+<h3 id="以下是两组协议的分类区分："><a href="#以下是两组协议的分类区分：" class="headerlink" title="以下是两组协议的分类区分："></a>以下是两组协议的分类区分：</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li>TCP</li>
+</ul>
+<p>Transmission Control Protocol</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>User Datagram Protocol 用户数据报协议</p>
+<h4 id="连接状态"><a href="#连接状态" class="headerlink" title="连接状态"></a>连接状态</h4><ul>
+<li>TCP</li>
+</ul>
+<p>面向连接</p>
+<p>需要先通过三次握手建立连接再进行数据传输，传输完毕后再通过三次挥手结束连接</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>无需连接（connectionless）</p>
+<h4 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h4><ul>
+<li>TCP</li>
+</ul>
+<p>提供数据排序</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>无法对数据进行排序</p>
+<h4 id="传输保证"><a href="#传输保证" class="headerlink" title="传输保证"></a>传输保证</h4><ul>
+<li>TCP</li>
+</ul>
+<p>可靠传输，使用流量控制和拥塞控制</p>
+<p>提供错误检测</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>不可靠传输，不实用流量控制和拥塞控制</p>
+<p>只用checksum检查基本的错误</p>
+<h4 id="传输方式"><a href="#传输方式" class="headerlink" title="传输方式"></a>传输方式</h4><ul>
+<li>TCP</li>
+</ul>
+<p>面向字节流</p>
+<p>一对一传输</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>面向报文</p>
+<p>有单播、多播、广播的功能</p>
+<h4 id="首部开销"><a href="#首部开销" class="headerlink" title="首部开销"></a>首部开销</h4><ul>
+<li>TCP</li>
+</ul>
+<p>首部最小20字节，最大60字节</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>首部开销小，仅八个字节</p>
+<h4 id="传输速度"><a href="#传输速度" class="headerlink" title="传输速度"></a>传输速度</h4><ul>
+<li>TCP</li>
+</ul>
+<p>慢</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>快</p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><ul>
+<li>TCP</li>
+</ul>
+<p>HTTPS/HTTP/SMTP/POP/FTP</p>
+<ul>
+<li>UDP</li>
+</ul>
+<p>视频会议/直播/DNS/VoIP</p>
+<h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><p><a target="_blank" rel="noopener" href="https://www.lifesize.com/en/blog/tcp-vs-udp/">lifesize</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/difference-between-tcp-and-udp">tutorialspoint</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.guru99.com/tcp-vs-udp-understanding-the-difference.html">guru99</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fundebug/p/differences-of-tcp-and-udp.html">Fundebug</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/基础知识盘点/">基础知识盘点</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/computer-science/">computer-science</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

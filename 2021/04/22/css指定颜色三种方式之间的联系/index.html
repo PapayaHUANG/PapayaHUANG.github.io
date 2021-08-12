@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/04/22/css指定颜色三种方式之间的联系/">
+      CSS中三种指定颜色方式之间的联系
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-04-22 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p> 这里涉及到的CSS三种指定颜色的方式分别为：直接使用颜色英文名；设定RGB值；用十六进制码表示。</p>
+ <span id="more"></span>
+
+
+
+<p><strong>不论使用哪一种方式，都是告诉浏览器一个颜色中红、绿、蓝的分量分别是多少</strong>。</p>
+<h3 id="1-直接使用颜色英文名"><a href="#1-直接使用颜色英文名" class="headerlink" title="1.直接使用颜色英文名"></a>1.直接使用颜色英文名</h3><p>CSS有16个基本颜色，和150个拓展颜色。</p>
+<p>16个基本颜色如图<br>图片空缺</p>
+<p>这些颜色名其实是预设了RGB的值</p>
+<h3 id="2-设定RGB值"><a href="#2-设定RGB值" class="headerlink" title="2. 设定RGB值"></a>2. 设定RGB值</h3><p>设定RGB值有两个方法：<br>一个使用0-100%的百分比来设定；<br>一个使用0-255的数值来设定。</p>
+<p>举一个例子：<br>若想要web背景色为橙色，需要80%的红色加上40%的绿色。<br>其语法表达式可以写成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">      background-color: rgb(80%, 40%, 0%);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>也可以写成</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">     background-color: rgb(204, 102, 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-用16进制码表示颜色"><a href="#3-用16进制码表示颜色" class="headerlink" title="3. 用16进制码表示颜色"></a>3. 用16进制码表示颜色</h3><p>用0-255来分别设定rgb的值是用十进制数值来表示颜色，我们可以把它改写成16进制数，上文的橙色就可以表示为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">          background-color: #CC6600;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>#CC6600从左往右看，前两位是R的值，中间两位是G的值，最后两位是B的值。<br>CC换算成10进制就是：<br>16<em>12+12=204<br>66换算成10进制就是：<br>6</em>16+6=102<br>00换算成10进制就是：<br>0*16+0=0</p>
+<p>这就与rgb(204, 102, 0)完全一致。</p>
+<p>当然#CC6600可以简写成#C60.</p>
+<p>综上CSS表示颜色的方式其实都是来指定红、绿、蓝三原色的值。直接使用颜色名是直接使用已经设定好的名字，rgb和16进制表达法可以通过计算相互转化。</p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/《HEAD-FIRST》读书笔记/">《HEAD FIRST》读书笔记</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/css/">css</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

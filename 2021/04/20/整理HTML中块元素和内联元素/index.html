@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/04/20/整理HTML中块元素和内联元素/">
+      整理HTML中的块元素和内联元素
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-04-20 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p> 最近在读《Head First》，这本书很好地补充了我对HTML和CSS框架知识的缺乏。HTML提供一个网页的结构，而CSS提供网页的表现。了解不同的HTML元素属性对后期CSS做页面布局的影响很大，在此总结一下HTML中常见元素的属性。</p>
+<span id="more"></span>
+
+
+<h3 id="块元素（block-element）"><a href="#块元素（block-element）" class="headerlink" title="块元素（block element）"></a>块元素（block element）</h3><p>在呈现上是独立的一块，单独为一行</p>
+<h3 id="内联元素（in-line-element）"><a href="#内联元素（in-line-element）" class="headerlink" title="内联元素（in-line element）"></a>内联元素（in-line element）</h3><p>在呈现上前后两个元素不会换行，直至一行完全占满</p>
+<h4 id="常见的块元素有："><a href="#常见的块元素有：" class="headerlink" title="常见的块元素有："></a>常见的块元素有：</h4><ul>
+<li><p>&lt;h1&gt;~&lt;h6&gt;</p>
+</li>
+<li><p>&lt;div&gt;</p>
+</li>
+<li><p>&lt;p&gt;</p>
+</li>
+<li><p>&lt;li&gt;&lt;ul&gt;&lt;ol&gt;</p>
+</li>
+<li><p>&lt;blockquote&gt;</p>
+</li>
+<li><p>&lt;table&gt;</p>
+</li>
+</ul>
+<h4 id="常见的内联元素有："><a href="#常见的内联元素有：" class="headerlink" title="常见的内联元素有："></a>常见的内联元素有：</h4><ul>
+<li><p>&lt;em&gt;</p>
+</li>
+<li><p>&lt;strong&gt;</p>
+</li>
+<li><p>&lt;img&gt;</p>
+</li>
+<li><p>&lt;q&gt;</p>
+</li>
+<li><p>&lt;span&gt;</p>
+</li>
+<li><p>&lt;label&gt;</p>
+</li>
+<li><p>&lt;input&gt;</p>
+</li>
+</ul>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况:"></a>特殊情况:</h4><ul>
+<li>&lt;a&gt;</li>
+</ul>
+<p>看起来像内联元素，但可以包含块元素，所以需要根据具体情景来判断；</p>
+<ul>
+<li>&lt;br&gt;</li>
+</ul>
+<p>处在块元素和内联元素的模糊地段，可以产生换行，但不会像块元素&lt;p&gt;那样，把两端文本分成独立的两块。</p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/《HEAD-FIRST》读书笔记/">《HEAD FIRST》读书笔记</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/html/">html</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

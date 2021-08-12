@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/06/25/概念async-await/">
+      async/await
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-06-25 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p> 之前在项目练习的时候碰到了async/await，刚好在fcc的论坛也看到响应的文章。所以跟着文章练习，并总结一下关于async/await的知识点。</p>
+<span id="more"></span>
+
+
+<h3 id="这篇文章主要涉及三个概念："><a href="#这篇文章主要涉及三个概念：" class="headerlink" title="这篇文章主要涉及三个概念："></a>这篇文章主要涉及三个概念：</h3><ul>
+<li>Callbacks</li>
+<li>Promises</li>
+<li>Async/Await</li>
+</ul>
+<h3 id="同时也会解决以下几个问题："><a href="#同时也会解决以下几个问题：" class="headerlink" title="同时也会解决以下几个问题："></a>同时也会解决以下几个问题：</h3><ul>
+<li>什么是异步JavaScript</li>
+<li>JS中的同步和异步</li>
+<li>Callbacks/Promises/Async/Await如何在JS中运用</li>
+</ul>
+<h4 id="什么是异步JavaScript-JS中的同步和异步"><a href="#什么是异步JavaScript-JS中的同步和异步" class="headerlink" title="什么是异步JavaScript/JS中的同步和异步"></a>什么是异步JavaScript/JS中的同步和异步</h4><p>在解决这个问题之前，要先解决何为异步。<br>基本上计算语言都是<em>单线程（single-threaded）</em>的，也就是一个接一个的任务排队运行，而异步用一句话概括就是几个任务同时运行。</p>
+<h4 id="什么时候会用到异步？"><a href="#什么时候会用到异步？" class="headerlink" title="什么时候会用到异步？"></a>什么时候会用到异步？</h4><p>当从外部设备抓取（fetch）资源的时候，如：<br>从网络上下载一个文件；<br>向数据库接收以及发送数据、从网络相机获取视频流等。<br>J</p>
+<h4 id="S异步的表达形式有哪些？"><a href="#S异步的表达形式有哪些？" class="headerlink" title="S异步的表达形式有哪些？"></a>S异步的表达形式有哪些？</h4><p>callbacks（旧）和promises（新）</p>
+<p>此处有图</p>
+<h3 id="Callback（回调）在js中的运用"><a href="#Callback（回调）在js中的运用" class="headerlink" title="Callback（回调）在js中的运用"></a>Callback（回调）在js中的运用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(&#x27;click&#x27;, () =&gt; &#123;</span><br><span class="line">  alert(&#x27;You clicked me!&#x27;);</span><br><span class="line"></span><br><span class="line">  let pElem = document.createElement(&#x27;p&#x27;);</span><br><span class="line">  pElem.textContent = &#x27;This is a newly-added paragraph.&#x27;;</span><br><span class="line">  document.body.appendChild(pElem);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这里的addEventListener第二个参数就是典型的callback；<br>setTimeout的第一个参数也使用了回调函数。</p>
+<h4 id="什么时候使用回调："><a href="#什么时候使用回调：" class="headerlink" title="什么时候使用回调："></a>什么时候使用回调：</h4><p>把一个复杂的任务分解成更小的步骤；<br>根据时间或顺序把这些步骤之间建立联系。</p>
+<ul>
+<li>使用回调的问题：<br>由于回调会产生嵌套，太多回调就会产生回调地狱。</li>
+</ul>
+<p>此时，promise就登场了。</p>
+<h3 id="promise在js中的运用"><a href="#promise在js中的运用" class="headerlink" title="promise在js中的运用"></a>promise在js中的运用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;products.json&#x27;).then(function(response) &#123;</span><br><span class="line">  return response.json();</span><br><span class="line">&#125;).then(function(json) &#123;</span><br><span class="line">  let products = json;</span><br><span class="line">  initialize(products);</span><br><span class="line">&#125;).catch(function(err) &#123;</span><br><span class="line">  console.log(&#x27;Fetch problem: &#x27; + err.message);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>fetch（）就是一个典型的promise的例子</p>
+<h3 id="Async-Await在JS中的运用"><a href="#Async-Await在JS中的运用" class="headerlink" title="Async/Await在JS中的运用"></a>Async/Await在JS中的运用</h3><p>Async/Await是更为简洁的编写promise的方式。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a target="_blank" rel="noopener" href="https://chinese.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/">https://chinese.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous">https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/基础知识盘点/">基础知识盘点</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/js/">js</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/04/22/media查询补充/">
+      补充@media查询
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-04-22 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p>《Head First》引入@media的讲解是针对网站需要不同的样式表这个案例。</p>
+<span id="more"></span>
+
+<p>读完之后我对两个信息点比较感兴趣：</p>
+<ol>
+<li><p>在语法结构方面，@media除了有screen和print媒体形式还有没有其他的媒体形式？</p>
+</li>
+<li><p>针对不同设备（如电脑、平板、手机）的显示，有没有特定的@media设定值的模板？</p>
+</li>
+</ol>
+<p>针对这两个点，我google了一些资料，现汇总一下：</p>
+<h4 id="首先是语法结构："><a href="#首先是语法结构：" class="headerlink" title="首先是语法结构："></a>首先是语法结构：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@media media type and (condition: breakpoint)&#123;</span><br><span class="line"></span><br><span class="line">           //CSS rules</span><br><span class="line"></span><br><span class="line">    &#125;     </span><br></pre></td></tr></table></figure>
+
+<p>在语法结构中，media type除了screen表示不同屏幕，print表示打印格式之外，还有两个类型：<br>一个是all，表示所有媒体类型；<br>另一个是speech，表示需要把页面内容读出来。</p>
+<p>若不标明media type，则@media的默认为all。</p>
+<p>不同设备的显示应该选择什么具体的设定值，有没有模板，这个问题可以简化为——<br>“如何设定@media的breakpoint？”</p>
+<p>回答这个问题有两个思路：</p>
+<ol>
+<li><p>根据设备的不同来设定breakpoint；</p>
+</li>
+<li><p>根据内容的不同来设定breakpoint；</p>
+</li>
+</ol>
+<p>如果是根据设备来设定breakpoint，情况会变得非常复杂，仅一个iphone就已经有6、7、8、9、10、11、12，若要维护起来会非常困难。</p>
+<p>相关的设定参数，可以参加这个博客——<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS-Tricks</a></p>
+<h4 id="所以更省事的方式应该是根据内容的不同来设定breakpoint"><a href="#所以更省事的方式应该是根据内容的不同来设定breakpoint" class="headerlink" title="所以更省事的方式应该是根据内容的不同来设定breakpoint"></a>所以更省事的方式应该是根据内容的不同来设定breakpoint</h4><p>换句话说，就是设定width的min/max值，或者同时设定min和max值，来管理一个范围区间的设备。</p>
+<p>如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media only screen and (min-width: 640px)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media only screen and(max-width: 1024px) and (min-width: 640px)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么接下来的问题就是</p>
+<h4 id="何时用min值，何时用max值？"><a href="#何时用min值，何时用max值？" class="headerlink" title="何时用min值，何时用max值？"></a>何时用min值，何时用max值？</h4><p>如果主要的显示设备是手机，那么就可以从min-width开始，根据实际情况，逐渐增大；</p>
+<p>如果这要的显示这杯是大屏幕，那么就可以从max-width开始，根据实际情况，逐渐缩小。</p>
+<p>但具体用什么值的问题还没有回答，好在一些CSS框架给了回答<br>如 bootstrap就有对breakpoint的设定——<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">bootstrap</a>。</p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/《HEAD-FIRST》读书笔记/">《HEAD FIRST》读书笔记</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/css/">css</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

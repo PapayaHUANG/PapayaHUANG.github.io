@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2020/05/19/http和https的区别/">
+      http和https的区别
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2020-05-19 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p>最近在看前端面试的题库，第一道就是http和https的区别，感觉牛客网上写得虽然很详细很清晰，但是太冷冰冰，是好的背诵资料，但不是理解资料，所以我又搜了英文的资料，结合在一起，自己写一下回顾总结。</p>
+<span id="more"></span>
+
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>HTTP</li>
+</ul>
+<p>hypertext transfer protocol</p>
+<p>超文本传输协议</p>
+<p>是由Berners-Lee在90年代初创建的，HTTP这个网络协议标准帮助客户端和服务器端之间可以实现数据交换。</p>
+<p>HTTP是无状态的（a stateless system), 主要专注于呈现信息，所以存在安全隐患。</p>
+<p>HTTP是明文传输的（plaintext）。</p>
+<ul>
+<li>HTTPS</li>
+</ul>
+<p>HTTPS并不是HTTP的对立面，他是HTTP的小兄弟。他和HTTP一样，也是客户端与服务器端的数据传输协议。</p>
+<p>但他更高级、更安全。</p>
+<p>S表示Secure（安全），是由TLS（Transport Layer Security）实现的，TLS是SSL（Secure Sockets Layer）的升级版本，是一种安全协议，确保客户端和服务器端的数据是加密传输的。</p>
+<p>TLS除了加密数据，还会验证服务器端，保护数据在传输的过程中不被动手脚。</p>
+<p>HTTP更像是目的地，而SSL是通向目的地的路程，HTTP响应数据，呈现在显示屏上，而后者管理通向这个目的地的路程，使得过程更加安全。</p>
+<h3 id="区别对照"><a href="#区别对照" class="headerlink" title="区别对照"></a>区别对照</h3><ul>
+<li>HTTP</li>
+</ul>
+<p>不安全</p>
+<p>TCP端口：80个</p>
+<p>在应用层面（application layer)工作</p>
+<p>不需要SSL证书</p>
+<p>不需要域名验证（domain validation）</p>
+<p>数据不加密</p>
+<ul>
+<li>HTTPS</li>
+</ul>
+<p>安全</p>
+<p>TCP端口：443个</p>
+<p>使用TLS</p>
+<p>需要安装由CA（certification authority）认证的SSL证书</p>
+<p>需要域名验证、证书以及法律文件验证</p>
+<p>数据加密</p>
+<h3 id="HTTPS的优点"><a href="#HTTPS的优点" class="headerlink" title="HTTPS的优点"></a>HTTPS的优点</h3><p>更安全</p>
+<p>谷歌搜索排名更靠前</p>
+<h3 id="HTTPS的缺点"><a href="#HTTPS的缺点" class="headerlink" title="HTTPS的缺点"></a>HTTPS的缺点</h3><p>SSL证书是付费的</p>
+<p>客户端运行速度更慢</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a target="_blank" rel="noopener" href="https://www.globalsign.com/en/blog/the-difference-between-http-and-https">globalsign</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/基础知识盘点/">基础知识盘点</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/cyber-security/">cyber-security</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

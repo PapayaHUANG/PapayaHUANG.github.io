@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/05/18/var-let-const的区别/">
+      var/let/const的区别
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-05-18 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p>昨天在微信公众号看到一篇面试概念题的帖子，觉得很基础也很有意思，所以尝试自己分类，并收集资料解释一下。</p>
+<span id="more"></span>
+
+
+<h2 id="var、let和const之间的区别"><a href="#var、let和const之间的区别" class="headerlink" title="var、let和const之间的区别"></a>var、let和const之间的区别</h2><h3 id="历史："><a href="#历史：" class="headerlink" title="历史："></a>历史：</h3><p>let和const是随着2015年ES6的诞生而产生的，在此之前声明变量只有var，let和const很好地补充了var的不足。</p>
+<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><ul>
+<li>var</li>
+</ul>
+<p>如果var在函数外声明，var的作用域为全局作用域；</p>
+<p>如果var在函数内声明，var的作用域在该函数内。</p>
+<ul>
+<li>let</li>
+</ul>
+<p>块级作用域（block scoped），即{ }之间。</p>
+<ul>
+<li>const</li>
+</ul>
+<p>块级作用域</p>
+<p><em>关于函数作用域和块级作用域的区别，可以查阅参考文章</em></p>
+<h4 id="变量更新和声明"><a href="#变量更新和声明" class="headerlink" title="变量更新和声明"></a>变量更新和声明</h4><ul>
+<li>var</li>
+</ul>
+<p>var可以重复声明并更新。</p>
+<ul>
+<li>let</li>
+</ul>
+<p>let可以在同一作用域更新变量，但let不可以重复声明。</p>
+<p>即</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let greeting = &quot;say Hi&quot;;</span><br><span class="line">greeting = &quot;say Hello instead&quot;;</span><br></pre></td></tr></table></figure>
+<p>成立</p>
+<p>但</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let greeting = &quot;say Hi&quot;;</span><br><span class="line">let greeting = &quot;say Hello instead&quot;;</span><br></pre></td></tr></table></figure>
+<p>会报错。</p>
+<p>但同一个名称的变量可以在不同作用域用let来声明。</p>
+<ul>
+<li>const</li>
+</ul>
+<p>const不可以被更新，也不可以重复声明。</p>
+<p>因此const声明时就一定要赋值。</p>
+<p>但如果用const声明一个对象，对象的属性可以更新。</p>
+<h4 id="提升（hoisting）"><a href="#提升（hoisting）" class="headerlink" title="提升（hoisting）"></a>提升（hoisting）</h4><ul>
+<li>var</li>
+</ul>
+<p>var存在变量提升，可以在声明之前被调用，其值为undefined</p>
+<ul>
+<li>let</li>
+</ul>
+<p>let存在变量提升，但没有var造成的变量提升问题，因为let没有被自动赋值，所以如果在声明前调用let，系统会报错。</p>
+<ul>
+<li>const</li>
+</ul>
+<p>const存在变量提升，和let一样，没有自动赋值。</p>
+<p>由于前文提到的作用域的区别，var很容易造成bug，这点能够很好的被let和const解决。</p>
+<h4 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h4><p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/">FCC</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/基础知识盘点/">基础知识盘点</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/js/">js</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

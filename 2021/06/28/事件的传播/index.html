@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/profile">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/profile">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/">blogs</a>
+
+    
+  </div>
+  <p class="footer">
+    Inspired by Marketify @ TOKYO<br />
+    Created by Shaoya HUANG
+  </p>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/06/28/事件的传播/">
+      DOM Event Propagation事件的传播
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-06-28 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p>缘起： </p>
+<p>最近在做项目练习的时候碰到了prevent.default()这个方法，在搜索资料的时候发现这个和event的事件流有关，所以就借此机会把整个事件传播的基础概念梳理了一遍。</p>
+<span id="more"></span>
+
+
+<h3 id="什么是event-propagation事件的传播？"><a href="#什么是event-propagation事件的传播？" class="headerlink" title="什么是event propagation事件的传播？"></a>什么是event propagation事件的传播？</h3><p>一个事件发生之后，会在子元素和父元素之间传播。<br>这种传播分为三个阶段。</p>
+<h4 id="第一阶段："><a href="#第一阶段：" class="headerlink" title="第一阶段："></a>第一阶段：</h4><p><strong>capture phase 捕获阶段</strong></p>
+<p>从window对象传导到目标节点（上层传到底层）；</p>
+<h4 id="第二阶段："><a href="#第二阶段：" class="headerlink" title="第二阶段："></a>第二阶段：</h4><p><strong>target phase 目标阶段</strong></p>
+<p>在目标节点上触发；</p>
+<h4 id="第三阶段："><a href="#第三阶段：" class="headerlink" title="第三阶段："></a>第三阶段：</h4><p><strong>bubbling phase 冒泡阶段</strong></p>
+<p>从目标节点传导回window对象（从底层传回上层）。</p>
+<h3 id="如何知道事件处于什么阶段？"><a href="#如何知道事件处于什么阶段？" class="headerlink" title="如何知道事件处于什么阶段？"></a>如何知道事件处于什么阶段？</h3><p>可以使用方法<strong>event.eventPhase</strong>来获取：</p>
+<p>1 = capturing</p>
+<p>2 = target</p>
+<p>3 = bubbling</p>
+<p>0 = none</p>
+<h3 id="如何获取事件的捕获阶段-冒泡阶段？"><a href="#如何获取事件的捕获阶段-冒泡阶段？" class="headerlink" title="如何获取事件的捕获阶段/冒泡阶段？"></a>如何获取事件的捕获阶段/冒泡阶段？</h3><p>这里涉及到addEventListener的三个参数中的最后一个参数（useCaputre）</p>
+<p>如果该值为默认值即’false’，则获取的是由底层到上层的冒泡阶段；</p>
+<p>如果该值为’true’，则获取的是由上层到底层的捕获阶段。</p>
+<p>同时，每次事件目标即target，这也是为什么我们会在编写代码中经常使用e.target来指向事件绑定目标。</p>
+<h3 id="e-target和this的区别？"><a href="#e-target和this的区别？" class="headerlink" title="e.target和this的区别？"></a>e.target和this的区别？</h3><p>this指在嵌套的各个元素中是动态的，指向事件流过程中的每一个节点，而e.target仅指事件发生的这个特定元素。</p>
+<h3 id="如何停止事件传播？"><a href="#如何停止事件传播？" class="headerlink" title="如何停止事件传播？"></a>如何停止事件传播？</h3><p>可以使用event.stopPropagation()这个方法，</p>
+<h3 id="事件传播在实际情况中的运用？"><a href="#事件传播在实际情况中的运用？" class="headerlink" title="事件传播在实际情况中的运用？"></a>事件传播在实际情况中的运用？</h3><p>事件委托/代理（delegation）</p>
+<p>即不再事件的发生地（直接DOM）上设置监听函数，而是在其父元素上设置监听函数。</p>
+<p>这是由于事件会在冒泡阶段向上传播到父节点，由父节点的监听函数统一处理多个子元素事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var ul = document.querySelector(&#x27;ul&#x27;);</span><br><span class="line"></span><br><span class="line">ul.addEventListener(&#x27;click&#x27;, function (event) &#123;</span><br><span class="line">  if (event.target.tagName.toLowerCase() === &#x27;li&#x27;) &#123;</span><br><span class="line">    // some code</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上面就是把click事件直接绑定到了ul，这样做的<strong>好处</strong>是，只要定义一个监听函数，就能处理多个子节点的事件。<br>即<em>1.减少内存消耗；2.动态绑定事件</em>。</p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=BtOrr7oTH_8&list=RDCMUC07WzVtVDVksJR30sU7-EWg&index=1">Zac Gordon的教学视频</a></p>
+<p><a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/events/model.html#%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%BC%A0%E6%92%AD">阮一峰</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26536815">JS事件委托详解（桐城）</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/基础知识盘点/">基础知识盘点</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/js/">js</a>
+  </span>
+  
+</div>
+
+
+</div>
+  </body>
+</html>

@@ -30,7 +30,7 @@ article {
 }
 .avatar {
   border: solid 8px rgba(53,55,56,0.5);
-  background-image: url("http://qx92d7p65.hd-bkt.clouddn.com/avatar.jpeg");
+  background-image: url("http://shaoyahuang.cn/avatar.jpeg");
   filter: grayscale(90%);
   width: 250px;
   height: 250px;
@@ -331,12 +331,21 @@ aside {
     top: 25%;
   }
 }
+.blog-container {
+  margin-top: 10%;
+}
 .blog-post {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10% 10% 0 10%;
+  margin: 10px 10% 0 10%;
   overflow: scroll;
+}
+.title-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .blog-post-title a {
   text-decoration: none;
@@ -345,6 +354,15 @@ aside {
 .blog-post-meta {
   color: rgba(0,0,0,0.3);
   font-style: italic;
+}
+.paper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.paper li {
+  padding: 20px 10px 10% 0;
+  list-style: none;
 }
 hr {
   margin-top: 3.5em;
@@ -438,7 +456,9 @@ figure.highlight .gutter {
 figure.highlight .gutter pre {
   margin: 0;
 }
-ul {
+ul,
+ol,
+dl {
   padding-left: 2em;
 }
 table {

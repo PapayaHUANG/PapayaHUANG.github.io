@@ -30,7 +30,7 @@ article {
 }
 .avatar {
   border: solid 8px rgba(53,55,56,0.5);
-  background-image: url("https://imgur.com/a/Ovrpyo3");
+  background-image: url("https://raw.githubusercontent.com/PapayaHUANG/images/main/img/avatar.jpeg");
   filter: grayscale(90%);
   width: 250px;
   height: 250px;

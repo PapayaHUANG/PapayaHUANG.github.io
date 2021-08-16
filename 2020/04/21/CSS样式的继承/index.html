@@ -38,6 +38,9 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   />
+ 
+
+
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -122,7 +125,7 @@
 <p>要体会这一点，可以从变换子选择器的all属性值来体会。</p>
 <h4 id="举例代码如下："><a href="#举例代码如下：" class="headerlink" title="举例代码如下："></a>举例代码如下：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote&gt;</span><br><span class="line">   &lt;p&gt;This blockquote is styled&lt;/p&gt;</span><br><span class="line">&lt;/blockquote&gt;</span><br><span class="line"></span><br><span class="line">&lt;blockquote class = &quot;fix-this&quot;&gt;</span><br><span class="line">   &lt;p&gt;This blockquote is not styled&lt;/p&gt;</span><br><span class="line">&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">blockquote &#123;</span><br><span class="line">  background-color:red;</span><br><span class="line">  border: 2px solid green;</span><br><span class="line">&#125;</span><br><span class="line">.fix-this &#123;</span><br><span class="line">  all: inherit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="举例效果如图："><a href="#举例效果如图：" class="headerlink" title="举例效果如图："></a>举例效果如图：</h4><p>空缺</p>
+<h4 id="举例效果如图："><a href="#举例效果如图：" class="headerlink" title="举例效果如图："></a>举例效果如图：</h4><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/css%E6%A0%B7%E5%BC%8F%E7%BB%A7%E6%89%BF%E4%BE%8B%E5%AD%90.png" alt="举例图"></p>
 <h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>在这里，类选择器被规定需要继承元素选择器的CSS属性。</p>
 <p>但是从效果上来看，类选择器仅继承了边框，没有继承元素选择器的背景色和边框属性。<br>background-color这个属性不可以被继承，其默认属性是transparent（透明），这样父属性的背景色才能被看见，更符合呈现逻辑。</p>
 <p>而在这个例子中，两个选择器的原生关系并不是父元素和子元素的关系，是两个同等重要的block元素，所以即便fix-this被规定需要inherit时，保留了边框，但是移除了一开始对边框属性的设定。</p>
@@ -153,5 +156,6 @@
 
 
 </div>
+    
   </body>
 </html>

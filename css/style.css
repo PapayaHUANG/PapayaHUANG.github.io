@@ -349,10 +349,8 @@ aside {
 }
 .blog-post-title a {
   text-decoration: none;
-  color: #000;
 }
 .blog-post-meta {
-  color: rgba(0,0,0,0.3);
   font-style: italic;
 }
 .paper {
@@ -488,8 +486,8 @@ table td {
 img {
   display: block;
   max-width: 100%;
-  heigh: auto;
-  magin: 0 auto;
+  height: auto;
+  margin: 0 auto;
   overflow: hidden;
 }
 blockquote {
@@ -498,7 +496,6 @@ blockquote {
   margin: 1em 0;
   padding: 1em 1.2em;
   position: relative;
-  color: rgba(52,73,94,0.8);
   background-color: #f0f3f5;
   border-left: 2px solid;
 }

@@ -365,6 +365,9 @@ aside {
 hr {
   margin-top: 3.5em;
 }
+.archive-blog {
+  border: solid;
+}
 .post-content {
   padding-top: 2rem;
   text-align: justify;

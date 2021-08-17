@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -115,8 +116,10 @@
     <p>《Head First》在介绍如何变换&lt;a&gt;的样式的时候引入了伪类(pseudo-class)选择器的概念。</p>
 <span id="more"></span>
 
-<h3 id="伪类（Pseudo-class-选择器的语法格式："><a href="#伪类（Pseudo-class-选择器的语法格式：" class="headerlink" title="伪类（Pseudo-class)选择器的语法格式："></a>伪类（Pseudo-class)选择器的语法格式：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a:hover &#123;</span><br><span class="line">   /*this is a pseudo class*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="伪类（Pseudo-class-选择器的语法格式："><a href="#伪类（Pseudo-class-选择器的语法格式：" class="headerlink" title="伪类（Pseudo-class)选择器的语法格式："></a>伪类（Pseudo-class)选择器的语法格式：</h3><pre><code>a:hover &#123;
+   /*this is a pseudo class*/
+&#125;
+</code></pre>
 <h3 id="伪类（Pseudo-class-选择器名称的由来："><a href="#伪类（Pseudo-class-选择器名称的由来：" class="headerlink" title="伪类（Pseudo-class)选择器名称的由来："></a>伪类（Pseudo-class)选择器名称的由来：</h3><p>从字面意思上来看，即这个选择器就像一个类，但他实际上不是一个类。</p>
 <p>这里主要需要解决的是为什么他在实际意义上不是一个类。</p>
 <p>因为当你打开CSS样式表对应的HTML文件的时候，会发现没有任何<br>a:hover/a:link/a:visited, 但他们确实可以让你指定样式。</p>

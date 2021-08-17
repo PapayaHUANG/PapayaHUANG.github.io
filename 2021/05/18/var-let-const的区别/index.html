@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -140,10 +141,14 @@
 </ul>
 <p>let可以在同一作用域更新变量，但let不可以重复声明。</p>
 <p>即</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> greeting = <span class="string">&quot;say Hi&quot;</span>;</span><br><span class="line">greeting = <span class="string">&quot;say Hello instead&quot;</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> greeting <span class="token operator">=</span> <span class="token string">"say Hi"</span><span class="token punctuation">;</span>
+greeting <span class="token operator">=</span> <span class="token string">"say Hello instead"</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>成立</p>
 <p>但</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> greeting = <span class="string">&quot;say Hi&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> greeting = <span class="string">&quot;say Hello instead&quot;</span>;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">let</span> greeting <span class="token operator">=</span> <span class="token string">"say Hi"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> greeting <span class="token operator">=</span> <span class="token string">"say Hello instead"</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>会报错。</p>
 <p>但同一个名称的变量可以在不同作用域用let来声明。</p>
 <ul>

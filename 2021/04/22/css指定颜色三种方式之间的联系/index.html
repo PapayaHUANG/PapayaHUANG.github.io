@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -123,13 +124,20 @@
 <p>这些颜色名其实是预设了RGB的值</p>
 <h3 id="2-设定RGB值"><a href="#2-设定RGB值" class="headerlink" title="2. 设定RGB值"></a>2. 设定RGB值</h3><p>设定RGB值有两个方法：<br>一个使用0-100%的百分比来设定；<br>一个使用0-255的数值来设定。</p>
 <p>举一个例子：<br>若想要web背景色为橙色，需要80%的红色加上40%的绿色。<br>其语法表达式可以写成：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">      background-color: rgb(80%, 40%, 0%);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-[css]"><code class="language-[css]">body &#123;
+      background-color: rgb(80%, 40%, 0%);
+ &#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>也可以写成</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">     background-color: rgb(204, 102, 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre class="line-numbers language-[css]"><code class="language-[css]">body &#123;
+     background-color: rgb(204, 102, 0);
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="3-用16进制码表示颜色"><a href="#3-用16进制码表示颜色" class="headerlink" title="3. 用16进制码表示颜色"></a>3. 用16进制码表示颜色</h3><p>用0-255来分别设定rgb的值是用十进制数值来表示颜色，我们可以把它改写成16进制数，上文的橙色就可以表示为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">          background-color: #CC6600;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre class="line-numbers language-[css]"><code class="language-[css]">body &#123;
+          background-color: #CC6600;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>#CC6600从左往右看，前两位是R的值，中间两位是G的值，最后两位是B的值。<br>CC换算成10进制就是：<br>16<em>12+12=204<br>66换算成10进制就是：<br>6</em>16+6=102<br>00换算成10进制就是：<br>0*16+0=0</p>
 <p>这就与rgb(204, 102, 0)完全一致。</p>
 <p>当然#CC6600可以简写成#C60.</p>

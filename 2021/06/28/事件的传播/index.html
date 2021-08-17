@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -138,7 +139,14 @@
 <h3 id="事件传播在实际情况中的运用？"><a href="#事件传播在实际情况中的运用？" class="headerlink" title="事件传播在实际情况中的运用？"></a>事件传播在实际情况中的运用？</h3><p>事件委托/代理（delegation）</p>
 <p>即不再事件的发生地（直接DOM）上设置监听函数，而是在其父元素上设置监听函数。</p>
 <p>这是由于事件会在冒泡阶段向上传播到父节点，由父节点的监听函数统一处理多个子元素事件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var ul = document.querySelector(&#x27;ul&#x27;);</span><br><span class="line"></span><br><span class="line">ul.addEventListener(&#x27;click&#x27;, function (event) &#123;</span><br><span class="line">  if (event.target.tagName.toLowerCase() === &#x27;li&#x27;) &#123;</span><br><span class="line">    // some code</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>var ul = document.querySelector(&#39;ul&#39;);
+
+ul.addEventListener(&#39;click&#39;, function (event) &#123;
+  if (event.target.tagName.toLowerCase() === &#39;li&#39;) &#123;
+    // some code
+  &#125;
+&#125;);
+</code></pre>
 <p>上面就是把click事件直接绑定到了ul，这样做的<strong>好处</strong>是，只要定义一个监听函数，就能处理多个子节点的事件。<br>即<em>1.减少内存消耗；2.动态绑定事件</em>。</p>
 <h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=BtOrr7oTH_8&list=RDCMUC07WzVtVDVksJR30sU7-EWg&index=1">Zac Gordon的教学视频</a></p>
 <p><a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/events/model.html#%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%BC%A0%E6%92%AD">阮一峰</a></p>

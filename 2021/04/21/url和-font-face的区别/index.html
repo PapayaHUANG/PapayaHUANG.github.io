@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -118,7 +119,14 @@
 <h3 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h3><ul>
 <li>句法结构：</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line"></span><br><span class="line">  font-family: &quot;You can define the name of the font here&quot;;</span><br><span class="line"></span><br><span class="line">  src: url(&quot;font url&quot;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>@font-face &#123;
+
+  font-family: &quot;You can define the name of the font here&quot;;
+
+  src: url(&quot;font url&quot;);
+
+&#125;
+</code></pre>
 <ul>
 <li>实现方式：</li>
 </ul>
@@ -126,7 +134,8 @@
 <h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><ul>
 <li>句法结构：</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import url（&quot;font-url&quot;）;</span><br></pre></td></tr></table></figure>
+<pre><code>@import url（&quot;font-url&quot;）;
+</code></pre>
 <p>@import规则必须放置在样式表顶部，位于其他任何规则之上。</p>
 <ul>
 <li>实现方式：</li>

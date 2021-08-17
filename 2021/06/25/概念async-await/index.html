@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -130,16 +131,29 @@
 <h4 id="什么时候会用到异步？"><a href="#什么时候会用到异步？" class="headerlink" title="什么时候会用到异步？"></a>什么时候会用到异步？</h4><p>当从外部设备抓取（fetch）资源的时候，如：<br>从网络上下载一个文件；<br>向数据库接收以及发送数据、从网络相机获取视频流等。<br>J</p>
 <h4 id="S异步的表达形式有哪些？"><a href="#S异步的表达形式有哪些？" class="headerlink" title="S异步的表达形式有哪些？"></a>S异步的表达形式有哪些？</h4><p>callbacks（旧）和promises（新）</p>
 <p>此处有图</p>
-<h3 id="Callback（回调）在js中的运用"><a href="#Callback（回调）在js中的运用" class="headerlink" title="Callback（回调）在js中的运用"></a>Callback（回调）在js中的运用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(&#x27;click&#x27;, () =&gt; &#123;</span><br><span class="line">  alert(&#x27;You clicked me!&#x27;);</span><br><span class="line"></span><br><span class="line">  let pElem = document.createElement(&#x27;p&#x27;);</span><br><span class="line">  pElem.textContent = &#x27;This is a newly-added paragraph.&#x27;;</span><br><span class="line">  document.body.appendChild(pElem);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Callback（回调）在js中的运用"><a href="#Callback（回调）在js中的运用" class="headerlink" title="Callback（回调）在js中的运用"></a>Callback（回调）在js中的运用</h3><pre><code>btn.addEventListener(&#39;click&#39;, () =&gt; &#123;
+  alert(&#39;You clicked me!&#39;);
 
+  let pElem = document.createElement(&#39;p&#39;);
+  pElem.textContent = &#39;This is a newly-added paragraph.&#39;;
+  document.body.appendChild(pElem);
+&#125;);
+</code></pre>
 <p>这里的addEventListener第二个参数就是典型的callback；<br>setTimeout的第一个参数也使用了回调函数。</p>
 <h4 id="什么时候使用回调："><a href="#什么时候使用回调：" class="headerlink" title="什么时候使用回调："></a>什么时候使用回调：</h4><p>把一个复杂的任务分解成更小的步骤；<br>根据时间或顺序把这些步骤之间建立联系。</p>
 <ul>
 <li>使用回调的问题：<br>由于回调会产生嵌套，太多回调就会产生回调地狱。</li>
 </ul>
 <p>此时，promise就登场了。</p>
-<h3 id="promise在js中的运用"><a href="#promise在js中的运用" class="headerlink" title="promise在js中的运用"></a>promise在js中的运用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;products.json&#x27;).then(function(response) &#123;</span><br><span class="line">  return response.json();</span><br><span class="line">&#125;).then(function(json) &#123;</span><br><span class="line">  let products = json;</span><br><span class="line">  initialize(products);</span><br><span class="line">&#125;).catch(function(err) &#123;</span><br><span class="line">  console.log(&#x27;Fetch problem: &#x27; + err.message);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
+<h3 id="promise在js中的运用"><a href="#promise在js中的运用" class="headerlink" title="promise在js中的运用"></a>promise在js中的运用</h3><pre><code>fetch(&#39;products.json&#39;).then(function(response) &#123;
+  return response.json();
+&#125;).then(function(json) &#123;
+  let products = json;
+  initialize(products);
+&#125;).catch(function(err) &#123;
+  console.log(&#39;Fetch problem: &#39; + err.message);
+&#125;);
+</code></pre>
 <p>fetch（）就是一个典型的promise的例子</p>
 <h3 id="Async-Await在JS中的运用"><a href="#Async-Await在JS中的运用" class="headerlink" title="Async/Await在JS中的运用"></a>Async/Await在JS中的运用</h3><p>Async/Await是更为简洁的编写promise的方式。</p>
 <h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a target="_blank" rel="noopener" href="https://chinese.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/">https://chinese.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous">https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous</a></p>

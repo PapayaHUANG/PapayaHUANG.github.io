@@ -41,7 +41,8 @@
  
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
   <body>
@@ -123,8 +124,12 @@
 </li>
 </ol>
 <p>针对这两个点，我google了一些资料，现汇总一下：</p>
-<h4 id="首先是语法结构："><a href="#首先是语法结构：" class="headerlink" title="首先是语法结构："></a>首先是语法结构：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@media media type and (condition: breakpoint)&#123;</span><br><span class="line"></span><br><span class="line">           //CSS rules</span><br><span class="line"></span><br><span class="line">    &#125;     </span><br></pre></td></tr></table></figure>
+<h4 id="首先是语法结构："><a href="#首先是语法结构：" class="headerlink" title="首先是语法结构："></a>首先是语法结构：</h4><pre><code>@media media type and (condition: breakpoint)&#123;
 
+           //CSS rules
+
+    &#125;     
+</code></pre>
 <p>在语法结构中，media type除了screen表示不同屏幕，print表示打印格式之外，还有两个类型：<br>一个是all，表示所有媒体类型；<br>另一个是speech，表示需要把页面内容读出来。</p>
 <p>若不标明media type，则@media的默认为all。</p>
 <p>不同设备的显示应该选择什么具体的设定值，有没有模板，这个问题可以简化为——<br>“如何设定@media的breakpoint？”</p>
@@ -139,9 +144,15 @@
 <p>相关的设定参数，可以参加这个博客——<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS-Tricks</a></p>
 <h4 id="所以更省事的方式应该是根据内容的不同来设定breakpoint"><a href="#所以更省事的方式应该是根据内容的不同来设定breakpoint" class="headerlink" title="所以更省事的方式应该是根据内容的不同来设定breakpoint"></a>所以更省事的方式应该是根据内容的不同来设定breakpoint</h4><p>换句话说，就是设定width的min/max值，或者同时设定min和max值，来管理一个范围区间的设备。</p>
 <p>如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media only screen and (min-width: 640px)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>@media only screen and (min-width: 640px)&#123;
+
+&#125;
+</code></pre>
 <p>或</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media only screen and(max-width: 1024px) and (min-width: 640px)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>@media only screen and(max-width: 1024px) and (min-width: 640px)&#123;
+
+&#125;
+</code></pre>
 <p>那么接下来的问题就是</p>
 <h4 id="何时用min值，何时用max值？"><a href="#何时用min值，何时用max值？" class="headerlink" title="何时用min值，何时用max值？"></a>何时用min值，何时用max值？</h4><p>如果主要的显示设备是手机，那么就可以从min-width开始，根据实际情况，逐渐增大；</p>
 <p>如果这要的显示这杯是大屏幕，那么就可以从max-width开始，根据实际情况，逐渐缩小。</p>

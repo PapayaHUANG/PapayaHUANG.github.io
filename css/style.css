@@ -411,12 +411,12 @@ a:hover {
 }
 code,
 pre {
-  padding: 7px;
+  padding: 0;
   font-size: 13px;
   font-family: Consolas, Monaco, Menlo, Consolas, monospace;
 }
 code {
-  padding: 3px 55px;
+  padding: 0;
   border-radius: 4px;
 }
 figure.highlight {
@@ -447,8 +447,10 @@ figure.highlight td {
   border-collapse: collapse;
   background-color: #eee;
 }
-figure.highlight .code pre {
-  margin: 0 10px;
+figure.highlight .code,
+figure.highlight .pre {
+  margin: 0;
+  padding: 0;
 }
 figure.highlight .gutter {
   width: 10px;
@@ -456,6 +458,7 @@ figure.highlight .gutter {
 }
 figure.highlight .gutter pre {
   margin: 0;
+  padding: 0;
 }
 ul,
 ol,

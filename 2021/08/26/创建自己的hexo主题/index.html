@@ -99,7 +99,7 @@
   <!-- title -->
   <h2 class="blog-post-title">
     <a href="/2021/08/26/创建自己的hexo主题/">
-      [object Object]
+      创建自己的hexo主题
     </a>
   </h2>
 
@@ -110,7 +110,36 @@
 
   <!-- content -->
   <div class="post-content">
-    
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将记录我从零开始搭建一个hexo主题的过程。决定用hexo搭建自己的播客的时候，我就在物色合适的主题了，虽然hexo的主题库很丰富，但是大部分主题框架都满足不了我自己的需求，或者有些功能超出了我的需求。所以我决定自己来搭建一个hexo主题，顺便也练习一下前端的技能。</p>
+<h4 id="我的主题需求"><a href="#我的主题需求" class="headerlink" title="我的主题需求"></a>我的主题需求</h4><ul>
+<li><p>主题框架<br>我构想的主题是分为四个部分：<br>Index：主题首页放个人概要<br>About：介绍页通过图片介绍个人情况<br>category：文章分类页，方便快速了解博文结构<br>Posts：所有博文合集</p>
+</li>
+<li><p>配色审美<br>我希望我的主题是浅色调的，配色不超过四种，重点用亮色突出；<br>同时主题可以响应不同尺寸窗口。</p>
+</li>
+<li><p>额外功能<br>作为目的为个人展示和学习记录的网站，hexo自带功能就可以满足我的所有需求。<br>所以我只需要利用好hexo自带的tags/categories/pagination就好。</p>
+</li>
+</ul>
+<h4 id="开发知识准备"><a href="#开发知识准备" class="headerlink" title="开发知识准备"></a>开发知识准备</h4><ul>
+<li>前端开发基础：<br>包括HTML CSS Javascript和NPM</li>
+<li>模板引擎语法：<br>hexo内置的是ejs——<a target="_blank" rel="noopener" href="https://ejs.bootcss.com/">ejs文档</a>，当然也有比较受欢迎的主题使用的pug</li>
+<li>CSS预处理器：<br>hexo内置的是stylus——<a target="_blank" rel="noopener" href="https://stylus-lang.com/">stylus文档</a></li>
+<li>YAML语法：<br>hexo内置config文件语法格式，<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2016/07/yaml.html">阮一峰YAML教程</a></li>
+<li>Hexo文档：<br>文档内会有一些hexo模板引擎的变量和辅助函数，对主题的编写很有帮助。<br>英文文档更详细，<a target="_blank" rel="noopener" href="https://hexo.io/docs/variables.html">Hexo文档</a></li>
+</ul>
+<p>我编写的主题使用的ejs+stylus。</p>
+<h2 id="构建目录结构"><a href="#构建目录结构" class="headerlink" title="构建目录结构"></a>构建目录结构</h2><p>根据<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/themes">官方文档</a>，hexo的主题文件夹，一般包含以下目录：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token keyword">.</span>
+├── _config.yml <span class="token comment" spellcheck="true"># 主题配置文件</span>
+├── languages <span class="token comment" spellcheck="true"># 语言文件夹</span>
+├── layout <span class="token comment" spellcheck="true"># 页面模板</span>
+├── scripts <span class="token comment" spellcheck="true"># 脚本文件夹</span>
+└── <span class="token function">source</span> <span class="token comment" spellcheck="true"># 资源文件夹</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="hexo工作原理"><a href="#hexo工作原理" class="headerlink" title="hexo工作原理"></a>hexo工作原理</h4><ul>
+<li>ejs模板是组件化开发思路，使得页面内容可以复用</li>
+<li>hexo会先解析<em>markdown</em>文件，然后根据<em>layout</em>判断布局类型，再结合<em>config</em>中变量动态渲染出静态html页面</li>
+</ul>
+
   </div>
 
   <hr>
@@ -118,8 +147,20 @@
   
      <!-- categories -->
   
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/项目练习/">项目练习</a>
+  </span>
+  
   
      <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/html-ejs-stylus/">html ejs stylus</a>
+  </span>
   
 </div>
 

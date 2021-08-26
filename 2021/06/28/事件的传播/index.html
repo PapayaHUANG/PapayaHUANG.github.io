@@ -38,7 +38,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   />
- 
+  
 
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
@@ -59,7 +59,7 @@
       </a>
     </li>
     <li>
-      <a href="/projects">
+      <a href="/categories">
         <i class="icon iconfont icon-project"></i>
       </a>
     </li>
@@ -83,18 +83,15 @@
 
     
 
-    <a class="menu-item" href="/projects">Projects</a>
+    <a class="menu-item" href="/categories">Categories</a>
 
     
 
     <a class="menu-item" href="/archives">Archives</a>
 
     
+  
   </div>
-  <p class="footer">
-    Inspired by Marketify @ TOKYO<br />
-    Created by Shaoya HUANG
-  </p>
 </aside>
 
 
@@ -125,6 +122,7 @@
 <p>在目标节点上触发；</p>
 <h4 id="第三阶段："><a href="#第三阶段：" class="headerlink" title="第三阶段："></a>第三阶段：</h4><p><strong>bubbling phase 冒泡阶段</strong></p>
 <p>从目标节点传导回window对象（从底层传回上层）。</p>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%BA%8B%E4%BB%B6%E4%BC%A0%E6%92%AD.png" alt="事件传播"></p>
 <h3 id="如何知道事件处于什么阶段？"><a href="#如何知道事件处于什么阶段？" class="headerlink" title="如何知道事件处于什么阶段？"></a>如何知道事件处于什么阶段？</h3><p>可以使用方法<strong>event.eventPhase</strong>来获取：</p>
 <p>1 = capturing</p>
 <p>2 = target</p>
@@ -136,6 +134,14 @@
 <p>同时，每次事件目标即target，这也是为什么我们会在编写代码中经常使用e.target来指向事件绑定目标。</p>
 <h3 id="e-target和this的区别？"><a href="#e-target和this的区别？" class="headerlink" title="e.target和this的区别？"></a>e.target和this的区别？</h3><p>this指在嵌套的各个元素中是动态的，指向事件流过程中的每一个节点，而e.target仅指事件发生的这个特定元素。</p>
 <h3 id="如何停止事件传播？"><a href="#如何停止事件传播？" class="headerlink" title="如何停止事件传播？"></a>如何停止事件传播？</h3><p>可以使用event.stopPropagation()这个方法，</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> ul <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ul<span class="token punctuation">.</span><span class="token function">addEvenListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>tagName<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'li'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// some code here</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="事件传播在实际情况中的运用？"><a href="#事件传播在实际情况中的运用？" class="headerlink" title="事件传播在实际情况中的运用？"></a>事件传播在实际情况中的运用？</h3><p>事件委托/代理（delegation）</p>
 <p>即不再事件的发生地（直接DOM）上设置监听函数，而是在其父元素上设置监听函数。</p>
 <p>这是由于事件会在冒泡阶段向上传播到父节点，由父节点的监听函数统一处理多个子元素事件。</p>
@@ -178,6 +184,6 @@ ul.addEventListener(&#39;click&#39;, function (event) &#123;
 
 
 </div>
-    
+  
   </body>
 </html>

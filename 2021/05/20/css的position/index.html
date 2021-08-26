@@ -38,7 +38,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   />
- 
+  
 
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
@@ -59,7 +59,7 @@
       </a>
     </li>
     <li>
-      <a href="/projects">
+      <a href="/categories">
         <i class="icon iconfont icon-project"></i>
       </a>
     </li>
@@ -83,18 +83,15 @@
 
     
 
-    <a class="menu-item" href="/projects">Projects</a>
+    <a class="menu-item" href="/categories">Categories</a>
 
     
 
     <a class="menu-item" href="/archives">Archives</a>
 
     
+  
   </div>
-  <p class="footer">
-    Inspired by Marketify @ TOKYO<br />
-    Created by Shaoya HUANG
-  </p>
 </aside>
 
 
@@ -114,8 +111,6 @@
   <!-- content -->
   <div class="post-content">
     <p> 最近在做练习的时候常用到position来定位元素，所以在此结合我看的资料来整理一下postion的各个属性。</p>
-<span id="more"></span>
-
 <h3 id="position的属性有5个值："><a href="#position的属性有5个值：" class="headerlink" title="position的属性有5个值："></a>position的属性有5个值：</h3><ul>
 <li>static</li>
 <li>relative</li>
@@ -135,13 +130,13 @@
 </ul>
 <p>relative相对的是默认位置；</p>
 <p>必须搭配top/bottom/left/right一起使用</p>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/position%20relative.jpeg" alt="relative"></p>
 <ul>
 <li><p>absolute<br>absolute相对于上级元素（一般是父元素）进行偏移；<br>定位的基点不能是static，如果向上检索的父元素都为static，则定位基点为网页根元素html；<br>所以通常要使用absolute的话，会把父元素的position设定为relative；<br>absolute定位的元素会忽略页面流，周边元素不受影响；<br>可以搭配top/bottom/left/right一起使用;</p>
 </li>
-<li><p>fixed<br>fixed相对的是视窗（viewport），这样会导致元素的位置不随着页面的滚动而变化，好像固定在网页上一样；</p>
+<li><p>fixed<br>fixed相对的是视窗（viewport），这样会导致元素的位置不随着页面的滚动而变化，好像固定在网页上一样；<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/fixed%20position.jpeg" alt="fixed"><br>可以搭配top/bottom/left/right一起使用;<br>若不设定这四个属性，则固定在元素的初始位置。</p>
 </li>
 </ul>
-<p>可以搭配top/bottom/left/right一起使用;<br>若不设定这四个属性，则固定在元素的初始位置。</p>
 <ul>
 <li>第三类 产生动态效果值<br>sticky<br>sticky是2017才加入的新值；<br>sticky的效果很像relative和fixed的结合；</li>
 </ul>
@@ -173,6 +168,6 @@
 
 
 </div>
-    
+  
   </body>
 </html>

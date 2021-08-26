@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/04/06/用flexbox练习写骰子面/">
+      用flexbox练习写骰子面
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-04-06 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <h2 id="Objective："><a href="#Objective：" class="headerlink" title="Objective："></a>Objective：</h2><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E9%AA%B0%E5%AD%90%E9%9D%A2.png" alt="效果图"></p>
+<p>用flex布局来排列骰子上面的黑点，写出骰子的6个面。</p>
+<h2 id="Skills："><a href="#Skills：" class="headerlink" title="Skills："></a>Skills：</h2><p>flex相关语法中justify-content/align-items/align-self的运用。</p>
+<h2 id="基本思路："><a href="#基本思路：" class="headerlink" title="基本思路："></a>基本思路：</h2><ol>
+<li><p>把骰子的面作为容器，点作为项目来排列；</p>
+</li>
+<li><p>因为flexbox是一维布局，仅基于主轴（main axis）和交叉轴（cross axis）两个坐标的变换来调整项目位置，而骰子上的黑点有1-6个不等，所以要先对不同点数的骰子面进行分类；</p>
+</li>
+<li><p>仅需一个空间进行排列组合：点数为1-3的骰子面可以分为一类；</p>
+</li>
+<li><p>需要两个空间进行排列组合：点数4-6的骰子面可以分为一类；</p>
+</li>
+<li><p>需要三个空间进行排列组合：点数5的骰子面单独为一类。</p>
+</li>
+</ol>
+<h2 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h2><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%B8%80%E7%82%B9%E9%AA%B0%E5%AD%90.png" alt="一点骰子"></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>first-dice<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.first-dice</span></span><span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+   <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+   <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><ul>
+<li>该容器中只有一个项目(item)；</li>
+<li>通过justify-content和align-items在水平主轴和垂直交叉轴上让所有项目居中。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%B8%A4%E7%82%B9%E9%AA%B0%E5%AD%90.png" alt="两点骰子"></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>second-dice<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.second-dice</span> \</span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token selector">;
+<span class="token class">.second-dice</span> <span class="token class">.dot</span><span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+   <span class="token property">align-self</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="分析：-1"><a href="#分析：-1" class="headerlink" title="分析："></a>分析：</h4><ul>
+<li>该容器中有两个项目；</li>
+<li>先用space-between在水平方向让两个项目从中间分开，分别靠向容器的左侧和右侧；</li>
+<li>再用align-self调整第二个点，使其对齐容器底边。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%B8%89%E7%82%B9%E9%AA%B0%E5%AD%90.png" alt="三点骰子"></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>third-dice<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.third-dice</span> </span><span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+   <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.third-dice</span> <span class="token class">.dot</span><span class="token pseudo-class">:nth-child(2)</span> </span><span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.third-dice</span> <span class="token class">.dot</span><span class="token pseudo-class">:nth-child(3)</span> </span><span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="分析：-2"><a href="#分析：-2" class="headerlink" title="分析："></a>分析：</h4><ul>
+<li>该容器中有三个项目；</li>
+<li>先用space-between确保水平方向三个点最左和左右分布在容器左右两侧；</li>
+<li>再用align-self分别将第二个点居中，第三个点分布在右下。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E5%9B%9B%E7%82%B9%E9%AA%B0%E5%AD%90.png" alt="四点骰子"><br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E5%85%AD%E7%82%B9%E9%AA%B0%E5%AD%90.png" alt="六点骰子"></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fourth-dice<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  &lt;div class= "column">
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  &lt;div class= "column">
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sixth-dice<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.fourth-dice</span>, <span class="token class">.sixth-dice</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.fourth-dice</span> <span class="token class">.column</span>, <span class="token class">.sixth-dice</span> <span class="token class">.column</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="分析：-3"><a href="#分析：-3" class="headerlink" title="分析："></a>分析：</h4><ul>
+<li>因为4点和6点的骰子面可以看作以中间纵轴线对称，左右点数分布一致的图形，所以可以把4点和6点先分成2个一组的column和3个一组的column；</li>
+<li>先space-between在水平主轴上让两个column分别靠向左侧和右侧；</li>
+<li>wu再在column内部，确保项目的排列方式是从上向下（column），再用space-between使两端项目靠近容器边界，项目之间平均分布。</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%BA%94%E7%82%B9%E9%AA%B0%E5%AD%90.png" alt="五点骰子"></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fifth-dice<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dot<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.fifth-dice</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.fifth-dice</span> <span class="token class">.colum</span></span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.fifth-dice</span> <span class="token class">.column</span><span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="分析：-4"><a href="#分析：-4" class="headerlink" title="分析："></a>分析：</h4><ul>
+<li>5点的骰子面分布在四边的点的处理方式可以和4/6点的骰子一样，然后有一个点居中，这样就可以把5个点分成2-1-2三个column；</li>
+<li>先用space-between在水平轴上确保三个column分布开；</li>
+<li>再确保在column内部点是从上而下并且两端靠边平均分布；</li>
+<li>单拎出来第二个column，使点（项目）居中。（注意这里虽然只有一个项目，但是这里我们把这个项目理解为一个column里的唯一项目，所以在分布时我们用justify-content而非justify-self。</li>
+</ul>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ol>
+<li>justify-content/align-items以及在这个项目里没有用到的align-content都是把一个容器内所有项目当作一个整体来进行排列分布，若需要调整其中一个项目，才使用align-self；</li>
+<li>若项目的排列方向是上下方向，想象中的水平主轴相应也调成90度。</li>
+</ol>
+<h2 id="完整项目链接："><a href="#完整项目链接：" class="headerlink" title="完整项目链接："></a>完整项目链接：</h2><p><a target="_blank" rel="noopener" href="https://codepen.io/papayahuang/pen/ExZvymq">Flexbox Dice</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/项目练习/">项目练习</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/css/">css</a>
+  </span>
+  
+</div>
+
+
+</div>
+  
+  </body>
+</html>

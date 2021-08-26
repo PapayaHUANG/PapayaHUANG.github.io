@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/04/25/表单练习/">
+      表单练习（FCC项目）
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-04-25 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p> 在《Head First》读到了表单相关的章节，所以拿出了之前做的FCC的项目，重新做了调整。</p>
+<p>项目呈现如图：<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E8%A1%A8%E5%8D%95%E6%88%AA%E5%9B%BE.png" alt="表单"></p>
+<h2 id="HTML方面："><a href="#HTML方面：" class="headerlink" title="HTML方面："></a>HTML方面：</h2><p>在这次调整中，主要修正了之前因为不懂<label>标签的作用，而产生的一些格式错误。</p>
+<h4 id="的作用："><a href="#的作用：" class="headerlink" title="的作用："></a><label>的作用：</h4><ul>
+<li><label>元素可以提供页面结构的更多信息，方便CSS对标签设置样式，另外对于有视力障碍的人，也有助于他们使用的屏幕阅读器更准确地去标识表单元素。</li>
+</ul>
+<h4 id="的使用方法："><a href="#的使用方法：" class="headerlink" title="的使用方法："></a><label>的使用方法：</h4><ul>
+<li>用<label>标记的<input>应标注<input>的id，举例：</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name-label<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Enter your name here<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>这里的label for的值和input id相同</p>
+<p>若<input>元素包含在<label>内部，则不需要for的值，以上代码可以更改为：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Enter your name here<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="使下拉选单呈现出placeholder："><a href="#使下拉选单呈现出placeholder：" class="headerlink" title="使下拉选单呈现出placeholder："></a>使下拉选单呈现出placeholder：</h4><pre class="line-numbers language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dropdown<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">disabled</span> <span class="token attr-name">selected</span> <span class="token attr-name">value</span><span class="token punctuation">></span></span>Select a gender<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>male<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Male<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>female<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Female<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
+
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>即在下拉选项中增加一个选项，并将这个选项disabled并且勾选。</p>
+<h2 id="CSS方面："><a href="#CSS方面：" class="headerlink" title="CSS方面："></a>CSS方面：</h2><p>主要实现了一个CSS trick：</p>
+<ul>
+<li><p>改变页面背景色调：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token property">background-image</span><span class="token punctuation">:</span>
+
+  <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+
+    <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">232</span>, <span class="token number">128</span>, <span class="token number">121</span>, <span class="token number">0.45</span><span class="token punctuation">)</span>, 
+
+    <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">232</span>, <span class="token number">128</span>, <span class="token number">121</span>, <span class="token number">0.45</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">)</span>,
+
+  <span class="token url">url("https://images.unsplash.com/photo-1518611012118-696072aa579a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2550&amp;q=80")</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其实就是利用了叠层的方法，将背景图片上覆盖了一块透明的颜色。</p>
+</li>
+</ul>
+<h2 id="项目完整呈现见链接："><a href="#项目完整呈现见链接：" class="headerlink" title="项目完整呈现见链接："></a>项目完整呈现见链接：</h2><p><a target="_blank" rel="noopener" href="https://codepen.io/papayahuang/pen/zYqLyVY">Workout Frequency Survey Form</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/项目练习/">项目练习</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/html/">html</a>
+  </span>
+  
+</div>
+
+
+</div>
+  
+  </body>
+</html>

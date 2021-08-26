@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  <!-- title -->
+  <h2 class="blog-post-title">
+    <a href="/2021/07/15/GIT学习笔记/">
+      git学习笔记
+    </a>
+  </h2>
+
+  <!-- date and author -->
+  <p class="blog-post-meta">
+    2021-07-15 
+  </p>
+
+  <!-- content -->
+  <div class="post-content">
+    <p>由于准备用hexo和github一起配合搭建个人网站，所以在开始之前简单学习了一下git的基本知识，在此做一个梳理。</p>
+<p><strong>Git的核心是分布式版本控制系统，与之相对应的概念是集中式版本控制系统。</strong></p>
+<p>分布式版本控制系统的<strong>优势</strong>在于<em>不必联网工作</em>，以及<em>强大的分支管理</em>。</p>
+<h2 id="Git的核心概念："><a href="#Git的核心概念：" class="headerlink" title="Git的核心概念："></a>Git的核心概念：</h2><ol>
+<li>版本库/Repository</li>
+</ol>
+<ul>
+<li>在这个目录下的所有文件都可以被Git管理起来；</li>
+</ul>
+<p>每个文件的修改、删除，Git都能跟踪，就像一个路径清晰的时光机，可以在任何时刻追踪历史，或者在将来某个时刻还原。</p>
+<ol start="2">
+<li>工作区/Working Directory</li>
+</ol>
+<ul>
+<li>在电脑中可以看到的目录</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/git%E5%90%84%E5%8C%BA%E5%9F%9F%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="git各区域示意图"></p>
+<ol start="3">
+<li>暂存区/Stage</li>
+</ol>
+<ul>
+<li>暂全区是理解git通过调整HEAD指针的位置来回顾和还原文件的关键，也是和他人协同工作的基础。</li>
+</ul>
+<h2 id="Git命令辨析"><a href="#Git命令辨析" class="headerlink" title="Git命令辨析"></a>Git命令辨析</h2><pre><code>git restore/git checkout --文件名/git reset HEAD 文件名
+</code></pre>
+<ul>
+<li>git restore可以实现后两者的功能，后两者是文件出在不同的区域是的撤销与删除</li>
+</ul>
+<pre><code>git checkout --文件名/git checkout 分支名
+</code></pre>
+<ul>
+<li>前者是撤销修改，后者是切换所在分支，后者可以用语义更明确的git switch来替代</li>
+</ul>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰Git教程</a></p>
+
+  </div>
+
+  <hr>
+  
+  
+     <!-- categories -->
+  
+     
+  <span class="post-categories">
+    <i class='icon iconfont icon-icon-goodscategory'></i>
+    <a href="/categories/技能学习/">技能学习</a>
+  </span>
+  
+  
+     <!-- tag -->
+   
+  
+  <span class="post-tags">
+    <i class="icon iconfont icon-tag"></i>
+    <a href="/tags/git/">git</a>
+  </span>
+  
+</div>
+
+
+</div>
+  
+  </body>
+</html>

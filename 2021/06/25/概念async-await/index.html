@@ -38,7 +38,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   />
- 
+  
 
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
@@ -59,7 +59,7 @@
       </a>
     </li>
     <li>
-      <a href="/projects">
+      <a href="/categories">
         <i class="icon iconfont icon-project"></i>
       </a>
     </li>
@@ -83,18 +83,15 @@
 
     
 
-    <a class="menu-item" href="/projects">Projects</a>
+    <a class="menu-item" href="/categories">Categories</a>
 
     
 
     <a class="menu-item" href="/archives">Archives</a>
 
     
+  
   </div>
-  <p class="footer">
-    Inspired by Marketify @ TOKYO<br />
-    Created by Shaoya HUANG
-  </p>
 </aside>
 
 
@@ -114,9 +111,6 @@
   <!-- content -->
   <div class="post-content">
     <p> 之前在项目练习的时候碰到了async/await，刚好在fcc的论坛也看到响应的文章。所以跟着文章练习，并总结一下关于async/await的知识点。</p>
-<span id="more"></span>
-
-
 <h3 id="这篇文章主要涉及三个概念："><a href="#这篇文章主要涉及三个概念：" class="headerlink" title="这篇文章主要涉及三个概念："></a>这篇文章主要涉及三个概念：</h3><ul>
 <li>Callbacks</li>
 <li>Promises</li>
@@ -128,9 +122,8 @@
 <li>Callbacks/Promises/Async/Await如何在JS中运用</li>
 </ul>
 <h4 id="什么是异步JavaScript-JS中的同步和异步"><a href="#什么是异步JavaScript-JS中的同步和异步" class="headerlink" title="什么是异步JavaScript/JS中的同步和异步"></a>什么是异步JavaScript/JS中的同步和异步</h4><p>在解决这个问题之前，要先解决何为异步。<br>基本上计算语言都是<em>单线程（single-threaded）</em>的，也就是一个接一个的任务排队运行，而异步用一句话概括就是几个任务同时运行。</p>
-<h4 id="什么时候会用到异步？"><a href="#什么时候会用到异步？" class="headerlink" title="什么时候会用到异步？"></a>什么时候会用到异步？</h4><p>当从外部设备抓取（fetch）资源的时候，如：<br>从网络上下载一个文件；<br>向数据库接收以及发送数据、从网络相机获取视频流等。<br>J</p>
-<h4 id="S异步的表达形式有哪些？"><a href="#S异步的表达形式有哪些？" class="headerlink" title="S异步的表达形式有哪些？"></a>S异步的表达形式有哪些？</h4><p>callbacks（旧）和promises（新）</p>
-<p>此处有图</p>
+<h4 id="什么时候会用到异步？"><a href="#什么时候会用到异步？" class="headerlink" title="什么时候会用到异步？"></a>什么时候会用到异步？</h4><p>当从外部设备抓取（fetch）资源的时候，如：<br>从网络上下载一个文件；<br>向数据库接收以及发送数据、从网络相机获取视频流等。</p>
+<h4 id="S异步的表达形式有哪些？"><a href="#S异步的表达形式有哪些？" class="headerlink" title="S异步的表达形式有哪些？"></a>S异步的表达形式有哪些？</h4><p>callbacks（旧）和promises（新）<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/synchronous.png" alt="同步"><br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/asynchoronous.png" alt="异步"></p>
 <h3 id="Callback（回调）在js中的运用"><a href="#Callback（回调）在js中的运用" class="headerlink" title="Callback（回调）在js中的运用"></a>Callback（回调）在js中的运用</h3><pre><code>btn.addEventListener(&#39;click&#39;, () =&gt; &#123;
   alert(&#39;You clicked me!&#39;);
 
@@ -139,12 +132,11 @@
   document.body.appendChild(pElem);
 &#125;);
 </code></pre>
-<p>这里的addEventListener第二个参数就是典型的callback；<br>setTimeout的第一个参数也使用了回调函数。</p>
+<p>这里的addEventListener第二个参数就是典型的callback；<br>setTimeout的第一个参数也使用了回调函数。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/callback.png" alt="回调"></p>
 <h4 id="什么时候使用回调："><a href="#什么时候使用回调：" class="headerlink" title="什么时候使用回调："></a>什么时候使用回调：</h4><p>把一个复杂的任务分解成更小的步骤；<br>根据时间或顺序把这些步骤之间建立联系。</p>
 <ul>
-<li>使用回调的问题：<br>由于回调会产生嵌套，太多回调就会产生回调地狱。</li>
+<li>使用回调的问题：<br>由于回调会产生嵌套，太多回调就会产生回调地狱。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/callback%20hell.png" alt="回调地狱"><br>此时，promise就登场了。</li>
 </ul>
-<p>此时，promise就登场了。</p>
 <h3 id="promise在js中的运用"><a href="#promise在js中的运用" class="headerlink" title="promise在js中的运用"></a>promise在js中的运用</h3><pre><code>fetch(&#39;products.json&#39;).then(function(response) &#123;
   return response.json();
 &#125;).then(function(json) &#123;
@@ -154,7 +146,7 @@
   console.log(&#39;Fetch problem: &#39; + err.message);
 &#125;);
 </code></pre>
-<p>fetch（）就是一个典型的promise的例子</p>
+<p>fetch（）就是一个典型的promise的例子<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/promise%20format.png" alt="promise格式"><br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/promise%20made.png" alt="promise结构1"><br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/promise.png" alt="promise结构2"></p>
 <h3 id="Async-Await在JS中的运用"><a href="#Async-Await在JS中的运用" class="headerlink" title="Async/Await在JS中的运用"></a>Async/Await在JS中的运用</h3><p>Async/Await是更为简洁的编写promise的方式。</p>
 <h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a target="_blank" rel="noopener" href="https://chinese.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/">https://chinese.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous">https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Asynchronous</a></p>
 
@@ -184,6 +176,6 @@
 
 
 </div>
-    
+  
   </body>
 </html>

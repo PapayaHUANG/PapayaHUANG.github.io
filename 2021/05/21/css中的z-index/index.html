@@ -38,7 +38,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   />
- 
+  
 
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
@@ -59,7 +59,7 @@
       </a>
     </li>
     <li>
-      <a href="/projects">
+      <a href="/categories">
         <i class="icon iconfont icon-project"></i>
       </a>
     </li>
@@ -83,18 +83,15 @@
 
     
 
-    <a class="menu-item" href="/projects">Projects</a>
+    <a class="menu-item" href="/categories">Categories</a>
 
     
 
     <a class="menu-item" href="/archives">Archives</a>
 
     
+  
   </div>
-  <p class="footer">
-    Inspired by Marketify @ TOKYO<br />
-    Created by Shaoya HUANG
-  </p>
 </aside>
 
 
@@ -114,8 +111,6 @@
   <!-- content -->
   <div class="post-content">
     <p> 我在写音乐播放器的时候，发现用z-index来排列不同元素有时候得到的结果和预期不一样，所以就搜了一些资料，尝试来厘清一下z-index的规则。</p>
-<span id="more"></span>
-
 <h3 id="首先来定义一下z-index："><a href="#首先来定义一下z-index：" class="headerlink" title="首先来定义一下z-index："></a>首先来定义一下z-index：</h3><p>其实z-index的定义一点也不复杂，它是z轴上的一个系数，和x轴与y轴属于同一组概念，z轴表示的是元素到观众的距离，所以z-index值越高，元素离观众就越近，在布局上理应位于较上层。</p>
 <h3 id="问题来了，为什么是“理应”呢？"><a href="#问题来了，为什么是“理应”呢？" class="headerlink" title="问题来了，为什么是“理应”呢？"></a>问题来了，为什么是“理应”呢？</h3><p>为了更好地阐明这个道理，在这里我们要引入一个新的概念——<strong>stacking order（层叠等级）</strong>（btw我更愿意把这个词翻译成层叠顺序），层叠等级指的就是元素在z轴上的上下排列。</p>
 <p>那么一个新的概念出现就意味着它有一个默认值，层叠等级也有默认值：</p>
@@ -123,13 +118,12 @@
 <li>html根元素；</li>
 <li>未定义position值的元素顺序(static)；</li>
 <li>定义了position值的元素的顺序；</li>
-<li>呈现见下文例子：</li>
+<li>呈现见下文例子：<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E9%BB%98%E8%AE%A4%E9%A1%BA%E5%BA%8F.png" alt="默认顺序"><br><a target="_blank" rel="noopener" href="https://codepen.io/ivhed/pen/QrdEBB">https://codepen.io/ivhed/pen/QrdEBB</a><br>按照html的顺序，盒子的排列应该是粉色在最下层、粉色包含橙色、然后是蓝色、最上是绿色。<br>但是蓝、粉、橙色盒子的postion都被定义了，绿色没有被定义，所以html的原始顺序被覆盖，绿色变到最底层，其他三个盒子继续遵循html的顺序。<br>搞清楚默认叠层等级后，我们把z-index值加进来，呈现见下文：<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/zindex%E9%A1%BA%E5%BA%8F.png" alt="z-index顺序"></li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://codepen.io/ivhed/pen/QrdEBB">https://codepen.io/ivhed/pen/QrdEBB</a><br>按照html的顺序，盒子的排列应该是粉色在最下层、粉色包含橙色、然后是蓝色、最上是绿色。<br>但是蓝、粉、橙色盒子的postion都被定义了，绿色没有被定义，所以html的原始顺序被覆盖，绿色变到最底层，其他三个盒子继续遵循html的顺序。<br>搞清楚默认叠层等级后，我们把z-index值加进来，呈现见下文：</p>
 <p><a target="_blank" rel="noopener" href="https://codepen.io/ivhed/pen/xjqmpV">https://codepen.io/ivhed/pen/xjqmpV</a><br>蓝色盒子的z-index值为2，橙色为3、绿色为100。<br>第一个“理应”之外的特例来了，绿色的z-index值最大，为什么它依旧处于最底层？</p>
 <p><em>因为绿色格子的postion未被定义，所以z-index无效</em>。</p>
 <p>而橙色和蓝色完美按照我们设想呈现了！</p>
-<p>但是，世界往往没有这么美好，我们再看一个特例：</p>
+<p>但是，世界往往没有这么美好，我们再看一个特例：<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E7%89%B9%E4%BE%8B.png" alt="特例"></p>
 <p><a target="_blank" rel="noopener" href="https://codepen.io/ivhed/pen/YLZdjx">https://codepen.io/ivhed/pen/YLZdjx</a><br>绿色盒子在最底层上文已经解释过了，那我们来看看其他盒子：<br>紫色的z-index值为0，粉色是1，蓝色是2，橙色是3，我们理应看到橙色在最上方，为什么最后蓝色在最上方了呢。<br>因为在这段代码里，我们给橙色的父元素——粉色盒子的z-index赋值了，于是粉色盒子给橙色盒子增加了一个<strong>叠层上下文（stacking context）</strong>（此处我愿把这个词翻译成叠层环境），粉色的z-index值再大也是在窝里横，由于父元素的值比蓝色小，这层关系被优先考虑，橙色的值就被困在了叠层上下文里。<br>（注：上个例子粉色盒子的z-index未被赋值，等同于auto）</p>
 <p>这就是第二个“理应”之外的特例，叠层上下文，那么造成叠层上下文的除了父元素的z-index被赋值外，还有别的情况：</p>
 <h4 id="特例"><a href="#特例" class="headerlink" title="特例"></a>特例</h4><ul>
@@ -173,6 +167,6 @@
 
 
 </div>
-    
+  
   </body>
 </html>

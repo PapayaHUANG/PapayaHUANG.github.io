@@ -38,7 +38,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   />
- 
+  
 
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
@@ -59,7 +59,7 @@
       </a>
     </li>
     <li>
-      <a href="/projects">
+      <a href="/categories">
         <i class="icon iconfont icon-project"></i>
       </a>
     </li>
@@ -83,18 +83,15 @@
 
     
 
-    <a class="menu-item" href="/projects">Projects</a>
+    <a class="menu-item" href="/categories">Categories</a>
 
     
 
     <a class="menu-item" href="/archives">Archives</a>
 
     
+  
   </div>
-  <p class="footer">
-    Inspired by Marketify @ TOKYO<br />
-    Created by Shaoya HUANG
-  </p>
 </aside>
 
 
@@ -130,7 +127,7 @@
 </li>
 </ul>
 <h3 id="为什么是三次？"><a href="#为什么是三次？" class="headerlink" title="为什么是三次？"></a>为什么是三次？</h3><p>TCP三次握手是客户端和服务器端在建立连接传输数据前的状态。三次握手成功后，两端之间才开始传输数据。</p>
-<p>此处有图片</p>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/tcp%E5%A4%B4%E9%83%A8.jpeg" alt="tcp头部"></p>
 <p>在理解TCP三次握手的场景下，我们需要的信息有：</p>
 <ul>
 <li><p>ACK：此标志表示应答域有效，有两个取值：0和1，1表示有效，0表示无效；</p>
@@ -169,7 +166,7 @@
 <p>建立socket连接需要一对套接字，一种一个运行于客户端，称为ClientSocket，另一个运行于服务器端，称为ServerSocket。</p>
 <p>创建socket连接时，可以指定使用传输层协议，当使用TCP协议的时候，该socket连接就是一个TCP连接。</p>
 <p>TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认一个连接。</p>
-<h3 id="三次握手的过程："><a href="#三次握手的过程：" class="headerlink" title="三次握手的过程："></a>三次握手的过程：</h3><p>此处有图</p>
+<h3 id="三次握手的过程："><a href="#三次握手的过程：" class="headerlink" title="三次握手的过程："></a>三次握手的过程：</h3><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpeg" alt="三次握手"></p>
 <h4 id="第一次握手："><a href="#第一次握手：" class="headerlink" title="第一次握手："></a>第一次握手：</h4><p>建立连接。客户端发送请求报文段，讲SYN位置位1，Sequence Number为x，然后客户端进入SYN_SENT的状态，等待服务器确认；</p>
 <h4 id="第二次握手："><a href="#第二次握手：" class="headerlink" title="第二次握手："></a>第二次握手：</h4><p>服务器几首到SYN报文段，需要对这个SYN报文段进行确认，设置ACK Num为x+1，Sequence Num+1；同时，自己还要发送SYN请求星系，讲SYN位置为1，Sequence Number为y；服务器将上述所有信息放在一个报文段（即SYN+ACK报文段“，一并发送给客户端，此时服务器进入SYN_RECV状态；</p>
 <h4 id="第三次握手："><a href="#第三次握手：" class="headerlink" title="第三次握手："></a>第三次握手：</h4><p>客户端收到服务器的SYN+ACK报文段，然后将ACK Num设置为y+1,向服务器发送ACK报文段，发送完毕后，客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。</p>
@@ -208,6 +205,6 @@
 
 
 </div>
-    
+  
   </body>
 </html>

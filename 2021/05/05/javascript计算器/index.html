@@ -71,6 +71,7 @@
   </ul>
 </header>
 
+  
     <aside>
   <div class="menu">
     
@@ -96,21 +97,26 @@
 
 
     <div class="main"><div class="blog-post">
-  <!-- title -->
-  <h2 class="blog-post-title">
-    <a href="/2021/05/05/javascript计算器/">
-      Javascript计算器
-    </a>
-  </h2>
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%E7%9B%AE%E7%9A%84"><span class="toc-text">练习目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">实现方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8html%E5%92%8Ccss%E6%90%AD%E5%BB%BA%E5%A5%BD%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="toc-text">用html和css搭建好计算器的框架</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">计算器的组成部分</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E9%83%A8%E5%88%86"><span class="toc-text">功能部分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E6%8C%89%E9%94%AE"><span class="toc-text">监听按键</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E5%AE%9A%E5%B9%B6%E5%8C%BA%E5%88%86%E6%98%BE%E7%A4%BA%E9%83%A8%E5%88%86"><span class="toc-text">选定并区分显示部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E8%AE%A1%E7%AE%97%E5%99%A8class%E5%AF%B9%E8%B1%A1"><span class="toc-text">构建计算器class对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A9%E6%88%91%E4%BB%AC%E7%BC%96%E5%86%99%E7%9A%84%E8%AE%A1%E7%AE%97%E5%99%A8%E7%BB%A7%E6%89%BF%E8%BF%99%E4%B8%AAclass%E5%8E%9F%E5%9E%8B"><span class="toc-text">让我们编写的计算器继承这个class原型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%AE%A1%E7%AE%97%E5%99%A8%E8%A6%81%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-text">判断计算器要实现的功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-text">项目地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
 
-  <!-- date and author -->
-  <p class="blog-post-meta">
-    2021-05-05 
-  </p>
-
-  <!-- content -->
-  <div class="post-content">
-    <h2 id="练习目的"><a href="#练习目的" class="headerlink" title="练习目的"></a>练习目的</h2><p>用Vanilla JS来构建一个可以实现简单计算功能的计算器。</p>
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/05/05/javascript计算器/">
+        Javascript计算器
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-05-05 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="练习目的"><a href="#练习目的" class="headerlink" title="练习目的"></a>练习目的</h2><p>用Vanilla JS来构建一个可以实现简单计算功能的计算器。</p>
 <h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="用html和css搭建好计算器的框架"><a href="#用html和css搭建好计算器的框架" class="headerlink" title="用html和css搭建好计算器的框架"></a>用html和css搭建好计算器的框架</h3><h4 id="计算器的组成部分"><a href="#计算器的组成部分" class="headerlink" title="计算器的组成部分"></a>计算器的组成部分</h4><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210821163958.png" alt="计算器展示图"></p>
 <ul>
 <li>可以把计算器分成两个部分，一个是显示部分（display），一个是计算机的按键（calculator）<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>calculator-container<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -181,28 +187,29 @@ equalsButton<span class="token punctuation">.</span><span class="token function"
 <p>确认了计算器要实现的功能就可以在class原型中编写这些功能。</p>
 <h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/">https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/</a></p>
 
-  </div>
-
-  <hr>
+    </div>
   
-  
-     <!-- categories -->
-  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
      
-  <span class="post-categories">
-    <i class='icon iconfont icon-icon-goodscategory'></i>
-    <a href="/categories/项目练习/">项目练习</a>
-  </span>
-  
-  
-     <!-- tag -->
-   
-  
-  <span class="post-tags">
-    <i class="icon iconfont icon-tag"></i>
-    <a href="/tags/javascript/">javascript</a>
-  </span>
-  
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/javascript/">javascript</a>
+    </span>
+    
+  </div>
 </div>
 
 

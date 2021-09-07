@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/font_2719161_7iuw0tztuex.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Blog"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+  
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E7%9A%84"><span class="toc-text">项目目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%95%88%E6%9E%9C"><span class="toc-text">项目效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-text">实现过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-text">项目地址</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/09/07/pokemon-list/">
+        pokemon-list
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-09-07 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="项目目的"><a href="#项目目的" class="headerlink" title="项目目的"></a>项目目的</h2><p>这个项目是跟着John Smilga的React Course练习的，这个项目主要是练习useState。</p>
+<h2 id="项目效果"><a href="#项目效果" class="headerlink" title="项目效果"></a>项目效果</h2><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210907214026.png" alt="项目效果图"></p>
+<ul>
+<li>模块化在宝可梦清单添加宝可梦的信息</li>
+<li>宝可梦信息包括姓名、照片、属性</li>
+<li>宝可梦清单标题显示清单宝可梦数量</li>
+<li>宝可梦清单提供一键删除所有宝可梦的功能</li>
+</ul>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><p>按信息从下往上来梳理：</p>
+<ol>
+<li>Data.js 一个数据的数组，包含所有宝可梦的信息</li>
+<li>Card.js 模块化提取数组中宝可梦的信息</li>
+<li>App.js 遍历所有宝可梦信息，并按照固定格式呈现出来</li>
+</ol>
+<p>因为React的模块化是通过dripple来实现的，所以在代码编写的时候，除了信息源Data.js之外，其他代码的编写顺序和上述清单相反。</p>
+<ul>
+<li><p>Data.js<br>在数组清单的编写中需要注意的是除了每一只宝可梦的基本信息，还需要给每一只宝可梦加上id：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">//添加id</span>
+  img<span class="token punctuation">:</span> <span class="token string">'https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png'</span><span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span> <span class="token string">'Pikachu'</span><span class="token punctuation">,</span>
+  type<span class="token punctuation">:</span> <span class="token string">'Electric'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这个id是将数组信息向上传递的关键，是key，相当于每一个宝可梦的身份证，详情可以看<a target="_blank" rel="noopener" href="https://reactjs.org/docs/lists-and-keys.html">官方文档</a></p>
+</li>
+<li><p>App.js<br>在这个部分我们需要获取Data.js里所有宝可梦信息，并且把这些信息分类处理：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Data <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./data'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> App <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span>Data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">return</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>section className<span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>h3 className<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">></span>You have <span class="token punctuation">{</span>value<span class="token punctuation">.</span>length<span class="token punctuation">}</span> <span class="token function">Pokemon</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> at hand<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+    <span class="token operator">&lt;</span>article<span class="token operator">></span>
+      <span class="token punctuation">{</span>value<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>card<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>Card key<span class="token operator">=</span><span class="token punctuation">{</span>card<span class="token punctuation">.</span>id<span class="token punctuation">}</span> card<span class="token operator">=</span><span class="token punctuation">{</span>card<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Card<span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>article<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>因为这个页面还要实现点击按钮，清除所有宝可梦信息，涉及到状态的改变，所有这里我们使用了React hook中的<code>useState()</code>；<br>页面加载的初始状态是呈现出Data.js中数组的所有信息，所以我们可以设置初始状态<code>value</code>为引入的<code>Data</code>，并使用<code>map()</code>的方法遍历。在这一步我们需要提取出每一个<code>card</code>的id，和单个对象，并把这些信息传递给<code>Card</code>方便之后进一步分解使用。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">"button"</span> className<span class="token operator">=</span><span class="token string">"btn"</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+      All Back to Pokeball
+    <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>点击按钮后清单晴空，所以我们把<code>setValue</code>的值设定为空数组<code>[]</code>;</p>
+</li>
+<li><p>Card.js<br>在这个部分我们要接收App.js传导过来的property，并分解：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> Card <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span>props<span class="token punctuation">.</span>card<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> img<span class="token punctuation">,</span> name<span class="token punctuation">,</span> type <span class="token punctuation">}</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+
+<span class="token keyword">return</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>article className<span class="token operator">=</span><span class="token string">"cards"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token punctuation">{</span>img<span class="token punctuation">}</span> alt<span class="token operator">=</span><span class="token string">""</span> className<span class="token operator">=</span><span class="token string">"img"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>img<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"info"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>h3 className<span class="token operator">=</span><span class="token string">"name"</span><span class="token operator">></span>Name<span class="token punctuation">:</span> <span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">></span>
+      <span class="token operator">&lt;</span>h5 className<span class="token operator">=</span><span class="token string">"type"</span><span class="token operator">></span>Type<span class="token punctuation">:</span> <span class="token punctuation">{</span>type<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h5<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>article<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样加上样式就完成了一个简单的宝可梦清单。</p>
+</li>
+</ul>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/PapayaHUANG/pokemon-list">https://github.com/PapayaHUANG/pokemon-list</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

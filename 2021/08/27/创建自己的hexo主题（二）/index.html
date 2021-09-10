@@ -98,7 +98,7 @@
 
     <div class="main"><div class="blog-post">
   
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2"><span class="toc-text">特殊页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E9%A1%B5%EF%BC%88archive%EF%BC%89"><span class="toc-text">归档页（archive）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E8%AF%A6%E7%BB%86%E5%B8%83%E5%B1%80%EF%BC%88article-archive%EF%BC%89"><span class="toc-text">归档详细布局（article-archive）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E9%A1%B5%EF%BC%88pagination%EF%BC%89"><span class="toc-text">翻页（pagination）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%B8%83%E5%B1%80"><span class="toc-text">文章布局</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">主题配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%B8%B8%E7%94%A8%E5%8F%98%E9%87%8F"><span class="toc-text">Hexo常用变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2%E5%A4%84%E7%90%86"><span class="toc-text">特殊页面处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E9%A1%B5%EF%BC%88archive%EF%BC%89"><span class="toc-text">归档页（archive）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E8%AF%A6%E7%BB%86%E5%B8%83%E5%B1%80%EF%BC%88article-archive%EF%BC%89"><span class="toc-text">归档详细布局（article-archive）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E9%A1%B5%EF%BC%88pagination%EF%BC%89"><span class="toc-text">翻页（pagination）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%B8%83%E5%B1%80"><span class="toc-text">文章布局</span></a></li></ol></li></ol>
   <div class='blog-main'>
 
     <!-- title -->
@@ -117,31 +117,25 @@
     <!-- content -->
     <div class="post-content">
       <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>在上一篇博文里介绍了如何把一个主题的布局框架和页面框架搭建出来，这篇笔记里会介绍我是如何处理每个页面的细节。</p>
-<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ul>
-<li>上篇博文提到过hexo的工作原理是会提取config.yml文件中的变量，动态渲染出最后的静态页面，所以在搭建页面细节时，我们可以利用config.yml中的变脸，来更高效地搭建结构相同的页面细节：</li>
-<li>在我们的sidebar中，菜单栏的布局是一样，只是链接名称和对应路径不一样，这里就可以用到config：</li>
-<li>首先在/theme/_config.yml添加如下文：<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">nav</span><span class="token punctuation">:</span>
-<span class="token key atrule">Home</span><span class="token punctuation">:</span> /
-<span class="token key atrule">About</span><span class="token punctuation">:</span> /about
-<span class="token key atrule">Categories</span><span class="token punctuation">:</span> /categories
-<span class="token key atrule">Archives</span><span class="token punctuation">:</span> /archives
+<h2 id="主题配置文件"><a href="#主题配置文件" class="headerlink" title="主题配置文件"></a>主题配置文件</h2><p>上篇博文提到过hexo的工作原理是会提取config.yml文件中的变量，动态渲染出最后的静态页面，所以在搭建页面细节时，可以利用config.yml中的变量，来更高效地搭建结构相同的页面细节：</p>
+<p>在sidebar中，菜单栏的布局是一样，只是链接名称和对应路径不一样，这里就可以用到config：<br>首先在/theme/_config.yml添加如下文：</p>
+<pre class="line-numbers language-yaml"><code class="language-yaml">  <span class="token key atrule">nav</span><span class="token punctuation">:</span>
+    <span class="token key atrule">Home</span><span class="token punctuation">:</span> /
+    <span class="token key atrule">About</span><span class="token punctuation">:</span> /about
+    <span class="token key atrule">Categories</span><span class="token punctuation">:</span> /categories
+    <span class="token key atrule">Archives</span><span class="token punctuation">:</span> /archives
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li>然后在sidebar.ejs文件中引用nav变量，并枚举nav变量中的对象：</li>
-</ul>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">for</span> <span class="token attr-name">(var</span> <span class="token attr-name">i</span> <span class="token attr-name">in</span> <span class="token attr-name">theme.nav)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu-item<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(theme.nav[i]) %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&lt;%= i %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>
-
- <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
-  
+<p>然后在sidebar.ejs文件中引用nav变量，并枚举<code>nav</code>变量中的对象：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">for</span> <span class="token attr-name">(var</span> <span class="token attr-name">i</span> <span class="token attr-name">in</span> <span class="token attr-name">theme.nav)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu-item<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(theme.nav[i]) %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        &lt;%= i %>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>变量参数表可以看 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/variables">hexo官方文档变量</a></p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li>hexo自带的变量在主题的模块化起到了非常关键的作用，这里我想列举一下我在这个主题的搭建中比较常用的几个变量：</li>
-</ul>
+<h2 id="Hexo常用变量"><a href="#Hexo常用变量" class="headerlink" title="Hexo常用变量"></a>Hexo常用变量</h2><p>hexo自带的变量在主题的模块化起到了非常关键的作用，这里我想列举一下我在这个主题的搭建中比较常用的几个变量：</p>
 <table>
 <thead>
 <tr>
@@ -196,8 +190,8 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="特殊页面"><a href="#特殊页面" class="headerlink" title="特殊页面"></a>特殊页面</h2><h3 id="归档页（archive）"><a href="#归档页（archive）" class="headerlink" title="归档页（archive）"></a>归档页（archive）</h3><ul>
-<li>hexo默认首页是index页面，并且index是用来放博客文章的。这里的默认在内置的变量上是有相关设计的，如针对index有一些page相关的变量，方便博客文章逐条分页呈现，但是这些page相关的变量只在页面为index时生效；</li>
+<h2 id="特殊页面处理"><a href="#特殊页面处理" class="headerlink" title="特殊页面处理"></a>特殊页面处理</h2><h3 id="归档页（archive）"><a href="#归档页（archive）" class="headerlink" title="归档页（archive）"></a>归档页（archive）</h3><p>hexo默认首页是index页面，并且index是用来放博客文章的。这里的默认在内置的变量上是有相关设计的，如针对index有一些page相关的变量，方便博客文章逐条分页呈现，但是这些page相关的变量只在页面为index时生效；</p>
+<ul>
 <li>这样就给我的网站搭建造成了问题，因为我需要把博文放在非index页面。但是好在有另外一个index的页面——archive，所以我把博文都放在archive.ejs这个页面：</li>
 </ul>
 <pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>

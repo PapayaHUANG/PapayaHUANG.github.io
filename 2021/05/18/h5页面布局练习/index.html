@@ -98,14 +98,13 @@
 
     <div class="main"><div class="blog-post">
   
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8HTML%E6%96%B9%E9%9D%A2%EF%BC%9A"><span class="toc-text">在HTML方面：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96"><span class="toc-text">结构优化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">标题。
-</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0%EF%BC%9A"><span class="toc-text">参考文章：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%93%BE%E6%8E%A5%EF%BC%9A"><span class="toc-text">项目链接：</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E4%BC%98%E5%8C%96"><span class="toc-text">HTML优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%8C%96"><span class="toc-text">语义化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section%E5%92%8Cdiv%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">section和div的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">参考文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%93%BE%E6%8E%A5"><span class="toc-text">项目链接</span></a></li></ol>
   <div class='blog-main'>
 
     <!-- title -->
     <h2 class="blog-post-title">
       <a href="/2021/05/18/h5页面布局练习/">
-        HTML5页面布局练习
+        项目练习 —— HTML5页面布局练习
       </a>
     </h2>
   
@@ -117,26 +116,26 @@
   
     <!-- content -->
     <div class="post-content">
-      <p> 针对《Head First》有关H5标记的章节，我做了相关的页面布局项目，项目呈现如图：<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E7%BB%83%E4%B9%A0.png" alt="页面布局展示"></p>
-<h2 id="在HTML方面："><a href="#在HTML方面：" class="headerlink" title="在HTML方面："></a>在HTML方面：</h2><h3 id="结构优化"><a href="#结构优化" class="headerlink" title="结构优化"></a>结构优化</h3><ul>
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 针对《Head First》有关H5标记的章节，我做了相关的页面布局项目，项目呈现如图：<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E7%BB%83%E4%B9%A0.png" alt="页面布局展示"></p>
+<h2 id="HTML优化"><a href="#HTML优化" class="headerlink" title="HTML优化"></a>HTML优化</h2><h3 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h3><ul>
 <li><p>我把页面分化成了header/main/footer三个部分。</p>
 </li>
-<li><p>其中header包含了<nav>菜单栏，main包含了两个<section>，一个section是视频，一个section是产品图，footer部分写了我的签名。</p>
+<li><p>其中<code>&lt;header&gt;</code>包含了<code>&lt;nav&gt;</code>菜单栏，main包含了两个<code>&lt;section&gt;</code>，一个<code>&lt;section&gt;</code>是视频，一个<code>&lt;section&gt;</code>是产品图，<code>&lt;footer&gt;</code>部分写了我的签名。</p>
 </li>
 </ul>
-<p><strong>这里主要想记录一下<section>和<div>的区别：</strong></p>
-<ul>
+<p>这里主要想记录一下<code>&lt;section&gt;</code>和<code>&lt;div&gt;</code>的区别。</p>
+<h2 id="section和div的区别"><a href="#section和div的区别" class="headerlink" title="section和div的区别"></a>section和div的区别</h2><ul>
 <li><p>div没有任何的语义，常用作布局及样式化的标签；</p>
 </li>
 <li><p>section与div相似，但是他有进一步语义，表示section内部的内容是为一组，表示同一个主题的，可以是章节、或者一篇论文的不同部分，这里我把视频和文本框放在一个section，产品信息放在一个section，因为他们表示同一个主题。</p>
 </li>
-<li><p>由此还可以衍生出<article>这个标签，article的语义更强,表示一篇独立的文章，并且必须包含一个<h1>标题。</p>
+<li><p>由此还可以衍生出<code>&lt;article&gt;</code>这个标签，<code>&lt;article&gt;</code>的语义更强,表示一篇独立的文章，并且必须包含一个<code>&lt;h1&gt;</code>标题。</p>
 </li>
-<li><p>具体的例子可以是论坛的帖子、报纸文章、博客文章等。</p>
+<li><p><code>&lt;article&gt;</code>应用的例子可以是论坛的帖子、报纸文章、博客文章等。</p>
 </li>
 </ul>
-<h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2><p><a target="_blank" rel="noopener" href="https://medium.com/design-code-repository/html-elements-section-vs-div-vs-article-a8c34e6548cf">https://medium.com/design-code-repository/html-elements-section-vs-div-vs-article-a8c34e6548cf</a></p>
-<h2 id="项目链接："><a href="#项目链接：" class="headerlink" title="项目链接："></a>项目链接：</h2><p><a target="_blank" rel="noopener" href="https://codepen.io/papayahuang/pen/rNeZLKp">https://codepen.io/papayahuang/pen/rNeZLKp</a></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://medium.com/design-code-repository/html-elements-section-vs-div-vs-article-a8c34e6548cf">HTML Elements - medium - nana Jeon</a></p>
+<h2 id="项目链接"><a href="#项目链接" class="headerlink" title="项目链接"></a>项目链接</h2><p><a target="_blank" rel="noopener" href="https://codepen.io/papayahuang/pen/rNeZLKp">https://codepen.io/papayahuang/pen/rNeZLKp</a></p>
 
     </div>
   

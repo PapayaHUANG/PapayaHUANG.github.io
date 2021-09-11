@@ -98,32 +98,29 @@
 
     <div class="main"><div class="blog-post">
   
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%EF%BC%88CADSCADING%EF%BC%89%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">理解“层叠”（CADSCADING）的意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">“层叠”是怎么工作的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%E7%9A%84%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%9F"><span class="toc-text">“层叠”的排序规则是什么样的？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%9D%A5%E6%BA%90%E5%8F%8A%E9%87%8D%E8%A6%81%E6%80%A7%EF%BC%88%E6%8C%87%E6%98%AF%E5%90%A6%E6%9C%89-important%E5%A3%B0%E6%98%8E%EF%BC%89"><span class="toc-text">样式的来源及重要性（指是否有!important声明）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%A5%E6%BA%90%E5%92%8C-important%E6%B7%B7%E5%90%88%E5%90%8E%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7%E4%BB%8E%E9%AB%98%E5%88%B0%E4%BD%8E%E6%8E%92%E5%BA%8F%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">来源和!important混合后的重要性从高到低排序如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E7%89%B9%E5%AE%9A%E6%80%A7"><span class="toc-text">选择器的特定性</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%EF%BC%88CADSCADING%EF%BC%89%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">理解“层叠”（CADSCADING）的意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">“层叠”是怎么工作的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%E7%9A%84%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%9F"><span class="toc-text">“层叠”的排序规则是什么样的？</span></a></li></ol>
   <div class='blog-main'>
 
     <!-- title -->
     <h2 class="blog-post-title">
-      <a href="/2020/04/24/理解叠层/">
+      <a href="/2021/04/24/理解叠层/">
         理解“层叠”（cascading)
       </a>
     </h2>
   
     <!-- date and author -->
     <p class="blog-post-meta">
-      2020-04-24 
+      2021-04-24 
     </p>
   
   
     <!-- content -->
     <div class="post-content">
-      <h3 id="理解“层叠”（CADSCADING）的意义"><a href="#理解“层叠”（CADSCADING）的意义" class="headerlink" title="理解“层叠”（CADSCADING）的意义"></a>理解“层叠”（CADSCADING）的意义</h3><p>理解层叠是如何工作的，可以帮助我们写出更容易维护的代码，也是debug的一个基础知识。</p>
-<span id="more"></span>
-
-
-<h3 id="“层叠”是怎么工作的？"><a href="#“层叠”是怎么工作的？" class="headerlink" title="“层叠”是怎么工作的？"></a>“层叠”是怎么工作的？</h3><p>在给定的一组样式表中，浏览器以层叠的方式来确定具体使用哪一种样式。</p>
+      <h2 id="理解“层叠”（CADSCADING）的意义"><a href="#理解“层叠”（CADSCADING）的意义" class="headerlink" title="理解“层叠”（CADSCADING）的意义"></a>理解“层叠”（CADSCADING）的意义</h2><p>理解层叠是如何工作的，可以帮助我们写出更容易维护的代码，也是debug的一个基础知识。</p>
+<h2 id="“层叠”是怎么工作的？"><a href="#“层叠”是怎么工作的？" class="headerlink" title="“层叠”是怎么工作的？"></a>“层叠”是怎么工作的？</h2><p>在给定的一组样式表中，浏览器以层叠的方式来确定具体使用哪一种样式。</p>
 <p>那么“层叠”的方式具体是怎么工作的呢，其实可以把“层叠”看作一个对不同CSS声明的优先级的算法，对不同的CSS声明，“层叠”有一套加权逻辑来对CSS声明进行排序，最终通过确定不同CSS声明的重要性来决定浏览器样式的呈现。</p>
-<h3 id="“层叠”的排序规则是什么样的？"><a href="#“层叠”的排序规则是什么样的？" class="headerlink" title="“层叠”的排序规则是什么样的？"></a>“层叠”的排序规则是什么样的？</h3><ul>
-<li><p>样式的来源及重要性（指是否有!important声明）</p>
+<h2 id="“层叠”的排序规则是什么样的？"><a href="#“层叠”的排序规则是什么样的？" class="headerlink" title="“层叠”的排序规则是什么样的？"></a>“层叠”的排序规则是什么样的？</h2><ul>
+<li><p>样式的来源及重要性（指是否有<code>!important</code>声明）</p>
 </li>
 <li><p>选择器的特定性（specificity）</p>
 </li>
@@ -134,8 +131,14 @@
 </ul>
 <p>以上分类的重要程度由上到下，逐渐变小。</p>
 <p><em>其中需要更细化说明的有</em>：</p>
-<h4 id="样式的来源及重要性（指是否有-important声明）"><a href="#样式的来源及重要性（指是否有-important声明）" class="headerlink" title="样式的来源及重要性（指是否有!important声明）"></a>样式的来源及重要性（指是否有!important声明）</h4><p>样式的来源指的是声明来自浏览器（user-agent）、编写代码的程序员(author)还是用户(user)。</p>
-<h4 id="来源和-important混合后的重要性从高到低排序如下："><a href="#来源和-important混合后的重要性从高到低排序如下：" class="headerlink" title="来源和!important混合后的重要性从高到低排序如下："></a>来源和!important混合后的重要性从高到低排序如下：</h4><ol>
+<ul>
+<li>样式的来源及重要性（指是否有!important声明）</li>
+</ul>
+<p>样式的来源指的是声明来自浏览器（user-agent）、编写代码的程序员(author)还是用户(user)。</p>
+<ul>
+<li>来源和!important混合后的重要性从高到低排序如下：</li>
+</ul>
+<ol>
 <li>user-agent and !important</li>
 <li>user and !important</li>
 <li>author and !important</li>
@@ -144,7 +147,10 @@
 <li>user</li>
 <li>user-agent</li>
 </ol>
-<h4 id="选择器的特定性"><a href="#选择器的特定性" class="headerlink" title="选择器的特定性"></a>选择器的特定性</h4><ol>
+<ul>
+<li>选择器的特定性</li>
+</ul>
+<ol>
 <li>重要性从高到低排列如下</li>
 <li>内联样式</li>
 <li>ID选择器</li>

@@ -98,7 +98,7 @@
 
     <div class="main"><div class="blog-post">
   
-  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E6%98%AF%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-text">首先是语法结构：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%80%E4%BB%A5%E6%9B%B4%E7%9C%81%E4%BA%8B%E7%9A%84%E6%96%B9%E5%BC%8F%E5%BA%94%E8%AF%A5%E6%98%AF%E6%A0%B9%E6%8D%AE%E5%86%85%E5%AE%B9%E7%9A%84%E4%B8%8D%E5%90%8C%E6%9D%A5%E8%AE%BE%E5%AE%9Abreakpoint"><span class="toc-text">所以更省事的方式应该是根据内容的不同来设定breakpoint</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%95%E6%97%B6%E7%94%A8min%E5%80%BC%EF%BC%8C%E4%BD%95%E6%97%B6%E7%94%A8max%E5%80%BC%EF%BC%9F"><span class="toc-text">何时用min值，何时用max值？</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-text">语法结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E5%AE%9Abreakpoint"><span class="toc-text">设定breakpoint</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#min%E5%80%BC-max%E5%80%BC%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">min值&#x2F;max值的定义</span></a></li></ol></li></ol>
   <div class='blog-main'>
 
     <!-- title -->
@@ -116,26 +116,28 @@
   
     <!-- content -->
     <div class="post-content">
-      <p>《Head First》引入@media的讲解是针对网站需要不同的样式表这个案例。</p>
-<span id="more"></span>
-
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>《Head First》引入@media的讲解是针对网站需要不同的样式表这个案例。</p>
 <p>读完之后我对两个信息点比较感兴趣：</p>
 <ol>
-<li><p>在语法结构方面，@media除了有screen和print媒体形式还有没有其他的媒体形式？</p>
+<li><p>在语法结构方面，<code>@media</code>除了有<code>screen</code>和<code>print</code>媒体形式还有没有其他的媒体形式？</p>
 </li>
-<li><p>针对不同设备（如电脑、平板、手机）的显示，有没有特定的@media设定值的模板？</p>
+<li><p>针对不同设备（如电脑、平板、手机）的显示，有没有特定的<code>@media</code>设定值的模板？</p>
 </li>
 </ol>
 <p>针对这两个点，我google了一些资料，现汇总一下：</p>
-<h4 id="首先是语法结构："><a href="#首先是语法结构：" class="headerlink" title="首先是语法结构："></a>首先是语法结构：</h4><pre><code>@media media type and (condition: breakpoint)&#123;
+<h2 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h2><pre class="line-numbers language-css"><code class="language-css">  <span class="token atrule"><span class="token rule">@media</span> media type and <span class="token punctuation">(</span><span class="token property">condition</span><span class="token punctuation">:</span> breakpoint<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
 
-           //CSS rules
+      //CSS rules
 
-    &#125;     
-</code></pre>
-<p>在语法结构中，media type除了screen表示不同屏幕，print表示打印格式之外，还有两个类型：<br>一个是all，表示所有媒体类型；<br>另一个是speech，表示需要把页面内容读出来。</p>
-<p>若不标明media type，则@media的默认为all。</p>
-<p>不同设备的显示应该选择什么具体的设定值，有没有模板，这个问题可以简化为——<br>“如何设定@media的breakpoint？”</p>
+    <span class="token punctuation">}</span>     
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在语法结构中，<code>media type</code>除了<code>screen</code>表示不同屏幕，<code>print</code>表示打印格式之外，还有两个类型：</p>
+<ul>
+<li>一个是<code>all</code>，表示所有媒体类型；</li>
+<li>另一个是<code>speech</code>，表示需要把页面内容读出来。</li>
+</ul>
+<p>若不标明<code>media type</code>，则<code>@media</code>的默认为<code>all</code>。</p>
+<h2 id="设定breakpoint"><a href="#设定breakpoint" class="headerlink" title="设定breakpoint"></a>设定breakpoint</h2><p>不同设备的显示应该选择什么具体的设定值，有没有模板，这个问题可以简化为——<br>“如何设定<code>@media</code>的breakpoint？”</p>
 <p>回答这个问题有两个思路：</p>
 <ol>
 <li><p>根据设备的不同来设定breakpoint；</p>
@@ -145,19 +147,20 @@
 </ol>
 <p>如果是根据设备来设定breakpoint，情况会变得非常复杂，仅一个iphone就已经有6、7、8、9、10、11、12，若要维护起来会非常困难。</p>
 <p>相关的设定参数，可以参加这个博客——<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS-Tricks</a></p>
-<h4 id="所以更省事的方式应该是根据内容的不同来设定breakpoint"><a href="#所以更省事的方式应该是根据内容的不同来设定breakpoint" class="headerlink" title="所以更省事的方式应该是根据内容的不同来设定breakpoint"></a>所以更省事的方式应该是根据内容的不同来设定breakpoint</h4><p>换句话说，就是设定width的min/max值，或者同时设定min和max值，来管理一个范围区间的设备。</p>
+<p>所以更省事的方式应该是根据内容的不同来设定breakpoint:</p>
+<p>换句话说，就是设定<code>width</code>的<code>min/max</code>值，或者同时设定min和max值，来管理一个范围区间的设备。</p>
 <p>如：</p>
-<pre><code>@media only screen and (min-width: 640px)&#123;
+<pre class="line-numbers language-css"><code class="language-css">  <span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
 
-&#125;
-</code></pre>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>或</p>
-<pre><code>@media only screen and(max-width: 1024px) and (min-width: 640px)&#123;
+<pre class="line-numbers language-css"><code class="language-css">  <span class="token atrule"><span class="token rule">@media</span> only screen <span class="token function">and</span><span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1024px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span><span class="token punctuation">{</span>
 
-&#125;
-</code></pre>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>那么接下来的问题就是</p>
-<h4 id="何时用min值，何时用max值？"><a href="#何时用min值，何时用max值？" class="headerlink" title="何时用min值，何时用max值？"></a>何时用min值，何时用max值？</h4><p>如果主要的显示设备是手机，那么就可以从min-width开始，根据实际情况，逐渐增大；</p>
+<h3 id="min值-max值的定义"><a href="#min值-max值的定义" class="headerlink" title="min值/max值的定义"></a>min值/max值的定义</h3><p>如果主要的显示设备是手机，那么就可以从min-width开始，根据实际情况，逐渐增大；</p>
 <p>如果这要的显示这杯是大屏幕，那么就可以从max-width开始，根据实际情况，逐渐缩小。</p>
 <p>但具体用什么值的问题还没有回答，好在一些CSS框架给了回答<br>如 bootstrap就有对breakpoint的设定——<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">bootstrap</a>。</p>
 

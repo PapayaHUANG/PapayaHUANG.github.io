@@ -155,9 +155,10 @@ aside {
   align-items: center;
   box-shadow: rgba(0,0,0,0.15) 1.95px 1.95px 2.6px;
   border-radius: 5px;
+  background-color: rgba(128,128,128,0.5);
 }
 .about-img {
-  filter: grayscale(90%);
+  filter: grayscale(50%);
   z-index: 0;
   width: 100%;
   height: 100%;
@@ -188,10 +189,6 @@ aside {
 .about-container:hover .about-img {
   animation: imgChange 1s ease-in-out forwards;
 }
-.about-container:hover .pic-title {
-  animation: titleUpwards 2s ease-out forwards;
-  text-decoration: underline;
-}
 .about-container:hover .description-text {
   animation: descriptionShowUp 1s ease-in-out forwards;
   text-align: left;
@@ -207,82 +204,50 @@ aside {
 }
 @-moz-keyframes imgChange {
   0% {
-    filter: grayscale(90%);
+    opacity: 1;
     width: 100%;
     height: 100%;
   }
   100% {
-    filter: grayscale(0%);
+    opacity: 0;
     width: 130%;
     height: 130%;
   }
 }
 @-webkit-keyframes imgChange {
   0% {
-    filter: grayscale(90%);
+    opacity: 1;
     width: 100%;
     height: 100%;
   }
   100% {
-    filter: grayscale(0%);
+    opacity: 0;
     width: 130%;
     height: 130%;
   }
 }
 @-o-keyframes imgChange {
   0% {
-    filter: grayscale(90%);
+    opacity: 1;
     width: 100%;
     height: 100%;
   }
   100% {
-    filter: grayscale(0%);
+    opacity: 0;
     width: 130%;
     height: 130%;
   }
 }
 @keyframes imgChange {
   0% {
-    filter: grayscale(90%);
+    opacity: 1;
     width: 100%;
     height: 100%;
   }
   100% {
-    filter: grayscale(0%);
+    opacity: 0;
     width: 130%;
     height: 130%;
-  }
-}
-@-moz-keyframes titleUpwards {
-  0% {
-    bottom: 0;
-  }
-  100% {
-    top: 0;
-  }
-}
-@-webkit-keyframes titleUpwards {
-  0% {
-    bottom: 0;
-  }
-  100% {
-    top: 0;
-  }
-}
-@-o-keyframes titleUpwards {
-  0% {
-    bottom: 0;
-  }
-  100% {
-    top: 0;
-  }
-}
-@keyframes titleUpwards {
-  0% {
-    bottom: 0;
-  }
-  100% {
-    top: 0;
   }
 }
 @-moz-keyframes descriptionShowUp {
@@ -634,7 +599,7 @@ body {
     height: 60%;
   }
   body {
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
 }
 @-moz-keyframes showMain {

@@ -131,8 +131,7 @@ aside {
   text-align: center;
 }
 #about-hashtag {
-  font-size: 1.5em;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .about-title {
   text-align: left;
@@ -351,9 +350,8 @@ aside {
   font-style: italic;
 }
 .paper {
-  width: 100%;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
 .paper li {
   padding: 20px 10px 10% 0;
@@ -363,18 +361,20 @@ hr {
   margin-top: 3.5em;
 }
 .archive-page {
-  margin-top: 5%;
   height: 100vh;
-  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.archive-block {
+  padding-left: 10%;
 }
 .archive-title {
-  font-size: 1.5em;
   margin-top: 100px;
 }
 .archive-post {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 .toc {
   background-color: #fff;
@@ -551,13 +551,12 @@ p {
 }
 .category-page {
   height: 100vh;
-  padding-left: 100px;
+  padding-left: 10%;
   display: flex;
   flex-direction: column;
 }
 .category-tile {
-  margin-top: 250px;
-  font-size: 1.5em;
+  margin-top: 100px;
 }
 .categories-cloud {
   display: flex;
@@ -589,7 +588,7 @@ body {
   }
   .all-container,
   .blog-post,
-  article {
+  .main {
     width: calc(100vw - 400px);
   }
 }
@@ -597,10 +596,18 @@ body {
   aside {
     display: none;
   }
+  .about-container {
+    width: 40%;
+    height: 30%;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   aside {
     display: none;
+  }
+  .about-container {
+    width: 40%;
+    height: 30%;
   }
 }
 @media screen and (max-width: 479px) {
@@ -618,6 +625,16 @@ body {
   }
   .toc {
     display: none;
+  }
+  .all-container {
+    height: auto;
+  }
+  .about-container {
+    width: 60%;
+    height: 60%;
+  }
+  body {
+    font-size: 0.5em;
   }
 }
 @-moz-keyframes showMain {

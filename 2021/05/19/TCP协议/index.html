@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E4%BC%A0%E8%BE%93%E5%88%86%E5%B1%82"><span class="toc-text">互联网传输分层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="toc-text">四层协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">数据包的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-text">传输层的功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP%E5%8D%8F%E8%AE%AE"><span class="toc-text">UDP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ACK%EF%BC%88acknowledgement%EF%BC%89"><span class="toc-text">ACK（acknowledgement）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5"><span class="toc-text">资料链接</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/05/19/TCP协议/">
+        TCP协议
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-05-19 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>还是在牛客网看前端面试的题库，以及面经多次提到“一句话概括TCP三次握手”，所以我查找了TCP的资料，找到了阮一峰老师TCP协议简介的博客。所以我尝试复述一下我对TCP的理解。</p>
+<p>要理解TCP协议首先要理解他在互联网协议系统里的位置，</p>
+<h2 id="互联网传输分层"><a href="#互联网传输分层" class="headerlink" title="互联网传输分层"></a>互联网传输分层</h2><p>互联网的实现是需要分层的，每一层都靠下一层来支持。</p>
+<ul>
+<li><p>应用层（Application Layer)</p>
+</li>
+<li><p>传输层 (Transport Layer）</p>
+</li>
+<li><p>网络层 (Network Layer)</p>
+</li>
+<li><p>链接层(Link Layer)</p>
+</li>
+<li><p>实体层(Physical Layer)</p>
+</li>
+</ul>
+<p>除开实体层的电气连接，每一层都有各自的功能，为了实现这些功能就需要共同的规定，这个规定就叫<strong>Protocol协议</strong>。</p>
+<p>于是与之对应的就有</p>
+<h2 id="四层协议"><a href="#四层协议" class="headerlink" title="四层协议"></a>四层协议</h2><ul>
+<li><p>Application</p>
+</li>
+<li><p>TCP</p>
+</li>
+<li><p>IP</p>
+</li>
+<li><p>Ethernet(以太网协议）</p>
+</li>
+</ul>
+<p>所以TCP是服务与传输层的协议。</p>
+<p>互联网通过五层模型把不同地区的电脑连接在一起，实现数据的传输。</p>
+<p>数据从二进制的0101到用户在用户端看到的可以理解的内容，是通过上诉四层协议的打包实现的。</p>
+<p>在研究具体某一层协议之前，我们应该先搞清楚数据包的结构是什么样的。</p>
+<h2 id="数据包的结构"><a href="#数据包的结构" class="headerlink" title="数据包的结构"></a>数据包的结构</h2><p>一个数据包叫做“帧”（Frame），每一帧分成两个部分：<em>标头（Head）</em>和<em>数据（Data）</em>。</p>
+<p><strong>“标头”</strong>包含数据包的说明项，如发送者、接受者、数据类型等等。</p>
+<p><strong>“数据”</strong>则是数据包的具体内容。</p>
+<p>协议从下往上，数据包是<strong>包含关系</strong>，即以太网协议数据包包含了IP协议数据包包含了TCP协议数据包包含了应用协议数据包。</p>
+<p>以太网数据包的大小是固定的，为1522字节，其中1500是负载（payload），22是标头。</p>
+<p><em>根据各层数据包大小的规定，可以得出HTTP2协议速度比HTTP快的一个原因。压缩了HTTP协议的头信息，使得一个HTTP请求可以放在一个TCP数据包里</em>。</p>
+<p>那么TCP数据包里包含了什么信息呢？</p>
+<p>回答这个问题就要回答传输层的功能。</p>
+<h2 id="传输层的功能"><a href="#传输层的功能" class="headerlink" title="传输层的功能"></a>传输层的功能</h2><p>底层的网络层解决了“主机到主机”的通信，而传输层是建立“端口到端口“的通信。</p>
+<p>这里又引入了一个新的概念——“端口”（port），它是每一个使用网卡的程序的编号，每一个数据包都发到主机的特定端口，不同的程序就能去到自己所需要的数据。</p>
+<p>只要确定了主机和端口，我们就能够实现程序之间的交流。</p>
+<p><strong>而TCP就是实现这一传输的协议</strong>。</p>
+<p>在理解TCP协议之前，需要先引入UDP协议。</p>
+<h3 id="UDP协议"><a href="#UDP协议" class="headerlink" title="UDP协议"></a>UDP协议</h3><p>UDP数据包的标头主要定义发出端口和接收端口，数据部分是具体的内容。他的优点是简单、容易实现，缺点是可靠性较差，一旦数据包发出，无法知道对方是否收到。</p>
+<p>为了提到可靠性，TCP应运而生。</p>
+<p>可以近似地认为TCP是由确认机制的UDP协议。但他的缺点是过程复杂、实现困难、消耗较多的资源。</p>
+<p>TCP协议为了做到效率与可靠性的统一，设计了一个<strong>慢启动（slow start）</strong>机制。</p>
+<p>默认情况下，接收方每收到两个TCP数据包，就要发送一个确认消息。</p>
+<h3 id="ACK（acknowledgement）"><a href="#ACK（acknowledgement）" class="headerlink" title="ACK（acknowledgement）"></a>ACK（acknowledgement）</h3><p>ACK携带两个信息：</p>
+<p>期待要收到下一个数据包的编码</p>
+<p>接收方的接受窗口的剩余容量</p>
+<p>发送方有了这两个信息，再加上自己已经发出的数据包的最新编号，就会推测出接收方大概的接收速度，从而降低或增加发送速率。这被称作 <strong>“发送窗口”</strong>。</p>
+<h2 id="资料链接"><a href="#资料链接" class="headerlink" title="资料链接"></a>资料链接</h2><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2017/06/tcp-protocol.html">TCP协议简介 - 阮一峰</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html">互联网协议入门（一） - 阮一峰</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/computer-science/">computer-science</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

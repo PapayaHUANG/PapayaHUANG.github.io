@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E9%A2%9C%E8%89%B2%E8%8B%B1%E6%96%87%E5%90%8D"><span class="toc-text">直接使用颜色英文名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E5%AE%9A-RGB-%E5%80%BC"><span class="toc-text">设定 RGB 值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8-16-%E8%BF%9B%E5%88%B6%E7%A0%81%E8%A1%A8%E7%A4%BA%E9%A2%9C%E8%89%B2"><span class="toc-text">用 16 进制码表示颜色</span></a></li></ol></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/04/22/css指定颜色三种方式之间的联系/">
+        CSS中三种指定颜色方式之间的联系
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-04-22 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里涉及到的 CSS 三种指定颜色的方式分别为：直接使用颜色英文名；设定 RGB 值；用十六进制码表示。</p>
+<p><strong>不论使用哪一种方式，都是告诉浏览器一个颜色中红、绿、蓝的分量分别是多少</strong>。</p>
+<h3 id="直接使用颜色英文名"><a href="#直接使用颜色英文名" class="headerlink" title="直接使用颜色英文名"></a>直接使用颜色英文名</h3><p>CSS 有 16 个基本颜色，和 150 个拓展颜色。</p>
+<p>16 个基本颜色如图<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/16%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%A2%9C%E8%89%B2.png" alt="16个基本颜色图"></p>
+<p>这些颜色名其实是预设了 RGB 的值</p>
+<h3 id="设定-RGB-值"><a href="#设定-RGB-值" class="headerlink" title="设定 RGB 值"></a>设定 RGB 值</h3><p>设定 RGB 值有两个方法：<br>一个使用 0-100%的<strong>百分比</strong>来设定；<br>一个使用 0-255 的<strong>数值</strong>来设定。</p>
+<p>举一个例子：<br>若想要 web 背景色为橙色，需要 80%的红色加上 40%的绿色。<br>其语法表达式可以写成：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">80%</span>, <span class="token number">40%</span>, <span class="token number">0%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>也可以写成</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">204</span>, <span class="token number">102</span>, <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="用-16-进制码表示颜色"><a href="#用-16-进制码表示颜色" class="headerlink" title="用 16 进制码表示颜色"></a>用 16 进制码表示颜色</h3><p>用 0-255 来分别设定 rgb 的值是用十进制数值来表示颜色，我们可以把它改写成 16 进制数，上文的橙色就可以表示为：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#cc6600</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><code>#CC6600</code>从左往右看，前两位是 R 的值，中间两位是 G 的值，最后两位是 B 的值。<br>CC 换算成 10 进制就是：<br>16<em>12+12=204<br>66 换算成 10 进制就是：<br>6</em>16+6=102<br>00 换算成 10 进制就是：<br>0*16+0=0</p>
+<p>这就与<code>rgb(204, 102, 0)</code>完全一致。</p>
+<p>当然<code>#CC6600</code>可以简写成<code>#C60</code>。</p>
+<p>综上 CSS 表示颜色的方式其实都是来指定红、绿、蓝三原色的值。直接使用颜色名是直接使用已经设定好的名字，rgb 和 16 进制表达法可以通过计算相互转化。</p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/读书笔记/">读书笔记</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

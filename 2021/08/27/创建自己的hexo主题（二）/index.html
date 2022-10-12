@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">主题配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%B8%B8%E7%94%A8%E5%8F%98%E9%87%8F"><span class="toc-text">Hexo常用变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2%E5%A4%84%E7%90%86"><span class="toc-text">特殊页面处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E9%A1%B5%EF%BC%88archive%EF%BC%89"><span class="toc-text">归档页（archive）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E6%A1%A3%E8%AF%A6%E7%BB%86%E5%B8%83%E5%B1%80%EF%BC%88article-archive%EF%BC%89"><span class="toc-text">归档详细布局（article-archive）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E9%A1%B5%EF%BC%88pagination%EF%BC%89"><span class="toc-text">翻页（pagination）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%B8%83%E5%B1%80"><span class="toc-text">文章布局</span></a></li></ol></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/08/27/创建自己的hexo主题（二）/">
+        创建自己的hexo主题（二）
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-08-27 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h2><p>在上一篇博文里介绍了如何把一个主题的布局框架和页面框架搭建出来，这篇笔记里会介绍我是如何处理每个页面的细节。</p>
+<h2 id="主题配置文件"><a href="#主题配置文件" class="headerlink" title="主题配置文件"></a>主题配置文件</h2><p>上篇博文提到过hexo的工作原理是会提取config.yml文件中的变量，动态渲染出最后的静态页面，所以在搭建页面细节时，可以利用config.yml中的变量，来更高效地搭建结构相同的页面细节：</p>
+<p>在sidebar中，菜单栏的布局是一样，只是链接名称和对应路径不一样，这里就可以用到config：<br>首先在/theme/_config.yml添加如下文：</p>
+<pre class="line-numbers language-yaml"><code class="language-yaml">  <span class="token key atrule">nav</span><span class="token punctuation">:</span>
+    <span class="token key atrule">Home</span><span class="token punctuation">:</span> /
+    <span class="token key atrule">About</span><span class="token punctuation">:</span> /about
+    <span class="token key atrule">Categories</span><span class="token punctuation">:</span> /categories
+    <span class="token key atrule">Archives</span><span class="token punctuation">:</span> /archives
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在sidebar.ejs文件中引用nav变量，并枚举<code>nav</code>变量中的对象：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">for</span> <span class="token attr-name">(var</span> <span class="token attr-name">i</span> <span class="token attr-name">in</span> <span class="token attr-name">theme.nav)</span> <span class="token attr-name">{</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu-item<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(theme.nav[i]) %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        &lt;%= i %>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>变量参数表可以看 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/variables">hexo官方文档变量</a></p>
+<h2 id="Hexo常用变量"><a href="#Hexo常用变量" class="headerlink" title="Hexo常用变量"></a>Hexo常用变量</h2><p>hexo自带的变量在主题的模块化起到了非常关键的作用，这里我想列举一下我在这个主题的搭建中比较常用的几个变量：</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>介绍</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>site</td>
+<td>全站信息</td>
+<td>object</td>
+</tr>
+<tr>
+<td>page</td>
+<td>当前页面信息</td>
+<td>object</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>主题内config文件内参数</td>
+<td>object</td>
+</tr>
+<tr>
+<td>config</td>
+<td>网站参数，主题外config文件</td>
+<td>object</td>
+</tr>
+<tr>
+<td>site.posts</td>
+<td>全站博文</td>
+<td>array of post objects</td>
+</tr>
+<tr>
+<td>site.categories</td>
+<td>全站分类</td>
+<td>array</td>
+</tr>
+<tr>
+<td>site.tags</td>
+<td>全站标签</td>
+<td>array</td>
+</tr>
+<tr>
+<td>page.prev</td>
+<td>上一个页面</td>
+<td></td>
+</tr>
+<tr>
+<td>page.next</td>
+<td>下一个页面</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="特殊页面处理"><a href="#特殊页面处理" class="headerlink" title="特殊页面处理"></a>特殊页面处理</h2><h3 id="归档页（archive）"><a href="#归档页（archive）" class="headerlink" title="归档页（archive）"></a>归档页（archive）</h3><p>hexo默认首页是index页面，并且index是用来放文章摘要的。这里的默认在内置的变量上是有相关设计的，如针对index有一些page相关的变量，方便博客文章逐条分页呈现，但是这些page相关的变量只在页面为index时生效；</p>
+<p>这样就给我的网站搭建造成了问题，因为我需要把博文列表放在非index页面。但是好在有另外一个默认呈现博文列表的页面——archive，所以在我的主题充分利用了archive.ejs这个页面：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-page<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>#Posts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">page.posts.each(function(item){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+          &lt;%- partial('_partial/article-archive', {item: item}) %>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">});</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+          &lt;%- partial('_partial/pagination') %>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意此处<code>&#123;item: item&#125;</code>，因为需要把item这个参数传递给article-archive这个模块使用，所以会出现。</p>
+<h3 id="归档详细布局（article-archive）"><a href="#归档详细布局（article-archive）" class="headerlink" title="归档详细布局（article-archive）"></a>归档详细布局（article-archive）</h3><p>我希望我归档页显示博文的标题和时间，并且点击标题可以看到完整文章，通过结合hexo变量实现：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token comment" spellcheck="true">&lt;!-- title --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-post-title-archive<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          &lt;a href = "<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">config.root</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">item.path</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>">
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">item.title</span> <span class="token attr-name">||</span> <span class="token attr-name">item.link</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+      <span class="token comment" spellcheck="true">&lt;!-- date --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>archive-post-meta<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          &lt;%= item.date.format(config.date_format) %>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="翻页（pagination）"><a href="#翻页（pagination）" class="headerlink" title="翻页（pagination）"></a>翻页（pagination）</h3><p>因为文章清单涉及到翻页，所以有必要设置每页显示的文章数和翻页按钮<br>每页显示文章数需要在主题外的config文件中设置：</p>
+<pre class="line-numbers language-yaml"><code class="language-yaml">  <span class="token comment" spellcheck="true"># Pagination</span>
+  <span class="token comment" spellcheck="true">## Set per_page to 0 to disable pagination</span>
+  <span class="token key atrule">per_page</span><span class="token punctuation">:</span> <span class="token number">5</span>
+  <span class="token key atrule">pagination_dir</span><span class="token punctuation">:</span> page
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而翻页按钮可以利用ejs的模块化来写专门的pagination.ejs</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>paper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if(page.prev){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- config.root %<span class="token punctuation">></span>&lt;%- page.prev_link %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>上一页
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span> 
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if(page.next){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- config.root %<span class="token punctuation">></span>&lt;%- page.next_link %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>下一页
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="文章布局"><a href="#文章布局" class="headerlink" title="文章布局"></a>文章布局</h3><p>每篇文章我希望可以显示标题、时间、文章详情、文章的标签和分类，这些也可以通过hexo变量来实现：<br>显示文章标题：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blog-post-title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- config.root %<span class="token punctuation">></span>&lt;%- item.path %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">item.title</span> <span class="token attr-name">||</span> <span class="token attr-name">item.link</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>显示文章时间：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blog-post-meta<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    &lt;%= item.date.format(config.date_format) %> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>显示全文：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post-content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">item.content</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>显示归档</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if(item.categories</span> <span class="token attr-name">&amp;&amp;</span> <span class="token attr-name">item.categories.length){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    &lt;% 
+      var cats = [];
+      item.categories.forEach(function(cat){
+        cats.push('<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span> + config.root + cat.path + <span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>' + cat.name + '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>');
+        });
+    %> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post-categories<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>icon iconfont icon-icon-goodscategory<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">cats.join(',</span> <span class="token attr-name">')</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>显示标签</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if(item.tags</span> <span class="token attr-name">&amp;&amp;</span> <span class="token attr-name">item.tags.length){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> 
+      <span class="token attr-name">var</span> <span class="token attr-name">tags</span><span class="token attr-value"><span class="token punctuation">=</span>[];</span>
+      <span class="token attr-name">item.tags.forEach(function(tag){</span> <span class="token attr-name">tags.push('&lt;a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span> + config.root + tag.path + <span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>' + tag.name + '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>'); 
+      });
+    %>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post-tags<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon iconfont icon-tag<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">tags.join('')</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意：因为tags和archives都可以回溯到archive页面，所以没有为标签和归档创建多余的页面。<a target="_blank" rel="noopener" href="https://hexo.io/docs/templates">hexo文档对应内容</a></p>
+<p>至此我们就处理完所有的页面框架和细节搭建，接下来就是样式的处理。</p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/html/">html,</a><a href="/tags/ejs/">ejs,</a><a href="/tags/stylus/">stylus,</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#z-index%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">z-index的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%90%86%E5%BA%94%E2%80%9D%E5%91%A2%EF%BC%9F"><span class="toc-text">为什么是“理应”呢？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%B1%82%E5%8F%A0%E7%AD%89%E7%BA%A7%EF%BC%88Default-stacking-order"><span class="toc-text">默认层叠等级（Default stacking order)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#z-index%E5%B1%82%E5%8F%A0%E7%AD%89%E7%BA%A7"><span class="toc-text">z-index层叠等级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%82%E5%8F%A0%E7%89%B9%E4%BE%8B"><span class="toc-text">层叠特例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E4%BE%8B%E6%9D%A1%E4%BB%B6"><span class="toc-text">特例条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">参考文章</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/05/21/css中的z-index/">
+        z-index
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-05-21 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 我在写音乐播放器的时候，发现用z-index来排列不同元素有时候得到的结果和预期不一样，所以就搜了一些资料，尝试来厘清一下z-index的规则。</p>
+<h2 id="z-index的定义"><a href="#z-index的定义" class="headerlink" title="z-index的定义"></a>z-index的定义</h2><p>其实z-index的定义一点也不复杂，它是z轴上的一个系数，和x轴与y轴属于同一组概念，z轴表示的是元素到观看者的距离，所以z-index值越高，元素离观众就越近，在布局上理应位于较上层。</p>
+<h3 id="为什么是“理应”呢？"><a href="#为什么是“理应”呢？" class="headerlink" title="为什么是“理应”呢？"></a>为什么是“理应”呢？</h3><p>为了更好地阐明这个道理，要引入一个新的概念——<strong>stacking order（层叠等级）</strong>（我更愿意把这个词翻译成层叠顺序），层叠等级指的就是元素在z轴上的上下排列。</p>
+<p>那么一个新的概念出现就意味着它有一个默认值，层叠等级也有默认值：</p>
+<h4 id="默认层叠等级（Default-stacking-order"><a href="#默认层叠等级（Default-stacking-order" class="headerlink" title="默认层叠等级（Default stacking order)"></a>默认层叠等级（Default stacking order)</h4><ul>
+<li><p>html根元素；</p>
+</li>
+<li><p>未定义position值的元素顺序(static)；</p>
+</li>
+<li><p>定义了position值的元素的顺序；</p>
+</li>
+<li><p>呈现见下文例子：</p>
+<pre class="line-numbers language-html"><code class="language-html"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pink<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   Positioned
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>orange<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Non-positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css"> <span class="token selector"><span class="token class">.pink</span>, <span class="token class">.blue</span>, <span class="token class">.orange</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E9%BB%98%E8%AE%A4%E9%A1%BA%E5%BA%8F.png" alt="默认顺序"></p>
+</li>
+</ul>
+<p>按照html的顺序，盒子的排列应该是粉色在最下层、粉色包含橙色、然后是蓝色、最上是绿色。<br>但是蓝、粉、橙色盒子的postion都被定义了，绿色没有被定义，所以html的原始顺序被覆盖，绿色变到最底层，其他三个盒子继续遵循html的顺序。</p>
+<h4 id="z-index层叠等级"><a href="#z-index层叠等级" class="headerlink" title="z-index层叠等级"></a>z-index层叠等级</h4><p>搞清楚默认叠层等级后，我们把z-index值加进来，呈现见下文：</p>
+<pre class="line-numbers language-html"><code class="language-html">   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pink positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      Positioned
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>orange positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green non-positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Non-positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css">   <span class="token selector"><span class="token class">.positioned</span> </span><span class="token punctuation">{</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token selector"><span class="token class">.blue</span> </span><span class="token punctuation">{</span>
+      <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token selector"><span class="token class">.green</span> </span><span class="token punctuation">{</span>
+      <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* has no effect */</span>
+    <span class="token punctuation">}</span>
+   <span class="token selector"><span class="token class">.orange</span> </span><span class="token punctuation">{</span>
+      <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/zindex%E9%A1%BA%E5%BA%8F.png" alt="z-index顺序"></p>
+<p>蓝色盒子的<code>z-index</code>值为2，橙色为3、绿色为100。<br>第一个“理应”之外的特例来了，绿色的<code>z-index</code>值最大，为什么它依旧处于最底层？</p>
+<p>因为绿色格子的<strong>postion未被定义</strong>，所以z-index无效。</p>
+<p>而橙色和蓝色完美按照我们设想呈现了！</p>
+<h4 id="层叠特例"><a href="#层叠特例" class="headerlink" title="层叠特例"></a>层叠特例</h4><p>但是，世界往往没有这么美好，我们再看一个特例：</p>
+<pre class="line-numbers language-html"><code class="language-html">   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pink positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+       Positioned
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>orange positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>purple positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>green non-positioned<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Non-positioned<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-css"><code class="language-css">   <span class="token selector"><span class="token class">.pink</span> </span><span class="token punctuation">{</span>
+       <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* creates a new stacking context */</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.blue</span> </span><span class="token punctuation">{</span>
+       <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.green</span> </span><span class="token punctuation">{</span>
+       <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* has no effect */</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.orange</span> </span><span class="token punctuation">{</span>
+       <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.purple</span> </span><span class="token punctuation">{</span>
+       <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E7%89%B9%E4%BE%8B.png" alt="特例"></p>
+<p>绿色盒子在最底层上文已经解释过了，那我们来看看其他盒子：<br>紫色的<code>z-index</code>值为0，粉色是1，蓝色是2，橙色是3，我们理应看到橙色在最上方，为什么最后蓝色在最上方了呢。<br>因为在这段代码里，我们给橙色的父元素——粉色盒子的<code>z-index</code>赋值了，于是粉色盒子给橙色盒子增加了一个<strong>叠层上下文（stacking context）</strong>（此处我愿把这个词翻译成叠层环境），粉色的<code>z-index</code>值再大也是在窝里横，由于父元素的值比蓝色小，这层关系被优先考虑，橙色的值就被困在了叠层上下文里。<br>（注：上个例子粉色盒子的<code>z-index</code>未被赋值，等同于<code>auto</code>）</p>
+<p>这就是第二个“理应”之外的特例，叠层上下文，那么造成叠层上下文的除了父元素的z-index被赋值外，还有别的情况：</p>
+<h2 id="特例条件"><a href="#特例条件" class="headerlink" title="特例条件"></a>特例条件</h2><ul>
+<li>父元素的<code>display</code>属性值为<code>flex|inline-flex</code>，子元素<code>z-index</code>属性值不为<code>auto</code>的时候，子元素为层叠上下文元素；</li>
+<li>元素的<code>opacity</code>属性值不是1；</li>
+<li>元素的<code>transform</code>属性值不是none；</li>
+<li>元素<code>mix-blend-mode</code>属性值不是normal；</li>
+<li>元素的<code>filter</code>属性值不是none；</li>
+<li>元素的<code>isolation</code>属性值是isolate；</li>
+<li><code>will-change</code>指定的属性值为上面任意一个；</li>
+<li>元素的<code>-webkit-overflow-scrolling</code>属性值设置为touch。</li>
+</ul>
+<p>综合考虑我们可以绘制一个这样的<em>叠层顺序总图</em>：</p>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/stacking-order.jpeg" alt="stacking order"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在定义了position值的元素上加z-index，我们可以改变默认的叠层顺序；<br>添加一些特定CSS属性，会制造叠层环境（叠层上下文）。</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/z-index-explained-how-to-stack-elements-using-css-7c5aa0f179b3/">Z-Index Explained: How to Stack Elements Using CSS - freecodecamp - Veronika Ivhed</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context - MDN</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">CSS层叠上下文、层叠等级、层叠顺序、z-index完全说明 - 长安曹公子</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

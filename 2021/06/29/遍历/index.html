@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93"><span class="toc-text">简单总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#forEach%EF%BC%88%EF%BC%89%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C"><span class="toc-text">forEach（）批量操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#map%EF%BC%88%EF%BC%89%E6%98%A0%E5%B0%84"><span class="toc-text">map（）映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#filter%EF%BC%88%EF%BC%89%E7%AD%9B%E9%80%89%E8%BF%87%E6%BB%A4"><span class="toc-text">filter（）筛选过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#some%EF%BC%88%EF%BC%89%E6%9C%89%E7%AC%A6%E5%90%88"><span class="toc-text">some（）有符合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#every%EF%BC%88%EF%BC%89%E5%85%A8%E7%AC%A6%E5%90%88"><span class="toc-text">every（）全符合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#find%EF%BC%88%EF%BC%89%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E7%AC%A6%E5%90%88%E7%9A%84"><span class="toc-text">find（）返回一个符合的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#findIndex%EF%BC%88%EF%BC%89%E8%BF%94%E5%9B%9E%E5%BA%8F%E5%8F%B7"><span class="toc-text">findIndex（）返回序号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reduce%EF%BC%88%EF%BC%89%E9%80%92%E5%BD%92%E7%B4%AF%E5%8A%A0"><span class="toc-text">reduce（）递归累加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#includes%EF%BC%88%EF%BC%89%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%9C%89%EF%BC%88%E5%AE%8C%E5%85%A8%E5%8C%B9%E9%85%8D%EF%BC%89"><span class="toc-text">includes（）判断是否有（完全匹配）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/06/29/遍历/">
+        遍历区分
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-06-29 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学react，在写component的时候会遇到需要遍历数组的情况，主要用到的是<code>map()</code>和<code>filter()</code>，刚好看到了总结遍历的文章，所以在此自己也动笔做一下笔记。</p>
+<h2 id="简单总结"><a href="#简单总结" class="headerlink" title="简单总结"></a>简单总结</h2><ul>
+<li>forEach —— 只遍历数组，不返回新数组；</li>
+<li>map —— 对每项元素做改变后，返回新数组；</li>
+<li>reduce —— 对每项元素做叠加，返回叠加后的值；</li>
+<li>some —— 判断数组中某些项是否符合条件（内部return true时跳出整个循环）；</li>
+<li>every —— 判断数组中每一项是否符合条件 （内部return false时跳出整个循环）；</li>
+<li>filter —— 筛选出符合条件的数组；</li>
+<li>find —— 筛选数组：找元素；</li>
+<li>findIndex —— 筛选数组：找索引；</li>
+<li>includes —— 判断数组是否含有某值；</li>
+</ul>
+<h3 id="forEach（）批量操作"><a href="#forEach（）批量操作" class="headerlink" title="forEach（）批量操作"></a>forEach（）批量操作</h3><ul>
+<li>遍历数组全部元素（自动遍历数组length次）</li>
+<li>无法break中途跳出循环，不支持return操作推出循环</li>
+<li>不产生新的数组</li>
+</ul>
+<h3 id="map（）映射"><a href="#map（）映射" class="headerlink" title="map（）映射"></a>map（）映射</h3><ul>
+<li>对数组中的每一项通过某种计算，产生新的数组</li>
+<li>返回新数组，不改变原数组</li>
+<li>无法break中途跳出循环，不支持return操作推出循环</li>
+<li>使用return操作输出，会循环数组每一项，并在回调函数中操作</li>
+<li>回调函数参数：item/index/array</li>
+</ul>
+<h3 id="filter（）筛选过滤"><a href="#filter（）筛选过滤" class="headerlink" title="filter（）筛选过滤"></a>filter（）筛选过滤</h3><ul>
+<li>筛选出数组中符合条件的项，组成新数组</li>
+<li>创建新数组，不改变原数组</li>
+<li>输出的事判断为true的数组元素组成的新数组</li>
+<li>使用return操作输出，会循环数组每一项，并在回调函数中操作</li>
+<li>回调函数参数：item/index/array</li>
+</ul>
+<h3 id="some（）有符合"><a href="#some（）有符合" class="headerlink" title="some（）有符合"></a>some（）有符合</h3><ul>
+<li>检测数组中是否有某些符合条件，只要有一项符合了，马上return true，退出循环</li>
+<li>不创建新数组、不改变原数组</li>
+<li>当内部return true时退出循环</li>
+<li>使用return操作输出，会循环数组每一项，并在回调函数中操作</li>
+<li>回调函数参数：item/index/array</li>
+</ul>
+<h3 id="every（）全符合"><a href="#every（）全符合" class="headerlink" title="every（）全符合"></a>every（）全符合</h3><ul>
+<li>检测数组中的每一项是否符合条件，只要不符合就返回false，退出循环</li>
+<li>不创建新数组，不改变原数组</li>
+<li>当return false时退出循环</li>
+<li>使用return操作输出，会循环数组每一项，并在回调函数中操作</li>
+<li>回调函数参数：item/index/array</li>
+</ul>
+<h3 id="find（）返回一个符合的"><a href="#find（）返回一个符合的" class="headerlink" title="find（）返回一个符合的"></a>find（）返回一个符合的</h3><ul>
+<li>找元素（找出某个符合条件的元素）</li>
+<li>不创建新数组，不改变原数组</li>
+<li>输出的一旦判断为true则跳出循环输出符合条件的数组元素</li>
+<li>使用return操作输出，会循环数组每一项，并在回调函数中操作</li>
+<li>回调函数参数，item/index/array</li>
+</ul>
+<h3 id="findIndex（）返回序号"><a href="#findIndex（）返回序号" class="headerlink" title="findIndex（）返回序号"></a>findIndex（）返回序号</h3><ul>
+<li>找索引（找出某个符合条件的元素的索引）</li>
+<li>其他特点和find（）相同</li>
+</ul>
+<h3 id="reduce（）递归累加"><a href="#reduce（）递归累加" class="headerlink" title="reduce（）递归累加"></a>reduce（）递归累加</h3><ul>
+<li>不一定是数学意义上的叠加计算，这里的叠加指：让数组中的前项和后项做某种计算，并累计最终值</li>
+<li>创建新数组，不改变原数组</li>
+<li>无法break中途跳出循环，不支持return操作推出循环</li>
+<li>输出新数组<br>reduce()方法接收一个回调函数作为第一个参数，回调函数又接受四个参数，分别是；</li>
+</ul>
+<ol>
+<li>previousValue =&gt;初始值或上一次回调函数叠加的值；</li>
+<li>currentValue =&gt; 本次回调（循环）将要执行的值；</li>
+<li>index=&gt;“currentValue”的索引值；</li>
+<li>arr =&gt; 数组本身；<br>reduce()方法返回的是最后一次调用回调函数的返回值；</li>
+</ol>
+<h3 id="includes（）判断是否有（完全匹配）"><a href="#includes（）判断是否有（完全匹配）" class="headerlink" title="includes（）判断是否有（完全匹配）"></a>includes（）判断是否有（完全匹配）</h3><ul>
+<li>只是判断数组是否含有某值，不用return，不用回调函数，输出true或false</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Jenn168/article/details/106602811">forEach,map,reduce,some,every,filter,find,findIndex,includes使用和区别 - CSDN - Jenn168</a><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903870154588168">生动形象解释forEach,filter,map,some,every,find,findIndex,reduce的区别 - 掘金 - 夜行风</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/js/">js</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

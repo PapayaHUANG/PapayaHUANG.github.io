@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#font-face"><span class="toc-text">@font-face</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%A5%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-text">句法结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">实现方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#import"><span class="toc-text">@import</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%A5%E6%B3%95%E7%BB%93%E6%9E%84-1"><span class="toc-text">句法结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F-1"><span class="toc-text">实现方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-web-%E5%AD%97%E4%BD%93%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">使用 web 字体的好处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-web-%E5%AD%97%E4%BD%93%E7%9A%84%E5%9D%8F%E5%A4%84"><span class="toc-text">使用 web 字体的坏处</span></a></li></ol></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/04/21/url和-font-face的区别/">
+        CSS字体之@import和@font-face的区别
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-04-21 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>@import</code>和<code>@font-face</code>都是 CSS 的内置规则，<code>@import</code>和<code>@font-face</code>都可以为网页添加 web 字体。但两个内置规则的实现方式有所不同。</p>
+<h2 id="font-face"><a href="#font-face" class="headerlink" title="@font-face"></a>@font-face</h2><h3 id="句法结构"><a href="#句法结构" class="headerlink" title="句法结构"></a>句法结构</h3><pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'You can define the name of the font here'</span><span class="token punctuation">;</span>
+
+  <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('font url')</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>浏览器从 WEB 字体文件所在的服务器下载字体，<code>@font-face</code>规则告诉浏览器需要加载<code>src</code>,<code>url()</code>内的指定文字字体，一旦加载，会把这个字体分配到<code>font-family</code>属性中指定的名字所在的选择器所指。</p>
+<h2 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h2><h3 id="句法结构-1"><a href="#句法结构-1" class="headerlink" title="句法结构"></a>句法结构</h3><pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> url（ <span class="token string">'font-url'</span> ）<span class="token punctuation">;</span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>@import</code>规则必须放置在样式表顶部，位于其他任何规则之上。</p>
+<h3 id="实现方式-1"><a href="#实现方式-1" class="headerlink" title="实现方式"></a>实现方式</h3><p>根据 URL 的地址，导入其他 CSS stylesheet（样式表）。</p>
+<h3 id="使用-web-字体的好处"><a href="#使用-web-字体的好处" class="headerlink" title="使用 web 字体的好处"></a>使用 web 字体的好处</h3><p>可以在审美上让字体更加多样化，可以呈现出用户设备字体库没有的字体。</p>
+<h3 id="使用-web-字体的坏处"><a href="#使用-web-字体的坏处" class="headerlink" title="使用 web 字体的坏处"></a>使用 web 字体的坏处</h3><p>增加了页面加载的时长，增加了字体管理的复杂度，web 字体的设备兼容性不行。</p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/读书笔记/">读书笔记</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

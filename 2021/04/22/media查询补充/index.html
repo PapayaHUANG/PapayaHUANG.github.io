@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-text">语法结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E5%AE%9A-breakpoint"><span class="toc-text">设定 breakpoint</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#min-%E5%80%BC-max-%E5%80%BC%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">min 值&#x2F;max 值的定义</span></a></li></ol></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/04/22/media查询补充/">
+        补充@media查询
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-04-22 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>《Head First》引入@media 的讲解是针对网站需要不同的样式表这个案例。</p>
+<p>读完之后我对两个信息点比较感兴趣：</p>
+<ol>
+<li><p>在语法结构方面，<code>@media</code>除了有<code>screen</code>和<code>print</code>媒体形式还有没有其他的媒体形式？</p>
+</li>
+<li><p>针对不同设备（如电脑、平板、手机）的显示，有没有特定的<code>@media</code>设定值的模板？</p>
+</li>
+</ol>
+<p>针对这两个点，我 google 了一些资料，现汇总一下：</p>
+<h2 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h2><pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> media type and <span class="token punctuation">(</span><span class="token property">condition</span><span class="token punctuation">:</span> breakpoint<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  //CSS rules
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在语法结构中，<code>media type</code>除了<code>screen</code>表示不同屏幕，<code>print</code>表示打印格式之外，还有两个类型：</p>
+<ul>
+<li>一个是<code>all</code>，表示所有媒体类型；</li>
+<li>另一个是<code>speech</code>，表示需要把页面内容读出来。</li>
+</ul>
+<p>若不标明<code>media type</code>，则<code>@media</code>的默认为<code>all</code>。</p>
+<h2 id="设定-breakpoint"><a href="#设定-breakpoint" class="headerlink" title="设定 breakpoint"></a>设定 breakpoint</h2><p>不同设备的显示应该选择什么具体的设定值，有没有模板，这个问题可以简化为——<br>“如何设定<code>@media</code>的 breakpoint？”</p>
+<p>回答这个问题有两个思路：</p>
+<ol>
+<li><p>根据设备的不同来设定 breakpoint；</p>
+</li>
+<li><p>根据内容的不同来设定 breakpoint；</p>
+</li>
+</ol>
+<p>如果是根据设备来设定 breakpoint，情况会变得非常复杂，仅一个 iphone 就已经有 6、7、8、9、10、11、12，若要维护起来会非常困难。</p>
+<p>相关的设定参数，可以参加这个博客——<a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">CSS-Tricks</a></p>
+<p>所以更省事的方式应该是根据内容的不同来设定 breakpoint:</p>
+<p>换句话说，就是设定<code>width</code>的<code>min/max</code>值，或者同时设定 min 和 max 值，来管理一个范围区间的设备。</p>
+<p>如：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>或</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> only screen <span class="token function">and</span><span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1024px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>那么接下来的问题就是</p>
+<h3 id="min-值-max-值的定义"><a href="#min-值-max-值的定义" class="headerlink" title="min 值/max 值的定义"></a>min 值/max 值的定义</h3><p>如果主要的显示设备是手机，那么就可以从 min-width 开始，根据实际情况，逐渐增大；</p>
+<p>如果这要的显示这杯是大屏幕，那么就可以从 max-width 开始，根据实际情况，逐渐缩小。</p>
+<p>但具体用什么值的问题还没有回答，好在一些 CSS 框架给了回答<br>如 bootstrap 就有对 breakpoint 的设定——<a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">bootstrap</a>。</p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/读书笔记/">读书笔记</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

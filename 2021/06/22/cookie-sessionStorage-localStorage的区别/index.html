@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie-session%E5%8C%BA%E5%88%AB"><span class="toc-text">cookie&#x2F;session区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8"><span class="toc-text">存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">安全性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%AE%B9%E9%87%8F"><span class="toc-text">存储容量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie-sessionStorage-localStorage%E5%BC%82%E5%90%8C%E7%82%B9"><span class="toc-text">cookie&#x2F;sessionStorage&#x2F;localStorage异同点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E5%90%8C%E7%82%B9%EF%BC%9A"><span class="toc-text">共同点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%88%AB"><span class="toc-text">区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/06/22/cookie-sessionStorage-localStorage的区别/">
+        cookie/sessionStorage/localStorage的区别
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-06-22 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="cookie-session区别"><a href="#cookie-session区别" class="headerlink" title="cookie/session区别"></a>cookie/session区别</h2><h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><p>由于HTTP协议是无状态的协议，所以服务端需要记录用户状态时，就需要某种机制来识别具体的用户，这个机制就是<strong>session</strong>。</p>
+<p>而浏览器端识别特定用户的时候采用的是<strong>cookie</strong>。每次HTTP请求的时候，客户端都会发送相应的<strong>cookie</strong>信息到服务端。</p>
+<p>cookie存储于<em>浏览器端</em>，而session存储于<em>服务端</em>；</p>
+<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>cookie的安全性相比session较弱；</p>
+<h3 id="存储容量"><a href="#存储容量" class="headerlink" title="存储容量"></a>存储容量</h3><p>cookie存储容量有限制，单个cookie保存数据不能超过4K，且很多浏览器限制一个站点最多保存20个cookie，</p>
+<p>session默认大小一般是1024K</p>
+<h2 id="cookie-sessionStorage-localStorage异同点"><a href="#cookie-sessionStorage-localStorage异同点" class="headerlink" title="cookie/sessionStorage/localStorage异同点"></a>cookie/sessionStorage/localStorage异同点</h2><p>html5中<strong>webStorage</strong>包含了sessionStorage和localStorage。</p>
+<h3 id="共同点："><a href="#共同点：" class="headerlink" title="共同点："></a>共同点：</h3><p>都保存在浏览器端，且是同源的。</p>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>cookie数据始终在同源的http请求中携带，而webStorage不会在请求中携带，仅仅在本地存储；</p>
+<p>存储大小区别：cookie是4k，webStorage可以达到5M甚至更大；</p>
+<p>数据有效时间的区别：</p>
+<p>sessionStorage仅仅是会话级别的存储，它只在当前浏览器关闭前有效，不能持久保持；</p>
+<p>localStorage始终有效，即使窗口或者浏览器关闭也一直有效，除非用户手动删除，才会失效；</p>
+<p>cookie只在设置的cookie过期时间之前一直有效。</p>
+<p>作用域区别：</p>
+<p>sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；</p>
+<p>localStorage和cookie在所有同源窗口是共享的；</p>
+<p>webStorage支持事件通知机制，可以将数据更新的通知发送给监听者，webStorage的api接口使用更方便。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>《JavaScript入门经典（第五版）》</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bdbae99a3871">cookie, session, sessionStorage, localStorage区别 - 简书 - 落沙w</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19786827">cookie和session有什么区别 - 知乎</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/computer-science/">computer-science</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

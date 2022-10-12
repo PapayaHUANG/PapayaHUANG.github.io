@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E7%9A%84"><span class="toc-text">项目目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">实现功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%AE%9E%E7%8E%B0"><span class="toc-text">项目实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E9%9F%B3%E4%B9%90"><span class="toc-text">加载音乐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E5%87%BA%E6%92%AD%E6%94%BE%E6%A1%86"><span class="toc-text">弹出播放框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%BA%A6%E6%9D%A1%E9%9A%8F%E6%AD%8C%E6%9B%B2%E8%BF%9B%E5%BA%A6%E5%90%91%E5%8F%B3%E6%8E%A8%E8%BF%9B"><span class="toc-text">进度条随歌曲进度向右推进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E7%82%B9%E9%80%89%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%AD%8C%E6%9B%B2%E9%9A%8F%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%8F%98%E5%8C%96%E8%BF%9B%E5%BA%A6"><span class="toc-text">随机点选进度条歌曲随进度条变化进度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%93%E8%BE%91%E5%B0%81%E9%9D%A2%E8%BD%AC%E5%8A%A8"><span class="toc-text">专辑封面转动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-text">项目地址</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/05/31/音乐播放器/">
+        项目练习 —— JS音乐播放器
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-05-31 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.png" alt="效果图"></p>
+<h2 id="项目目的"><a href="#项目目的" class="headerlink" title="项目目的"></a>项目目的</h2><p>练习利用JS修改CSS属性和Audio API</p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ol>
+<li><p>功能键切换歌曲</p>
+</li>
+<li><p>播放键弹出播放框</p>
+</li>
+<li><p>进度条随歌曲进度向右推进</p>
+</li>
+<li><p>随机点选进度条歌曲随进度条变化进度</p>
+</li>
+<li><p>播放时专辑封面转动</p>
+</li>
+</ol>
+<h2 id="项目实现"><a href="#项目实现" class="headerlink" title="项目实现"></a>项目实现</h2><h3 id="加载音乐"><a href="#加载音乐" class="headerlink" title="加载音乐"></a>加载音乐</h3><p>这个项目中的音乐列表是用简单的数组实现的：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">const</span> musicList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"漩涡"</span><span class="token punctuation">,</span> <span class="token string">"苦瓜"</span><span class="token punctuation">,</span> <span class="token string">"罗生门"</span><span class="token punctuation">,</span> <span class="token string">"少女的祈祷"</span><span class="token punctuation">,</span> <span class="token string">"天下无双"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> musicIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>加载音乐需要改变<code>&lt;audio&gt;</code>的<code>src</code>属性，<code>&lt;img&gt;</code>的<code>src</code>属性，以及音乐标题：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">function</span> <span class="token function">loadMusic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      music<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`/musics/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>musicList<span class="token punctuation">[</span>musicIndex<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.mp3`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      img<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token string">`/snapshots/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>musicList<span class="token punctuation">[</span>musicIndex<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.jpeg`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      title<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>musicList<span class="token punctuation">[</span>musicIndex<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="弹出播放框"><a href="#弹出播放框" class="headerlink" title="弹出播放框"></a>弹出播放框</h3><p>实现播放框的弹出，主要是通过更改播放框（<code>.display</code>）的<code>transform</code>值，因为是y轴方向的移动，所以把初始值设定为<code>transform: translateY(0)</code>, 然后使用JS来更改值，因为是向上运动，所以值要变小：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">function</span> <span class="token function">musicPlay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      display<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token string">"translateY(-85%)"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="进度条随歌曲进度向右推进"><a href="#进度条随歌曲进度向右推进" class="headerlink" title="进度条随歌曲进度向右推进"></a>进度条随歌曲进度向右推进</h3><p>这里使用到了audio的API，首先在audio绑定一个“更新时间”的API：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    music<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"timeupdate"</span><span class="token punctuation">,</span> updateProgress<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后根据“更新时间”在音乐总时常的占比来实时更新进度条：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">function</span> <span class="token function">updateProgress</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> <span class="token punctuation">{</span> currentTime<span class="token punctuation">,</span> duration <span class="token punctuation">}</span> <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> progressPercent <span class="token operator">=</span> <span class="token punctuation">(</span>currentTime <span class="token operator">/</span> duration<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+      progress<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>progressPercent<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">%`</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="随机点选进度条歌曲随进度条变化进度"><a href="#随机点选进度条歌曲随进度条变化进度" class="headerlink" title="随机点选进度条歌曲随进度条变化进度"></a>随机点选进度条歌曲随进度条变化进度</h3><p>这个功能的实现和上个方法类似，只是作用的元素刚好相反，音乐播放时间的定点是通过鼠标点击点的x轴向的值处以总长度再乘以音乐总时常实现的：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">function</span> <span class="token function">setProgress</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> width <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>clientWidth<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> clickX <span class="token operator">=</span> e<span class="token punctuation">.</span>offsetX<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> duration <span class="token operator">=</span> music<span class="token punctuation">.</span>duration<span class="token punctuation">;</span>
+      music<span class="token punctuation">.</span>currentTime <span class="token operator">=</span> <span class="token punctuation">(</span>clickX <span class="token operator">/</span> width<span class="token punctuation">)</span> <span class="token operator">*</span> duration<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>Element.clientWidth</code>是元素内宽的长度，计量单位是pixels。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth">MDN</a><br><code>MouseEvent.offsetX</code>是事件对象与目标节点的内填充边（padding edge）在x轴方向的偏移量。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX">MDN</a></p>
+<h3 id="专辑封面转动"><a href="#专辑封面转动" class="headerlink" title="专辑封面转动"></a>专辑封面转动</h3><p>专辑封面的转动是先在CSS写好转动的规则，然后在JS操作开始和站定转动：</p>
+<pre class="line-numbers language-css"><code class="language-css">    <span class="token selector"><span class="token class">.snapshot</span> img </span><span class="token punctuation">{</span>
+      <span class="token property">animation</span><span class="token punctuation">:</span> rotation <span class="token number">3</span>s linear infinite<span class="token punctuation">;</span>
+      <span class="token property">animation-play-state</span><span class="token punctuation">:</span> paused<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@keyframes</span> rotation</span> <span class="token punctuation">{</span>
+      <span class="token selector">from </span><span class="token punctuation">{</span>
+         <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">0</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token selector">to </span><span class="token punctuation">{</span>
+         <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">360</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">function</span> <span class="token function">musicPlay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         img<span class="token punctuation">.</span>style<span class="token punctuation">.</span>animationPlayState <span class="token operator">=</span> <span class="token string">"running"</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/PapayaHUANG/music_player">https://github.com/PapayaHUANG/music_player</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/js/">js</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

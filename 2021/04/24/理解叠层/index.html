@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%EF%BC%88CADSCADING%EF%BC%89%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">理解“层叠”（CADSCADING）的意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">“层叠”是怎么工作的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C%E5%B1%82%E5%8F%A0%E2%80%9D%E7%9A%84%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%9F"><span class="toc-text">“层叠”的排序规则是什么样的？</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/04/24/理解叠层/">
+        理解“层叠”（cascading)
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-04-24 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="理解“层叠”（CADSCADING）的意义"><a href="#理解“层叠”（CADSCADING）的意义" class="headerlink" title="理解“层叠”（CADSCADING）的意义"></a>理解“层叠”（CADSCADING）的意义</h2><p>理解层叠是如何工作的，可以帮助我们写出更容易维护的代码，也是 debug 的一个基础知识。</p>
+<h2 id="“层叠”是怎么工作的？"><a href="#“层叠”是怎么工作的？" class="headerlink" title="“层叠”是怎么工作的？"></a>“层叠”是怎么工作的？</h2><p>在给定的一组样式表中，浏览器以层叠的方式来确定具体使用哪一种样式。</p>
+<p>那么“层叠”的方式具体是怎么工作的呢，其实可以把“层叠”看作一个对不同 CSS 声明的优先级的算法，对不同的 CSS 声明，“层叠”有一套加权逻辑来对 CSS 声明进行排序，最终通过确定不同 CSS 声明的重要性来决定浏览器样式的呈现。</p>
+<h2 id="“层叠”的排序规则是什么样的？"><a href="#“层叠”的排序规则是什么样的？" class="headerlink" title="“层叠”的排序规则是什么样的？"></a>“层叠”的排序规则是什么样的？</h2><ul>
+<li><p>样式的来源及重要性（指是否有<code>!important</code>声明）</p>
+</li>
+<li><p>选择器的特定性（specificity）</p>
+</li>
+<li><p>声明的顺序</p>
+</li>
+<li><p>默认属性或继承属性</p>
+</li>
+</ul>
+<p>以上分类的重要程度由上到下，逐渐变小。</p>
+<p>_其中需要更细化说明的有_：</p>
+<ul>
+<li>样式的来源及重要性（指是否有!important 声明）</li>
+</ul>
+<p>样式的来源指的是声明来自浏览器（user-agent）、编写代码的程序员(author)还是用户(user)。</p>
+<ul>
+<li>来源和!important 混合后的重要性从高到低排序如下：</li>
+</ul>
+<ol>
+<li>user-agent and !important</li>
+<li>user and !important</li>
+<li>author and !important</li>
+<li>CSS animations, @keyframes（其实也属于 author）</li>
+<li>author</li>
+<li>user</li>
+<li>user-agent</li>
+</ol>
+<ul>
+<li>选择器的特定性</li>
+</ul>
+<ol>
+<li>重要性从高到低排列如下</li>
+<li>内联样式</li>
+<li>ID 选择器</li>
+<li>类/伪类选择器</li>
+<li>元素选择器/伪元素</li>
+</ol>
+<p>详细的介绍可以查看这个<a href="logrocket.com">blog</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/读书笔记/">读书笔记</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

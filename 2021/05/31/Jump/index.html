@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E6%A0%87"><span class="toc-text">项目目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">实现功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%80%9D%E8%B7%AF"><span class="toc-text">主要思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%AE%9E%E7%8E%B0"><span class="toc-text">项目实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81JS%E6%96%B9%E6%B3%95"><span class="toc-text">主要JS方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E8%B7%B3%E5%8F%B0"><span class="toc-text">生成跳台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#doodle%E7%9A%84%E8%B7%B3%E8%B7%83"><span class="toc-text">doodle的跳跃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%B3%E5%8F%B0%E7%9A%84%E5%90%91%E4%B8%8B%E6%BB%9A%E5%8A%A8"><span class="toc-text">跳台的向下滚动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-text">项目地址</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/05/31/Jump/">
+        项目练习 —— 用JS仿写Doodle Jump
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-05-31 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/doodlejump.png" alt="效果图"></p>
+<h2 id="项目目标"><a href="#项目目标" class="headerlink" title="项目目标"></a>项目目标</h2><p>以经典游戏Doodle Jump为蓝本，练习使用JS来实现Doodle Jump的基本功能。</p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ol>
+<li><p>跳台随机定位实时刷新；</p>
+</li>
+<li><p>用键盘控制doodle小人跳跃方向；</p>
+</li>
+<li><p>doodle小人碰到跳台后会再次起跳。</p>
+</li>
+</ol>
+<h2 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h2><p>用array来实现跳台的随机定位和实时刷新。</p>
+<p>小人的跳跃需拆解为向上和向下两个函数，并用<code>setInterval()</code>来刷新。</p>
+<h2 id="项目实现"><a href="#项目实现" class="headerlink" title="项目实现"></a>项目实现</h2><h3 id="主要JS方法"><a href="#主要JS方法" class="headerlink" title="主要JS方法"></a>主要JS方法</h3><ul>
+<li><p><code>appendChild()</code></p>
+</li>
+<li><p><code>class constructor</code></p>
+</li>
+<li><p><code>forEach()</code></p>
+</li>
+<li><p><code>setInterval()</code></p>
+</li>
+</ul>
+<h3 id="生成跳台"><a href="#生成跳台" class="headerlink" title="生成跳台"></a>生成跳台</h3><pre class="line-numbers language-javascript"><code class="language-javascript">   <span class="token keyword">class</span> <span class="token class-name">Platform</span> <span class="token punctuation">{</span>
+     <span class="token function">constructor</span><span class="token punctuation">(</span>platformBottom<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>left <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">315</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>bottom <span class="token operator">=</span> platformBottom<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>visual <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">const</span> visual <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>visual<span class="token punctuation">;</span>
+        visual<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"platform"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        visual<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>left <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
+        visual<span class="token punctuation">.</span>style<span class="token punctuation">.</span>bottom <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>bottom <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
+        grid<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>visual<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>每一个跳台的上下间隔是固定的，二最左点的定位不一定，抓住这个特点，就可以构建跳台。由于跳台的创建是会被复用，因此创建每一个跳台用的是class constructor；</p>
+<p>同时一个屏幕内的跳台可以被看成一个数组，因此可以利用for循环来创建这个数组：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">   <span class="token keyword">function</span> <span class="token function">createPlatforms</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> platformCount<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> platformGap <span class="token operator">=</span> <span class="token number">600</span> <span class="token operator">/</span> platformCount<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> platformBottom <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">+</span> platformGap <span class="token operator">*</span> i<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> newPlatform <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Platform</span><span class="token punctuation">(</span>platformBottom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      platforms<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newPlatform<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// console.log(platforms);</span>
+   <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="doodle的跳跃"><a href="#doodle的跳跃" class="headerlink" title="doodle的跳跃"></a>doodle的跳跃</h3><p>doodle的跳跃可以分成向上和向下两个<code>timerId</code>，再结合<code>setInterval()</code>和<code>clearInterval</code>来实现跳跃的动画，跳跃方向可以通过数值的加减和设定是否跳跃的布尔值来实现。</p>
+<h3 id="跳台的向下滚动"><a href="#跳台的向下滚动" class="headerlink" title="跳台的向下滚动"></a>跳台的向下滚动</h3><p>游戏画面向下滚动其实是通过改变属于跳台的数组来实现的。<br>首先可以利用<code>forEach()</code>的方法来遍历所有跳台，减少跳台底部的数值，来实现跳台整体的下移；<br>其次，当跳台下移到超出画面，需要用<code>array.shift()</code>和<code>array.push()</code>的方法删除底部的跳台，并在上方增加一个跳台：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">   <span class="token keyword">function</span> <span class="token function">movePlatforms</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>doodlerBottomSpace <span class="token operator">></span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      platforms<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>platform<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+         platform<span class="token punctuation">.</span>bottom <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+         <span class="token keyword">let</span> visual <span class="token operator">=</span> platform<span class="token punctuation">.</span>visual<span class="token punctuation">;</span>
+         visual<span class="token punctuation">.</span>style<span class="token punctuation">.</span>bottom <span class="token operator">=</span> platform<span class="token punctuation">.</span>bottom <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
+
+         <span class="token keyword">if</span> <span class="token punctuation">(</span>platform<span class="token punctuation">.</span>bottom <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">let</span> firstPlatform <span class="token operator">=</span> platforms<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>visual<span class="token punctuation">;</span>
+         firstPlatform<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"platform"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         platforms<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token keyword">let</span> newPlatform <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Platform</span><span class="token punctuation">(</span><span class="token number">600</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         platforms<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>newPlatform<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a target="_blank" rel="noopener" href="https://github.com/PapayaHUANG/doodle-jump">https://github.com/PapayaHUANG/doodle-jump</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/js/">js</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

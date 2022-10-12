@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text">定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Block"><span class="toc-text">Block</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Elements"><span class="toc-text">Elements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modifers"><span class="toc-text">Modifers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BEM%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-text">BEM的特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8BEM%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">使用BEM的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/09/27/理解BEM/">
+        理解BEM
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-09-27 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在浏览MDN教程的时候喷到了BEM的概念，在此做一个总结。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>BEM的全称是Block，Element，Modifer，即块元素编辑器。是一种命名的方法，可以帮助程序员创建可以复用的前端组件和代码。</p>
+<p>以下是使用BEM命名CSS的例子：</p>
+<pre class="line-numbers language-css"><code class="language-css">  <span class="token comment" spellcheck="true">/* Block component */</span>
+  <span class="token selector"><span class="token class">.btn</span> </span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">/* Element that depends upon the block */</span>
+  <span class="token selector"><span class="token class">.btn_price</span> </span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">/* Modifier that changes the style of the block */</span>
+  <span class="token selector"><span class="token class">.btn--white</span> </span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.btn--small</span> </span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h3><p>在这里block是顶层的组件，如例子中的按钮，可以被看作其他元素的<strong>父元素</strong>。</p>
+<h3 id="Elements"><a href="#Elements" class="headerlink" title="Elements"></a>Elements</h3><p>在block名称后加上<em>下划线</em>再接上具体元素的名称就是Elements，相当于顶层组件的<strong>子元素</strong>。</p>
+<h3 id="Modifers"><a href="#Modifers" class="headerlink" title="Modifers"></a>Modifers</h3><p>顾名思义，modifer的意义是可以以组件的模式来批量更改元素，如设置不同的主题，Modifer的格式是block名称后加上<em>双横杠</em>再接上编辑器的名称。</p>
+<p>与上述例子相关的html代码为：</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn--white btn--small<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn_price<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>$99.99<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn_text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Subscribe<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="BEM的特性"><a href="#BEM的特性" class="headerlink" title="BEM的特性"></a>BEM的特性</h2><p>有上述例子可以总结出BEM的特性：</p>
+<ul>
+<li>易用性 命名规则清晰；</li>
+<li>单元性 代码单元化可复用；</li>
+<li>灵活性 可以按照自己的方式来组织和配置单元。</li>
+</ul>
+<h2 id="使用BEM的原因"><a href="#使用BEM的原因" class="headerlink" title="使用BEM的原因"></a>使用BEM的原因</h2><ol>
+<li>modifer使得css的结构更加清晰，在给组件编辑样式的时候，可以从modifer着手，看是否需要编写新的css样式；</li>
+<li>BEM在标记语言中更易识别，可以通过BEM更快了解到元素之间的父子关系；</li>
+<li>同一的命名规则更方便团队协作。</li>
+<li>BEM使得代码的结构更扁平，选择器类别分明，这样就避免了对选择器权重的纠结。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://css-tricks.com/bem-101/">BEM 101 - Robin Rendle - CSS-TRICKS</a><br><a target="_blank" rel="noopener" href="http://getbem.com/">Get BEM</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/html/">html,</a><a href="/tags/css/">css,</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

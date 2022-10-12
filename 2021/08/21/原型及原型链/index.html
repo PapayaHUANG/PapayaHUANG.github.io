@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1%E5%88%B0%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">从实例对象到构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">原始模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%94%B9%E8%BF%9B"><span class="toc-text">原始模式的改进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F"><span class="toc-text">构造函数模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">构造函数的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Protoype%E6%A8%A1%E5%BC%8F"><span class="toc-text">Protoype模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protype%E6%A8%A1%E5%BC%8F%E7%9A%84%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95"><span class="toc-text">Protype模式的验证方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/08/21/原型及原型链/">
+        JS原型及原型链(一)
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-08-21 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为总结了javascript计算器项目过程，且javascript计算器主要是通过class原型继承来实现的，所以在这篇文章里我尝试理解一下原型及原型链。</p>
+<h2 id="从实例对象到构造函数"><a href="#从实例对象到构造函数" class="headerlink" title="从实例对象到构造函数"></a>从实例对象到构造函数</h2><h3 id="原始模式"><a href="#原始模式" class="headerlink" title="原始模式"></a>原始模式</h3><p>Javascript是一种基于对象（object-based）的语言。<br>假定我们把狗看成一个对象，它有“名字”和“颜色”两个属性。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">var</span> Dog <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    color<span class="token punctuation">:</span> <span class="token string">' '</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>再根据这个格式，生成两个<strong>实例对象</strong>。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">var</span> dog1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    dog1<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"果果"</span><span class="token punctuation">;</span>
+    dog1<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">"黄色"</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> dog2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    dog2<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"汤圆"</span><span class="token punctuation">;</span>
+    dog2<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">"黑色"</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样就把两个属性分别封装到一个对象里，但是这样做有<strong>两个问题</strong>：</p>
+<ol>
+<li>如果实例的数量变多，写起来就非常麻烦；</li>
+<li>实例和原型之间没有任何方法和联系。</li>
+</ol>
+<h3 id="原始模式的改进"><a href="#原始模式的改进" class="headerlink" title="原始模式的改进"></a>原始模式的改进</h3><p>可以通过一个函数来解决上述代码重复的问题：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      name<span class="token punctuation">:</span> name<span class="token punctuation">,</span>
+      color<span class="token punctuation">:</span> color
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后通过调用函数的方式来生成实例对象：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">var</span> dog1 <span class="token operator">=</span> <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token string">"果果"</span><span class="token punctuation">,</span> <span class="token string">"黄色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> dog2 <span class="token operator">=</span> <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token string">"汤圆"</span><span class="token punctuation">,</span> <span class="token string">"黑色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>这样的写法问题是，<strong>dog1</strong>和<strong>dog2</strong>之间没有内在联系，不能反映出他们是同一个原型对象的实例。</li>
+</ul>
+<h3 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h3><p>为了解决从原型对象生成实例的问题，javascript提供了一个构造函数模式。</p>
+<p>构造函数其实就是一个普通函数，但是内部使用了<strong>this</strong>变量。对构造函数使用<strong>new</strong>运算符，就能生成实例，并且<strong>this</strong>变量会绑定在实例对象上。</p>
+<p>比如，狗的原型对象可以这样写：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> color<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在我们就可以生成实例对象了：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">var</span> dog1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"果果"</span><span class="token punctuation">,</span> <span class="token string">"黄色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> dog2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"汤圆"</span><span class="token punctuation">,</span> <span class="token string">"黑色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//果果</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>color<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//黄色</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这时<code>dog1</code>和<code>dog2</code>会自动含有一个<code>constructor</code>属性，指向他们的构造函数：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Dog<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog2<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Dog<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Javascript还提供了一个<code>instanceof</code>运算符，验证原型对象与实例对象之间的关系：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1 <span class="token keyword">instanceof</span> <span class="token class-name">Dog</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>cat2 <span class="token keyword">instanceof</span> <span class="token class-name">Cat</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="构造函数的问题"><a href="#构造函数的问题" class="headerlink" title="构造函数的问题"></a>构造函数的问题</h3><p>构造函数存在<strong>内存浪费</strong>的问题<br>我们现在为<code>Dog</code>对象添加一个不变的属性<code>type</code>，再添加一个方法<code>eat()</code>，那么原型对象<code>Dog</code>就变成了下面这样：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> color<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">"犬"</span>；
+    <span class="token keyword">this</span><span class="token punctuation">.</span>eat <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"吃狗粮"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>还是使用同样的方法生成实例：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">var</span> dog1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"果果"</span><span class="token punctuation">,</span> <span class="token string">"黄色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> dog2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"汤圆"</span><span class="token punctuation">,</span> <span class="token string">"黑色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 犬</span>
+  dog1<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//吃狗粮</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样做一个很大的<strong>弊端</strong>就是，对于每一个实例对象，<code>type</code>属性和<code>eat()</code>方法都是一模一样的内容，每一次生成一个实例，都必须为重复的内容，占用内存。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token function">alert</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>eat <span class="token operator">==</span> dog2<span class="token punctuation">.</span>eat<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Protoype模式"><a href="#Protoype模式" class="headerlink" title="Protoype模式"></a>Protoype模式</h3><p>为了解决上述的重复和占用内存的问题，可以使用prototype模式，将所有功能相同的实例都指向某个内存地址。</p>
+<p>Javascript规定，每个构造函数都有一个prototype属性，指向另一个对象。这个对象的所有属性和方法，都会被构造函数的实例继承。</p>
+<p>这样上述例子就可以修改成：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> color<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+  Dog<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">"犬"</span><span class="token punctuation">;</span>
+  Dog<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>eat <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"吃狗粮"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后生成实例：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">var</span> dog1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"果果"</span><span class="token punctuation">,</span> <span class="token string">"黄色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> dog2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"汤圆"</span><span class="token punctuation">,</span> <span class="token string">"黑色"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 犬</span>
+  dog1<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//吃狗粮</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这时所有实例的<code>type</code>和<code>eat()</code>方法，其实都指向同一个内存地址，指向prototype对象，这样就提高了运行效率。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span>eat <span class="token operator">==</span> dog2<span class="token punctuation">.</span>eat<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Protype模式的验证方法"><a href="#Protype模式的验证方法" class="headerlink" title="Protype模式的验证方法"></a>Protype模式的验证方法</h2><ul>
+<li><code>isPrototypeOf()</code><br>这个方法用来判断，某个prototype对象和某个实例之间的关系。<pre class="line-numbers language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Dog<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>dog1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Dog<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>dog2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><code>hasOwnProperty()</code><br>每个实例对象都有一个h<code>asOwnProperty()</code>方法，用来判断某个属性到底是本地属性，还是继承prototype对象的属性。<pre class="line-numbers language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">"type"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// false</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><code>in</code>运算符<br><code>in</code>运算符可以用来判断某个实例是否含有某个属性，不管是不是本地属性<pre class="line-numbers language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"name"</span> <span class="token keyword">in</span> dog1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"type"</span> <span class="token keyword">in</span> dog1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<code>in</code>运算符还可以用来遍历某个对象的所有属性<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> prop <span class="token keyword">in</span> dog1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"dog1["</span><span class="token operator">+</span>prop<span class="token operator">+</span><span class="token string">"]="</span> <span class="token operator">+</span> cat1<span class="token punctuation">[</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html">Javascript面向对象的编程（一）：封装 - 阮一峰</a></li>
+</ul>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/js/">js</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E7%9A%84%E4%BA%94%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="toc-text">响应式布局的五种模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mostly-Fluid"><span class="toc-text">Mostly Fluid</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Column-drop"><span class="toc-text">Column drop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Layout-shifter"><span class="toc-text">Layout shifter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tiny-tweaks"><span class="toc-text">Tiny tweaks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Off-Canvas"><span class="toc-text">Off Canvas</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/09/09/响应式布局/">
+        响应式布局设计模式
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-09-09 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在搭建自己的博客时，我发现自己对响应式布局的框架性思维不够，导致出现问题就兵来将挡，水来土掩。所以就顺势学习了以下响应式布局的设计模式。</p>
+<h2 id="响应式布局的五种模式"><a href="#响应式布局的五种模式" class="headerlink" title="响应式布局的五种模式"></a>响应式布局的五种模式</h2><p>市面上响应式布局模式最初由<a target="_blank" rel="noopener" href="https://www.lukew.com/ff/entry.asp?1514">Luke Wroblewski</a>归类，他把布局分为五种模式：<em>mostly fluid, column drop, layout shifter, tiny tweaks 和 off canvas。</em></p>
+<h3 id="Mostly-Fluid"><a href="#Mostly-Fluid" class="headerlink" title="Mostly Fluid"></a>Mostly Fluid</h3><p>之所以叫 Mostly Fluid 是因为这个模式主要是由<em>流动网格</em>组成的。<br>这是<strong>最常用</strong>的一种模式，在大屏幕的时候调整更大的边距，随着屏幕的缩小，网格自动重排。<br>这种模式的<strong>优点</strong>主要是在小屏幕和大屏幕之间通常只需要一个视图断点。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210909144023.png" alt="mostly fluid效果图"><br>实际例子：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/cho/">ChoiceResponse</a></li>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/tre/">Trent Walton</a></li>
+</ul>
+<h3 id="Column-drop"><a href="#Column-drop" class="headerlink" title="Column drop"></a>Column drop</h3><p>这类布局是从大屏幕的多栏布局变换到小屏幕的单栏布局，因此该布局选择视图断点时需要依据内容，会存在多个视图断点。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210909150048.png" alt="Column drop效果图"><br>实际例子：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/wee/">Wee Nudge</a></li>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/owl/">Owltastic</a></li>
+</ul>
+<h3 id="Layout-shifter"><a href="#Layout-shifter" class="headerlink" title="Layout shifter"></a>Layout shifter</h3><p>这是<strong>响应能力最强</strong>的一种模式，同时也意味着不同屏幕会采取不同的布局，所以维护起来更加麻烦。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210909151240.png" alt="layout shifter效果图"><br>实际例子：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/fse/">Food Sense</a></li>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/ffg/">Forefathers Group</a></li>
+</ul>
+<h3 id="Tiny-tweaks"><a href="#Tiny-tweaks" class="headerlink" title="Tiny tweaks"></a>Tiny tweaks</h3><p>这是操作起来<strong>最简单</strong>的一种响应模式，但使用度不高。<strong>优点</strong>是布局简单，仅改变以下字体大小，和图片的布局。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210909151749.png" alt="tiny tweaks效果图"><br>实际例子：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mediaqueri.es/ff/">Future Friendly</a></li>
+</ul>
+<h3 id="Off-Canvas"><a href="#Off-Canvas" class="headerlink" title="Off Canvas"></a>Off Canvas</h3><p>上述模式的一个<strong>共同点</strong>是当屏幕变小的时候，元素在纵向堆叠起来，也就是说上述排列都依赖于可见的屏幕大小。<br>而在 Off Canvas 模式当中，充分利用了看不见的屏幕部分，把不常用的内容（如导航或者应用菜单）放在屏幕之外。<br><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20210909152835.png" alt="Off Canvas效果图"><br>这种布局主要运用到手机应用中，比方说微博等。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.lukew.com/ff/entry.asp?1514">Multi-Device Layout Patterns - Luke Wroblewski</a><br><a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns?hl=zh-cn">自适应网页设计模式 - Google Developers</a><br><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html">自适应网页设计（Responsive Web Desgin) - 阮一峰</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">TCP的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%EF%BC%9F"><span class="toc-text">为什么是三次？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BF%A1%E9%81%93%E9%80%9A%E7%95%85%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%E5%91%A2%EF%BC%9F"><span class="toc-text">测试信道通畅为什么需要三次呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%A1%E6%89%8B%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">握手的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">三次握手的过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-text">第一次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-text">第二次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-text">第三次握手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E6%AC%A1%E5%88%86%E6%89%8B"><span class="toc-text">四次分手</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E6%89%8B"><span class="toc-text">第一次分手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%88%86%E6%89%8B"><span class="toc-text">第二次分手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%88%86%E6%89%8B"><span class="toc-text">第三次分手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%88%86%E6%89%8B"><span class="toc-text">第四次分手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E6%9D%A5%E6%BA%90"><span class="toc-text">资料来源</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2021/05/20/TCP三次握手/">
+        TCP三次握手
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2021-05-20 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为是第一次接触这个知识点，所以我的理解还处在非常浅薄的状态。不过基于昨天阮一峰老师对计算机网络的入门科普知识，以及今天我查到的关于TCP三次握手的文章。我想简单的梳理一下，就目前我对TCP三次握手的理解。</p>
+<p>首先还是要拆解概念，什么是TCP，为什么是三次，什么是握手。</p>
+<h2 id="TCP的定义"><a href="#TCP的定义" class="headerlink" title="TCP的定义"></a>TCP的定义</h2><ul>
+<li><p>TCP（Transmission Control Protocol传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议。</p>
+</li>
+<li><p>在一个TCP连接中，仅有两方彼此通信，广播和多播不能用于TCP。</p>
+</li>
+<li><p>TCP使用校验以及确认和重传机制来保证可靠的传输。</p>
+</li>
+<li><p>TCP给数据分节进行排序、并使用累计确保数据的顺序不变和非重复。</p>
+</li>
+<li><p>TCP使用滑动窗口机制来实现流量的控制，通过动态改变窗口的大小进行拥塞控制。</p>
+</li>
+</ul>
+<h2 id="为什么是三次？"><a href="#为什么是三次？" class="headerlink" title="为什么是三次？"></a>为什么是三次？</h2><p>TCP三次握手是客户端和服务器端在建立连接传输数据前的状态。三次握手成功后，两端之间才开始传输数据。</p>
+<p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/tcp%E5%A4%B4%E9%83%A8.jpeg" alt="tcp头部"></p>
+<p>在理解TCP三次握手的场景下，我们需要的信息有：</p>
+<ul>
+<li><p>ACK：此标志表示应答域有效，有两个取值：0和1，1表示有效，0表示无效；</p>
+</li>
+<li><p>SYN：表示同步序号，用来建立连接。和ACK搭配使用。当连接请求时，SYN=1， ACK=0；连接被响应的时候，SYN=1，ACK=1。</p>
+</li>
+<li><p>FIN：表示发送端已经达到数据末尾，也就是说双方的数据传送完成，没有数据可以传送了。发送FIN标志位的TCP数据包后，连接将被断开。</p>
+</li>
+</ul>
+<h2 id="测试信道通畅为什么需要三次呢？"><a href="#测试信道通畅为什么需要三次呢？" class="headerlink" title="测试信道通畅为什么需要三次呢？"></a>测试信道通畅为什么需要三次呢？</h2><p>因为这个问题的本质是信道不可靠，但是通信双方需要就某个问题达成一致，而要解决这个问题，无论你在消息中包含什么信息，三次通信就是理论上的最小值。所以按此握手不是TCP本身的要求，而是为了满足“在不可靠的信道上可靠地传输信息”这一需求所导致的。</p>
+<h2 id="握手的定义"><a href="#握手的定义" class="headerlink" title="握手的定义"></a>握手的定义</h2><p>这里就要回答TCP三次握手的整个过程，在回答之前还是要先解决一些会涉及到的概念。</p>
+<ul>
+<li>HTTP连接</li>
+</ul>
+<p>HTTP协议是web联网的接触，也是手机联网的常用协议（也是为什么我作为一个前端需要了解三次握手的原因）。HTTP连接的特点是客户端发送的每次请求都需要服务器回送响应，在请求结束后，会主动释放连接。由于HTTP在每次请求结束后都会主动释放连结，因此HTTP连接是一种“短连接”。</p>
+<ul>
+<li>SOCKET原理（套接字）</li>
+</ul>
+<p>套接字是通信的基石，是支持TCP/IP协议的网络通信基本操作单元。他是网络通信过程中端点的抽象表示，包含进行网络通信的五种信息：</p>
+<ol>
+<li><p>连接使用的协议</p>
+</li>
+<li><p>本地主机的IP地址</p>
+</li>
+<li><p>本地进程的协议端口</p>
+</li>
+<li><p>远地主机的IP地址</p>
+</li>
+<li><p>远地进程的协议端口</p>
+</li>
+</ol>
+<p>应用层可以和传输层通过socket接口，区分来自不同应用程序进程或网络连接的通信，实现数据传输的并发服务。</p>
+<ul>
+<li>建立socket连接</li>
+</ul>
+<p>建立socket连接需要一对套接字，一种一个运行于客户端，称为ClientSocket，另一个运行于服务器端，称为ServerSocket。</p>
+<p>创建socket连接时，可以指定使用传输层协议，当使用TCP协议的时候，该socket连接就是一个TCP连接。</p>
+<p>TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认一个连接。</p>
+<h2 id="三次握手的过程"><a href="#三次握手的过程" class="headerlink" title="三次握手的过程"></a>三次握手的过程</h2><p><img src="https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpeg" alt="三次握手"></p>
+<h3 id="第一次握手"><a href="#第一次握手" class="headerlink" title="第一次握手"></a>第一次握手</h3><p>建立连接。客户端发送请求报文段，讲SYN位置位1，Sequence Number为x，然后客户端进入SYN_SENT的状态，等待服务器确认；</p>
+<h3 id="第二次握手"><a href="#第二次握手" class="headerlink" title="第二次握手"></a>第二次握手</h3><p>服务器几首到SYN报文段，需要对这个SYN报文段进行确认，设置ACK Num为x+1，Sequence Num+1；同时，自己还要发送SYN请求星系，讲SYN位置为1，Sequence Number为y；服务器将上述所有信息放在一个报文段（即SYN+ACK报文段“，一并发送给客户端，此时服务器进入SYN_RECV状态；</p>
+<h3 id="第三次握手"><a href="#第三次握手" class="headerlink" title="第三次握手"></a>第三次握手</h3><p>客户端收到服务器的SYN+ACK报文段，然后将ACK Num设置为y+1,向服务器发送ACK报文段，发送完毕后，客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。</p>
+<p>然后就可以愉快地传输数据了。</p>
+<h2 id="四次分手"><a href="#四次分手" class="headerlink" title="四次分手"></a>四次分手</h2><h3 id="第一次分手"><a href="#第一次分手" class="headerlink" title="第一次分手"></a>第一次分手</h3><p>主机1（可以是客户端也可以是服务器端），设置Sequence Num和ACK Num，向主机2发送一个FIN报文段，此时，主机1进入FIN_WAIT_1状态，表示主机1没有数据要发送给主机2了；</p>
+<h3 id="第二次分手"><a href="#第二次分手" class="headerlink" title="第二次分手"></a>第二次分手</h3><p>主机2收到了主机1发送的FIN报文段，向主机1回一个ACK报文段，ACK Num和Sequence Num都+1，主机1进入FIN_Wait_2状态，主机2告诉主机1，我“同意“你的关闭请求；</p>
+<h3 id="第三次分手"><a href="#第三次分手" class="headerlink" title="第三次分手"></a>第三次分手</h3><p>主机2向主机1发送FIN报文段，请求关闭连接，同时主机2进入LAST_ACK状态；</p>
+<h3 id="第四次分手"><a href="#第四次分手" class="headerlink" title="第四次分手"></a>第四次分手</h3><p>主机1收到主机2发送的FIN报文段，向主机2发送ACK报文段，然后主机1进入TIME_WAIT状态；主机2收到主机1的ACK报文段以后，就关闭连接；此时，主机1等待2MSL后依然没有收到回复，则证明主机2已经正常关闭，主机1就关闭连接了。</p>
+<h2 id="资料来源"><a href="#资料来源" class="headerlink" title="资料来源"></a>资料来源</h2><p><a target="_blank" rel="noopener" href="https://github.com/jawil/blog/issues/14">通俗大白话来理解TCP协议的三次握手和三次分手 - Github - by Jawil</a></p>
+<p><a target="_blank" rel="noopener" href="https://hit-alibaba.github.io/interview/basic/network/TCP.html">TCP的三次握手和四次挥手 - 阿里巴巴</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.guru99.com/tcp-3-way-handshake.html">TCP 3-way Handshake - by Guru99</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/computer-science/">computer-science</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

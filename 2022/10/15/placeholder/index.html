@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF"><span class="toc-text">涉及技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">实现方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#preloader%E7%BB%84%E4%BB%B6"><span class="toc-text">preloader组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E8%BF%99%E4%B8%AA%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8React-memo"><span class="toc-text">为什么在这个组件中使用React.memo()?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ProgressiveImage%E7%BB%84%E4%BB%B6"><span class="toc-text">ProgressiveImage组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E8%BF%99%E4%B8%AA%E7%BB%84%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8useCallback"><span class="toc-text">为什么在这个组件中使用useCallback()?</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/10/15/placeholder/">
+        使用React Hook实现图片懒加载
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-10-15 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Pokedex 这个项目大量的数据都是通过从<a target="_blank" rel="noopener" href="https://pokeapi.co/">Pokeapi</a>抓取而来，主图的渲染就需要比较久的时间。这样就会造成一个问题：首页在等待三个宝可梦图片抓取的时候，三张宝可梦卡片的长度会比最终渲染要短，图片成功加载完毕后，宝可梦卡片的长度才会变成理想值。<br>为了解决这个问题，我决定添加一层<code>div</code>，并设置为透明，大小和等待渲染的宝可梦一致，在宝可梦被渲染的时候，先现实这个<code>div</code>，等宝可梦加载完毕后，再显示宝可梦。这样就不会出现上面说的情况。</p>
+<h2 id="涉及技术"><a href="#涉及技术" class="headerlink" title="涉及技术"></a>涉及技术</h2><ul>
+<li><code>img</code>的<code>onload</code>和<code>onerror</code>属性</li>
+<li><code>React.memo</code>以及<code>useCallback()</code></li>
+</ul>
+<p>在实现的过程中，将会创建两个组件：</p>
+<ol>
+<li><code>&lt;Preloader /&gt;</code></li>
+<li><code>&lt;ProgressiveImage /&gt;</code></li>
+</ol>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="preloader组件"><a href="#preloader组件" class="headerlink" title="preloader组件"></a><code>preloader</code>组件</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在 .Preloader.js组件中</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>memo<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Preloader <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+   <span class="token keyword">const</span> spinner <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token comment" spellcheck="true">// 图片加载前的div</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+   <span class="token punctuation">)</span>
+
+   <span class="token keyword">return</span><span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+        <span class="token punctuation">{</span>spinner<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+   <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">memo</span><span class="token punctuation">(</span>Preloader<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="为什么在这个组件中使用React-memo"><a href="#为什么在这个组件中使用React-memo" class="headerlink" title="为什么在这个组件中使用React.memo()?"></a>为什么在这个组件中使用<code>React.memo()</code>?</h4><p><code>React.memo()</code>的使用基本规则是：如果一个组件被<code>React.memo()</code>打包，那么 React 会渲染这个组件并且<strong>记录结果</strong>。那么在下一次渲染前，React 就会对比传入的<code>prop</code>,如果两次的<code>prop</code>一致，React 就会使用<strong>记录结果</strong>，而跳过这次渲染。</p>
+<p>而在我们的例子中，<code>Prelaoder</code>组件将打包我们的预加载<code>div</code>以及图片，图片将是我们传入的<code>children</code>实参，如果传入的图片内容一致，就不需要再次渲染，这样就提高了我们的加载效率。</p>
+<h3 id="ProgressiveImage组件"><a href="#ProgressiveImage组件" class="headerlink" title="ProgressiveImage组件"></a><code>ProgressiveImage</code>组件</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//在.ProgressiveImage.js中</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>memo<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useCallback<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> Preloader <span class="token keyword">from</span> <span class="token string">'./Preloader'</span>
+
+<span class="token keyword">const</span> ProgressiveImage <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>imgSrc<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>imageLoaded<span class="token punctuation">,</span> setImageLoading<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> handleLoad <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token function">setImageLoading</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> handleError <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span> <span class="token function">setImageLoadign</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> showImage <span class="token operator">=</span> <span class="token operator">!</span>imageLoaded <span class="token operator">?</span> <span class="token punctuation">{</span>display<span class="token punctuation">:</span><span class="token string">"none"</span><span class="token punctuation">}</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> ImageToRender <span class="token operator">=</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>img
+            alt<span class="token operator">=</span><span class="token string">""</span>
+            src<span class="token operator">=</span><span class="token punctuation">{</span>imgSrc<span class="token punctuation">}</span>
+            onLoad<span class="token operator">=</span><span class="token punctuation">{</span>handleLoad<span class="token punctuation">}</span>
+            onError<span class="token operator">=</span><span class="token punctuation">{</span>handleError<span class="token punctuation">}</span>
+            style<span class="token operator">=</span><span class="token punctuation">{</span>showImage<span class="token punctuation">}</span>
+            <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>imageLoaded<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token operator">&lt;</span>Preloader<span class="token operator">></span><span class="token punctuation">{</span>ImageToRender<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Preloader<span class="token operator">></span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> ImageToRender<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">memo</span><span class="token punctuation">(</span>ProgressiveImage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="为什么在这个组件中使用useCallback"><a href="#为什么在这个组件中使用useCallback" class="headerlink" title="为什么在这个组件中使用useCallback()?"></a>为什么在这个组件中使用<code>useCallback()</code>?</h4><p>首先，这里我们利用的是<code>&lt;img&gt;</code>本身的<code>onload</code>和<code>onerror</code>API，来控制图片的显式的，也就是当图片加载完毕之后，我们显示图片。<br>然后，由于我们是在 React 环境中开发，所以这里我们就要借助<code>useState()</code>来记录图片的加载状态。<br>于是我们就可以编写代码<code> const [imageLoaded, setImageLoading] = useState(&quot;&quot;);</code>, 以及<code>const showImage = !imageLoaded ? &#123;display:&quot;none&quot;&#125; : &#123;&#125;;</code>。<br>最后就来到比较麻烦的部分，即处理组件的生命周期，和图片的加载过程之间的关系：<br>显然我们希望的是<code>handleLoad</code>和<code>handleError</code><strong>只在组件挂载后只触发一次</strong>, 所以我们使用了<code>useCallback()</code>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上办法，我们就在 React 中实现了图片的懒加载。<br>而其中处理的难点，主要是处理要组件的渲染周期和事件处理器之间的关系。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://sviat-kuzhelev.medium.com/be-lazy-is-no-shame-an-efficient-image-loading-with-react-hooks-ade56978005e">Be lazy is no shame. An efficient Image Loading with React Hooks - Sviat Kuzhelev</a><br><a target="_blank" rel="noopener" href="https://dmitripavlutin.com/use-react-memo-wisely/">Use React.memo() wisely - Dmitri Pavlutin</a><br><a target="_blank" rel="noopener" href="https://dmitripavlutin.com/react-usecallback/">Your Guide to React.useCallback() - Dmitri Pavlutin</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

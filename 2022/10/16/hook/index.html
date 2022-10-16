@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%89%E5%8F%8A%E6%8A%80%E6%9C%AF"><span class="toc-text">涉及技术</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86"><span class="toc-text">技术原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-text">实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Provider-%E5%92%8C-Consumer"><span class="toc-text">Provider 和 Consumer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#React-createContext"><span class="toc-text">React.createContext</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Provider-%E7%9A%84-value-%E5%B1%9E%E6%80%A7"><span class="toc-text">Provider 的 value 属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#React-useContext"><span class="toc-text">React.useContext</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%92%A9%E5%AD%90%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">自定义钩子的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">参考文章</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/10/16/hook/">
+        用自定义React Hook创建翻页器
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-10-16 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Pokedex 这个项目中，多个组件发生变化，都会触发页面发生变化（翻页），也就是说翻页这个功能会被复用。所以我使用了自定义 hook 的功能，编写了一个自定义的翻页钩子。</p>
+<h2 id="涉及技术"><a href="#涉及技术" class="headerlink" title="涉及技术"></a>涉及技术</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/context.html">React Context</a></li>
+</ul>
+<h2 id="技术原理"><a href="#技术原理" class="headerlink" title="技术原理"></a>技术原理</h2><p>在一个典型的 React 应用中，<code>props</code>属性是通过自上而下进行传递的，英文叫做 _Prop Drilling_。这也就意味着在有些情况下，层层传递会显得非常地繁琐，编写的代码就不够简洁。<br>如果这些属性在很多组件中都会被复用的话，就可以使用<code>Context</code>。<br><code>Context</code> 提供了一种在组件之间共享值的方法，就完美地绕开了 Prop Drilling.</p>
+<p>而在这个项目中，我们会用到的 API 有：</p>
+<ul>
+<li>createContext</li>
+<li>useContext</li>
+<li>Context.Provider</li>
+<li>Context.Consumer</li>
+</ul>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="Provider-和-Consumer"><a href="#Provider-和-Consumer" class="headerlink" title="Provider 和 Consumer"></a>Provider 和 Consumer</h3><p>被复用的组件（也就是我们这个案例中的自定义钩子）就是 Provider，它提供具体需要实现的功能；而应用其他需要消费这个组件的组件就是 Consumer，在我们的案例中，为了更方便的使用，我将整个<code>&lt;App /&gt; </code>都打包为 Consumer。</p>
+<p>所以自定义的钩子代码结构如下：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token comment" spellcheck="true">//在自定义钩子中</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span>createContext<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+  <span class="token keyword">const</span> PageContext <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">function</span> PageNumProvider <span class="token punctuation">(</span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//...</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>PageContext<span class="token punctuation">.</span>Provider
+      value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span>
+    <span class="token operator">></span>
+    <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>PageContext<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+  <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="React-createContext"><a href="#React-createContext" class="headerlink" title="React.createContext"></a>React.createContext</h4><p>Provider 是 context 对象返回的组件，所以在使用之前，我们必须得先用<code>createContext()</code>来创建一个 Context 对象。</p>
+<h4 id="Provider-的-value-属性"><a href="#Provider-的-value-属性" class="headerlink" title="Provider 的 value 属性"></a>Provider 的 value 属性</h4><p>Provider 中的 value 属性接收的值可以传递给消费组件使用，所以在我们的案例中，所有跟翻页相关的功能都是通过 value 传递出来的。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>PageContext<span class="token punctuation">.</span>Provider
+  value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>turnToNextPage<span class="token punctuation">,</span> turnToPrePage<span class="token punctuation">,</span> turnToDefaultPage<span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">></span>
+  <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>PageContext<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="React-useContext"><a href="#React-useContext" class="headerlink" title="React.useContext"></a>React.useContext</h4><p>通常情况下，需要消费的组件可以使用如 Provider 一样的打包方式实现：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>PageContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+  <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>PageContext<span class="token punctuation">.</span>Consumer<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后再将需要使用的翻页逻辑写到自定义钩子中就可以在其他组件中复用了。</p>
+<h3 id="自定义钩子的使用"><a href="#自定义钩子的使用" class="headerlink" title="自定义钩子的使用"></a>自定义钩子的使用</h3><p>首先要在自定义钩子中，定义好钩子要使用的上下文：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//在自定义钩子中</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> usePageNum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">useContext</span><span class="token punctuation">(</span>PageContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在需要使用钩子的组件中编写代码：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//使用自定义钩子的组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> usePageNum <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../PageNumHooks'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">PageFlipper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> turnToPrePage<span class="token punctuation">,</span> turnToNextPage <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">usePageNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后就可以直接在这个组件中调用需要使用的功能。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>使用自定义钩子和 React Context 可以大大减少代码量，提高代码库的可复用性。</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/context.html#contextconsumer">React 文档</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

@@ -613,6 +613,8 @@ body {
 .main {
   opacity: 0;
   animation: showMain 3s ease-in-out forwards;
+  height: 100vh;
+  overflow-y: scroll;
 }
 @media screen and (min-width: 979px) {
   header {

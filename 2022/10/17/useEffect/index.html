@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%98%E8%B5%B7"><span class="toc-text">缘起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-useEffect-%E6%9D%A5%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-text">如何使用 useEffect 来抓取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E6%9C%BA%E5%92%8C%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">抓取数据的时机和组件生命周期的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#useEffect-%E5%92%8C%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">useEffect 和异步函数的关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/10/17/useEffect/">
+        在React中使用useEffect抓取数据(一)
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-10-17 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>在 Pokedex 项目中，页面需要渲染的数据，我都是通过<code>useEffect</code>来抓取的，而抓取数据的函数是异步的。这样就涉及到如何在<code>useEffect</code>中处理异步函数的问题，同时结合页面跳转，也会碰到页面 state 冲突的报错，这篇文章就要盘点这两个技术点：</p>
+<ul>
+<li>如何使用 useEffect 来抓取数据</li>
+<li>如何清理异步 useEffect</li>
+</ul>
+<h2 id="如何使用-useEffect-来抓取数据"><a href="#如何使用-useEffect-来抓取数据" class="headerlink" title="如何使用 useEffect 来抓取数据"></a>如何使用 useEffect 来抓取数据</h2><p>使用 useEffect 来抓取数据需要用到<code>useState</code>和<code>useEffect</code>搭配使用：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>data<span class="token punctuation">,</span> setData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//抓数据</span>
+    <span class="token function">setData</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span><span class="token punctuation">(</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>state 用来存储抓取的数据，而数据我们可以使用<code>axios</code>来抓取：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span>useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>data<span class="token punctuation">,</span> setData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token string">'some url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setData</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span><span class="token punctuation">(</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="抓取数据的时机和组件生命周期的关系"><a href="#抓取数据的时机和组件生命周期的关系" class="headerlink" title="抓取数据的时机和组件生命周期的关系"></a>抓取数据的时机和组件生命周期的关系</h3><p>我们使用 axios 将整个抓取数据的代码逻辑补充完整，但是马上就会发现问题。<br>由于 state 一发生变化，整个组件就会重新渲染；同时 useEffect 是在组件挂载(mounted)之后启动，以及组件每次发生变化后启动。而<code>setData</code>在 useEffect 内部，所以这样就会造成无限循环渲染。</p>
+<p><strong>我们仅需要在组件挂载后抓取数据</strong>。</p>
+<p>所以解决方法很简单，我们可以在<code>useEffect</code>后，添加一个空数组作为依赖数组。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setData</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="useEffect-和异步函数的关系"><a href="#useEffect-和异步函数的关系" class="headerlink" title="useEffect 和异步函数的关系"></a>useEffect 和异步函数的关系</h3><p>如上述代码块中我们可以看到，抓取数据使用的是 async/await， 通常异步函数会返回一个异步对象。而 effect 钩子只能返回空或者一个清理函数。所以如果按照上述代码来处理的话，可能会在控制台上收到报错：</p>
+<pre><code>452 Warning: useEffect function must return a cleanup function or nothing. Promises and useEffect(async () =&gt; ...) are not supported, but you can call an async function inside an effect..
+</code></pre>
+<p>所以我们可以按照报错提示来处理，把异步函数打包起来：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> fetchData <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setData</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.robinwieruch.de/react-hooks-fetch-data/">How to fetch data with React Hooks - Robin Wieruch</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

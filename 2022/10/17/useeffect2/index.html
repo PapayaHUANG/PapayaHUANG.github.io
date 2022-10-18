@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E6%B8%85%E7%90%86%E5%BC%82%E6%AD%A5-React-%E7%9A%84%E6%8A%A5%E9%94%99"><span class="toc-text">不清理异步 React 的报错</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#React-%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">React 组件的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mounting-%E9%98%B6%E6%AE%B5"><span class="toc-text">Mounting 阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Updating-methods"><span class="toc-text">Updating methods</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unmounting-method"><span class="toc-text">Unmounting method</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E7%90%86%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">清理异步函数的原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">解决方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/10/17/useeffect2/">
+        在React中使用useEffect抓取数据(二)
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-10-17 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="不清理异步-React-的报错"><a href="#不清理异步-React-的报错" class="headerlink" title="不清理异步 React 的报错"></a>不清理异步 React 的报错</h2><p>在运行 Pokedex 的时候，我遇到了一个问题，就是当我在主页点击了翻页符号，后台正在抓取新的数据的时候，我同时点击了卡片上的更多信息按钮，想要跳转到一个新的卡片详细页面，控制台会出现报错：</p>
+<pre><code>Warning: Can&#39;t perform a React state update on an unmounted component.
+</code></pre>
+<h3 id="React-组件的生命周期"><a href="#React-组件的生命周期" class="headerlink" title="React 组件的生命周期"></a>React 组件的生命周期</h3><p>要解决上面的报错，首先要理清楚 React 组件的生命周期：</p>
+<ul>
+<li>Mounting</li>
+<li>Updating</li>
+<li>Unmounting</li>
+</ul>
+<p><img src="https://miro.medium.com/max/1400/1*fdGC22mqWBAQ7jOFPPAvIg.png" alt="三阶段示意图"></p>
+<p>虽然组件的生命周期更适用于 class 组件的拆分，但是了解组件周期，对于我们处理 effect 和页面渲染的关系有帮助。</p>
+<h4 id="Mounting-阶段"><a href="#Mounting-阶段" class="headerlink" title="Mounting 阶段"></a>Mounting 阶段</h4><ul>
+<li><p><code>constructor()</code><br><code>state</code>在这个阶段设置好</p>
+</li>
+<li><p><code>render()</code><br>这个是<strong>唯一</strong>一个由 React 触发的生命周期，负责将 HTML 呈现给用户。</p>
+</li>
+<li><p><code>componentDidMount()</code><br>因为组件已经挂载完毕，并且 DOM 已经渲染好，通常这个时候会调用 API</p>
+</li>
+</ul>
+<h4 id="Updating-methods"><a href="#Updating-methods" class="headerlink" title="Updating methods"></a>Updating methods</h4><p>这里就体现了 React 如何动态地局部改变 SPA，通常<code>state</code>和<code>props</code>会经历一些改变，这样就会导致重新渲染组件。</p>
+<ul>
+<li><p><code>shouldComponentUpdate()</code><br>默认情况是，<code>state</code>和<code>props</code>一旦发生改变就会重新渲染组件，也可以自己创建触发渲染的条件，或者控制默认渲染。<br>这样就可以提高应用的性能。</p>
+</li>
+<li><p><code>componentDidUpdate()</code><br>在这个阶段可以发送 HTTP 请求。</p>
+</li>
+</ul>
+<h4 id="Unmounting-method"><a href="#Unmounting-method" class="headerlink" title="Unmounting method"></a>Unmounting method</h4><p>有时候需要把组件从 DOM 中清除。</p>
+<ul>
+<li><p><code>componentWillUnmount()</code><br>这个时候可以做一些清理工作，如取消网络连接，清除时间监听器等。</p>
+</li>
+<li><p><code>componentDidCatch()</code><br>这个阶段可以用来捕获和处理一些错误。</p>
+</li>
+</ul>
+<h2 id="清理异步函数的原理"><a href="#清理异步函数的原理" class="headerlink" title="清理异步函数的原理"></a>清理异步函数的原理</h2><p>了解了组件的生命就可以判断，当我们在点击翻页按钮的时候，后台就重新更新了传入组件的<code>state</code>准备重新渲染页面；而当我们点进单个卡片，准备跳转到卡片详细内容的页面是，当前我们正看到的这个页面正经历着<code>unmounting</code>的阶段。</p>
+<p>这样就造成了我们为一个<code>unmounted</code>的组件更新<code>state</code>的矛盾。回顾上文的生命周期，<code>state</code>的更新只发生在<code>updating</code>阶段，于是就产生了 bug。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>解决的原理，就是当组件<code>unmounting</code>的时候，我们要取消掉正在运行的异步请求。</p>
+<p>而<code>useEffect</code>刚好提供这样的清理方法：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//副作用逻辑</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//清理副作用</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>所以在我的代码中，我插入了一个<code>isMounted</code>的布尔值，来控制异步函数的运行：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> isMounted <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> getButton <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>chain<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchPokemonButtons</span><span class="token punctuation">(</span>chain<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isMounted<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setButtons</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">getButton</span><span class="token punctuation">(</span>chain<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    isMounted <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>chain<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>当然也可以借助<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController">AbortController</a>:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> controller <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AbortController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'url'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        signal<span class="token punctuation">:</span> controller<span class="token punctuation">.</span>signal<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">setData</span><span class="token punctuation">(</span><span class="token keyword">await</span> reponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      controller <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> controller<span class="token operator">?</span><span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在这个代码示例中，我们先创建了一个<code>AbortController</code>实例：<code>controller</code>，然后将<code>controller</code>带入到数据请求中，以控制数据请求，最后在<code>useEffect()</code>清理掉<code>controller</code>。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://medium.com/@ralph1786/intro-to-react-component-lifecycle-ac52bf6340c">Intro to React component lifecycle - Rafael Cruz</a><br><a target="_blank" rel="noopener" href="https://dmitripavlutin.com/react-cleanup-async-effects/">How to Cleanup Async Effects in React - Dmitri Pavlutin</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/项目练习/">项目练习</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

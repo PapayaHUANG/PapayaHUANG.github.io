@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-text">引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reconciliation"><span class="toc-text">Reconciliation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Component%EF%BC%88%E7%BB%84%E4%BB%B6%EF%BC%89%E6%98%AF-React-%E7%9A%84%E4%B8%80%E7%AD%89%E5%85%AC%E6%B0%91"><span class="toc-text">Component（组件）是 React 的一等公民</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%AF%E5%87%BD%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6"><span class="toc-text">纯函数和函数式组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E7%9A%84%E8%B0%83%E7%94%A8"><span class="toc-text">组件的调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC%EF%BC%88Inversion-of-Control"><span class="toc-text">控制反转（Inversion of Control)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/10/18/react学习笔记2/">
+        React学习笔记（二）
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-10-18 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>通过接入点对比 element tree 和 host tree 的规则是什么呢？</p>
+<h2 id="Reconciliation"><a href="#Reconciliation" class="headerlink" title="Reconciliation"></a>Reconciliation</h2><p>这个时候 Reconciliation 就登场了。这个概念并不仅应用在 React 中，任何 host tree 对新加入的信息作出的反应都可以称为 reconciliation。<br>那么在 DOM 中，这个 reconciliation 就是推倒重来，这样做的弊端不仅速度慢，而且会丧失一些重要的信息，比方说：focus、selected 等状态。</p>
+<p>所以 React 需要决定什么时候更新已有的 host tree 来匹配新的 element。</p>
+<p><strong>如果在同一个位置的一个元素（element）的类型在两次渲染之间保持一致，那么 React 就会复用这个 host 实例。</strong></p>
+<p>注意在这个规则中，有一个重要的条件是<strong>在同一个位置</strong>。</p>
+<p>而这个条件仅当在子元素的位置固定不变的情况下成立，如果子元素是一个动态列表，仅通过元素类型来判断是不够的，这个时候就引入<code>key</code>这个概念。</p>
+<p><strong>key</strong>告诉 React，即便在几次渲染之后，一个元素在父元素的位置发生了变化，但是它还是那个元素。<code>key</code>称为了元素的身份证。</p>
+<h2 id="Component（组件）是-React-的一等公民"><a href="#Component（组件）是-React-的一等公民" class="headerlink" title="Component（组件）是 React 的一等公民"></a>Component（组件）是 React 的一等公民</h2><p>之前我们一直在说 React element，但是在实际操作中，我们常常是使用 React Component 来返回 React element。</p>
+<p>React 的一个核心观念就是：<br><strong>描述一个组件的元素（element）也是元素，他们可以相互嵌套相互融合。</strong>（JSX 就是相互嵌套融合的一个语法糖）</p>
+<p>就像函数是 JavaScript 的一等公民一样，Component 是 React 的一等公民。</p>
+<p>而组件之间是通过 props 通信的。</p>
+<h3 id="纯函数和函数式组件"><a href="#纯函数和函数式组件" class="headerlink" title="纯函数和函数式组件"></a>纯函数和函数式组件</h3><p>纯函数有两个条件：</p>
+<ul>
+<li>输入相同的情况下，输出永远相同；</li>
+<li>不会产生副作用</li>
+</ul>
+<p>而在 React 函数式组件中，传入 props 可以做到纯函数的表现，即输入相同的情况下，输出永远相同，以及不产生副作用。与此同时输出就是 element（element tree）。</p>
+<p>但是 React 对“纯”的要求并没有那么严格，也就是说，在不影响其他组件的情况下，可以在该函数组件内部修改传入的 props。<br>比起纯函数，React 更强调的是幂等。</p>
+<h3 id="组件的调用"><a href="#组件的调用" class="headerlink" title="组件的调用"></a>组件的调用</h3><p><strong>组件的调用并不是直接的，而是通过 React 稍后调用。</strong></p>
+<p>组件的调用就会用到这篇笔记刚开始提到的 reconciliation， 在 react 中，reconciliation 并不是推倒重来，而是采用递归的方式遍历 element tree，如果 element 的 type 值是 component，就会调用这个组件，并且保持住继续遍历其他的 element，一直到没有子组件，这样就能够对比出来哪些是需要改变的，哪些可以保持不变。</p>
+<h3 id="控制反转（Inversion-of-Control"><a href="#控制反转（Inversion-of-Control" class="headerlink" title="控制反转（Inversion of Control)"></a>控制反转（Inversion of Control)</h3><p>从第一篇学习笔记一直到现在一直强调的一个点是我们不需要自己调用 host tree 上的 API，React 会帮我们完成这些工作，那么就有一个问题，React 帮我们完成这些任务有什么优势呢？</p>
+<p>假设同样是一个名为<code>Article</code>的组件，它是<code>Layout</code>的子组件，如果我们自己来调用的话：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token function">Layout</span><span class="token punctuation">(</span><span class="token punctuation">{</span> children<span class="token punctuation">:</span> <span class="token function">Article</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> domContainer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果是让 React 调用的话</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>Layout<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Article <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Layout<span class="token operator">></span><span class="token punctuation">,</span>
+  domContainer
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样做的优势如下：</p>
+<ul>
+<li>组件的类型在 reconciliation 中起到了作用，这样在重新渲染的时候就可以更高效地对比两次渲染的结构。</li>
+<li>组件不仅仅是函数，组件还可以包括本地的状态。</li>
+<li>React 可以推迟 reconciliation。</li>
+<li>由于组件的重要性（一等公民），所以可以基于组件创建更多 debug 的工具。</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976">Master the JavaScript Interview: What is a Pure Function - Eric Elliott</a><br><a target="_blank" rel="noopener" href="https://overreacted.io/react-as-a-ui-runtime/">React as a UI Runtime - Dan Adramov</a><br><a target="_blank" rel="noopener" href="https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html">React Components, Elements, and Instances - Dan Abramov</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

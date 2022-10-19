@@ -162,7 +162,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>虽然 React element 不可以被改变，但是他们随时可以被重新创建和清除。</p>
+<p>虽然 React element 不可以被改变，但是他们随时可以被重新创建和清除；因为他们不是实例，只是单纯的 JavaScript 对象，所以和 DOM node 相比，他们更加轻量。</p>
 <h3 id="接入点"><a href="#接入点" class="headerlink" title="接入点"></a>接入点</h3><p>既然 React Element 不和 host 实例绑定，那我们如何通过 React 来控制 host tree 呢？在 React DOM 中，我们使用<code>ReactDOM.render</code>:</p>
 <pre class="line-numbers language-javascript"><code class="language-javascript">ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>reactElement<span class="token punctuation">,</span> domContainer<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>

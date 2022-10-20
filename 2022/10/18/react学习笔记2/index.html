@@ -138,6 +138,17 @@
 <p>但是 React 对“纯”的要求并没有那么严格，也就是说，在不影响其他组件的情况下，可以在该函数组件内部修改传入的 props。<br>比起纯函数，React 更强调的是幂等。</p>
 <h3 id="组件的调用"><a href="#组件的调用" class="headerlink" title="组件的调用"></a>组件的调用</h3><p><strong>组件的调用并不是直接的，而是通过 React 稍后调用。</strong></p>
 <p>组件的调用就会用到这篇笔记刚开始提到的 reconciliation， 在 react 中，reconciliation 并不是推倒重来，而是采用递归的方式遍历 element tree，如果 element 的 type 值是 component，就会调用这个组件，并且保持住继续遍历其他的 element，一直到没有子组件，这样就能够对比出来哪些是需要改变的，哪些可以保持不变。</p>
+<p>而在 React 调用这些组件的时候，用到了一个 API:<a target="_blank" rel="noopener" href="https://developer.chrome.com/blog/using-requestidlecallback/">requestIdleCallback</a>，这个 API 可以在浏览器空闲的时候将函数置于队列中，所以可以使用这个 API 来计划什么时候执行函数。</p>
+<p>假设所有针对一个组件的 React 工作都表示在一个名为<code>performWork</code>的函数中，使用<code>requestIdleCallback</code>来计划工作流的代码类似于：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">requestIdleCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>deadline<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>deadline<span class="token punctuation">.</span><span class="token function">timeRemaining</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">||</span> deadline<span class="token punctuation">.</span>didTimeout<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+    nextComponent
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nextComponent <span class="token operator">=</span> <span class="token function">performWork</span><span class="token punctuation">(</span>nextComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="控制反转（Inversion-of-Control"><a href="#控制反转（Inversion-of-Control" class="headerlink" title="控制反转（Inversion of Control)"></a>控制反转（Inversion of Control)</h3><p>从第一篇学习笔记一直到现在一直强调的一个点是我们不需要自己调用 host tree 上的 API，React 会帮我们完成这些工作，那么就有一个问题，React 帮我们完成这些任务有什么优势呢？</p>
 <p>假设同样是一个名为<code>Article</code>的组件，它是<code>Layout</code>的子组件，如果我们自己来调用的话：</p>
 <pre class="line-numbers language-javascript"><code class="language-javascript">ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token function">Layout</span><span class="token punctuation">(</span><span class="token punctuation">{</span> children<span class="token punctuation">:</span> <span class="token function">Article</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> domContainer<span class="token punctuation">)</span><span class="token punctuation">;</span>

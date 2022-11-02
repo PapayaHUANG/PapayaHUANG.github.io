@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%98%E8%B5%B7"><span class="toc-text">缘起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">什么是环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%9C%A8%E5%93%AA%E9%87%8C%E4%BD%BF%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">一般在哪里使用环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-vanillaJS-%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">如何在 vanillaJS 中使用环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E5%9C%A8-vanillaJS-%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">为什么不能在 vanillaJS 中使用环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%85%A5-webpack"><span class="toc-text">引入 webpack</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/10/29/在vaniliaJS中使用环境变量/">
+        在vanillaJS中使用环境变量
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-10-29 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>在编写 30DaysOfJavaScriptDemos 这个项目的时候，我遇到一个问题：我需要调用漫威的 API，但是该 API 需要使用公钥，我不想直接在 Github 仓库公开公钥，所以想使用<code>.env</code>来在隐藏公钥；但是我的项目使用的是原生三件套，没办法直接引用<code>.env</code>。</p>
+<h2 id="什么是环境变量"><a href="#什么是环境变量" class="headerlink" title="什么是环境变量"></a>什么是环境变量</h2><p>环境变量在我的项目中的意义就是能够灵活地处理条件，让我们的应用可以在开发和生产模式自如应对。环境变量可以存储敏感数据。</p>
+<h2 id="一般在哪里使用环境变量"><a href="#一般在哪里使用环境变量" class="headerlink" title="一般在哪里使用环境变量"></a>一般在哪里使用环境变量</h2><p>一般在后端应用使用环境变量，如 nodeJS；在使用 CRA 创建的 React 中也可以直接使用环境变量，因为已经打包好了一些 Node 的包。在 React 中使用的时候，通常只需要在根目录创建一个<code>.env</code>文件，然后这个文件就可以在 Node 的运行时使用，Node 会把<code>.env</code>文件当作一个对象，然后通过<code>process.env.env_variable</code>来调取文件中的变量。</p>
+<h2 id="如何在-vanillaJS-中使用环境变量"><a href="#如何在-vanillaJS-中使用环境变量" class="headerlink" title="如何在 vanillaJS 中使用环境变量"></a>如何在 vanillaJS 中使用环境变量</h2><p>在 React 中使用<code>.env</code>的经验就给我们提供了一个思路，可以通过 npm 包来实现。刚好有一个<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/dotenv">dotenv</a>可以使用。<br>那我们直接在项目中初始化 node 然后安装这个包就可以了嘛？没那么简单！<br>当我们想要 JS 中使用 dotenv 的时候，需要引用它： <code>require(&quot;dotenv&quot;).config()</code>，这个时候就会出现报错：<code>require</code>未被定义。</p>
+<h3 id="为什么不能在-vanillaJS-中使用环境变量"><a href="#为什么不能在-vanillaJS-中使用环境变量" class="headerlink" title="为什么不能在 vanillaJS 中使用环境变量"></a>为什么不能在 vanillaJS 中使用环境变量</h3><p>你不能在浏览器中使用 node 提供<code>process.env</code>全局变量，并且如果你把代码通过 git 工作流提交到 github，github 会出于安全原因，删除密钥，应用就无法在生产环境运行。所以 VanillaJS 无法保存环境变量。</p>
+<h3 id="引入-webpack"><a href="#引入-webpack" class="headerlink" title="引入 webpack"></a>引入 webpack</h3><p>首先我们需要在应用中安装好相应的包文件：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token string">"dependencies"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"@babel/core"</span><span class="token punctuation">:</span> <span class="token string">"^7.19.6"</span><span class="token punctuation">,</span>
+    <span class="token string">"@babel/preset-env"</span><span class="token punctuation">:</span> <span class="token string">"^7.19.4"</span><span class="token punctuation">,</span>
+    <span class="token string">"babel-loader"</span><span class="token punctuation">:</span> <span class="token string">"^9.0.0"</span><span class="token punctuation">,</span>
+    <span class="token string">"css-loader"</span><span class="token punctuation">:</span> <span class="token string">"^6.7.1"</span><span class="token punctuation">,</span>
+    <span class="token string">"dotenv-webpack"</span><span class="token punctuation">:</span> <span class="token string">"^8.0.1"</span><span class="token punctuation">,</span>
+    <span class="token string">"html-webpack-plugin"</span><span class="token punctuation">:</span> <span class="token string">"^5.5.0"</span><span class="token punctuation">,</span>
+    <span class="token string">"style-loader"</span><span class="token punctuation">:</span> <span class="token string">"^3.3.1"</span><span class="token punctuation">,</span>
+    <span class="token string">"url-loader"</span><span class="token punctuation">:</span> <span class="token string">"^4.1.1"</span><span class="token punctuation">,</span>
+    <span class="token string">"webpack"</span><span class="token punctuation">:</span> <span class="token string">"^5.74.0"</span><span class="token punctuation">,</span>
+    <span class="token string">"webpack-cli"</span><span class="token punctuation">:</span> <span class="token string">"^4.10.0"</span><span class="token punctuation">,</span>
+    <span class="token string">"webpack-dev-server"</span><span class="token punctuation">:</span> <span class="token string">"^4.11.1"</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在<code>webpack.config.js</code>文件中做好配置：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Dotenv <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dotenv-webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token string">'./src/app.js'</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'bundle.js'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  devtool<span class="token punctuation">:</span> <span class="token string">'eval-cheap-source-map'</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span> loader<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span> exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        test<span class="token punctuation">:</span> <span class="token regex">/\.png$/</span><span class="token punctuation">,</span>
+        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            loader<span class="token punctuation">:</span> <span class="token string">'url-loader'</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              mimetype<span class="token punctuation">:</span> <span class="token string">'image/png'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  devServer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span><span class="token punctuation">:</span> <span class="token string">'src'</span><span class="token punctuation">,</span>
+    hot<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    open<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    port<span class="token punctuation">:</span> <span class="token number">8000</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>HotModuleReplacementPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      template<span class="token punctuation">:</span> <span class="token string">'src/index.html'</span><span class="token punctuation">,</span>
+      filename<span class="token punctuation">:</span> <span class="token string">'index.html'</span><span class="token punctuation">,</span>
+      inject<span class="token punctuation">:</span> <span class="token string">'body'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword">new</span> <span class="token class-name">Dotenv</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      systemvars<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其实这个方式不再是使用 vanillaJS 保存环境变量了，而是将整个应用模块化，再使用 webpack 打包。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/how-to-use-environment-variables-in-vanillajs/">How to Use Environment Variables in VanillaJS - Caleb Olojo</a><br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=vSmzEGZQI5A">Add .env to your JavaScript Project - Code with Ania Kubow</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/技巧总结/">技巧总结</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/js/">js</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

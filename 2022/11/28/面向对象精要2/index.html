@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1"><span class="toc-text">构造函数和原型对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">构造函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%AE%89%E5%85%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">作用域安全构造函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1"><span class="toc-text">原型对象</span></a></li></ol></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/11/28/面向对象精要2/">
+        《JavaScript面向对象精要》读书笔记（一）
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-11-28 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="构造函数和原型对象"><a href="#构造函数和原型对象" class="headerlink" title="构造函数和原型对象"></a>构造函数和原型对象</h2><h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>使用构造函数的好处在于所有用同一个构造函数创建的对象都具有同样的属性和方法。</p>
+<p>每一个对象在创建时都自动拥有一个构造函数属性，其中包含了一个指向其构造函数的引用。</p>
+<p>_通过对象字面量形式或者 Object 构造函数创建出来的泛用对象，其构造函数属性指向 Object_。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//任意内部内容</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> person1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> person2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//如果不需要传参，可以省略调用括号</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Person<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person2<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Person<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>当调用构造函数的时候，new 会自动创建 this 对象，且其类型就是构造函数的类型。构造函数本身不需要返回一个值，new 操作符会帮你返回。当然也可以<strong>显式调用</strong>return，如果返回的是一个对象，他会代替新创建的对象实例返回。如果返回的值是一个原始类型，他会被忽略，新创建的对象实例会被返回。</p>
+<p>如果构造函数不被 new 调用，this 对象就等于全局 this 对象，由于构造函数依靠 new 提供返回值，所以实例值就为<code>undefined</code>。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> person1 <span class="token operator">=</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token string">"Nick"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>person1 instanceOf <span class="token class-name">Person</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> person1<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// undefined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// "Nick"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但如果是严格模式下，如果不通过 new 来调用构造函数，会报错。因为严格模式并没有全局对象设置 this，this 保持为<code>undefined</code>,当你试图给<code>undefined</code>添加属性就会报错。</p>
+<h4 id="作用域安全构造函数"><a href="#作用域安全构造函数" class="headerlink" title="作用域安全构造函数"></a>作用域安全构造函数</h4><p>避免出现上述问题的方式是设计一个作用域安全构造函数：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span> instanceOf <span class="token class-name">Person</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name <span class="token comment" spellcheck="true">//用new调用</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//不用new调用</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h3>
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/读书笔记/">读书笔记</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/js/">js</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

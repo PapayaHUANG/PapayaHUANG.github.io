@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%87%BA%E7%8E%B0-flexbox"><span class="toc-text">为什么会出现 flexbox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flexbox-%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">flexbox 的核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%BD%B4-Primary-Axis-%E5%92%8C%E4%BA%A4%E5%8F%89%E8%BD%B4-Cross-Axis"><span class="toc-text">主轴(Primary Axis)和交叉轴(Cross Axis)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E5%A4%A7%E5%B0%8F-Hypothetical-size"><span class="toc-text">假设大小(Hypothetical size)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E7%9A%84%E6%94%BE%E5%A4%A7%E4%B8%8E%E7%BC%A9%E5%B0%8F"><span class="toc-text">元素的放大与缩小</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#flex-basis"><span class="toc-text">flex-basis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flex-grow"><span class="toc-text">flex-grow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flex-shrink"><span class="toc-text">flex-shrink</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9D%E5%A4%96%E7%A9%BA%E9%97%B4%E5%88%86%E9%85%8D"><span class="toc-text">额外空间分配</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gap"><span class="toc-text">gap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#margin-auto"><span class="toc-text">margin: auto</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wrapping"><span class="toc-text">wrapping</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2022/12/06/深入了解flexbox机制/">
+        深入理解Flexbox机制
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2022-12-06 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天看到了一篇讲解 flexbox 的文章，而我之前看到过从属性和属性的值这个角度来将 CSS 语法不大一样，觉得很有意思，所以记一下笔记。</p>
+<h2 id="为什么会出现-flexbox"><a href="#为什么会出现-flexbox" class="headerlink" title="为什么会出现 flexbox"></a>为什么会出现 flexbox</h2><p>CSS 的默认布局模式是“流”（flow），也就是 <em>块级元素</em> 以栈的方式布局，而 <em>内联元素</em> 在块的内部相互连接，就好像 Word 文档的布局一样。<br>Flexbox 的出现给这样的布局增加了更多的灵活性（flexibility）， 我们可以使用 Flexbox 来控制元素的分布和对齐方式、放大和缩小以及对额外空间的分配。</p>
+<h2 id="flexbox-的核心概念"><a href="#flexbox-的核心概念" class="headerlink" title="flexbox 的核心概念"></a>flexbox 的核心概念</h2><p>flexbox 是通过两个轴来控制元素的分布和对齐方式的。</p>
+<h3 id="主轴-Primary-Axis-和交叉轴-Cross-Axis"><a href="#主轴-Primary-Axis-和交叉轴-Cross-Axis" class="headerlink" title="主轴(Primary Axis)和交叉轴(Cross Axis)"></a>主轴(Primary Axis)和交叉轴(Cross Axis)</h3><p>设置主轴和交叉轴的方向需要借助<code>flex-direction</code>属性。</p>
+<ul>
+<li><p>主轴<br>默认情况下，元素会在主轴的起始点依次排开，也就是说主轴解决的是元素的<strong>分布问题</strong>(distribution)。<br>在主轴上，是将所有元素作为一个整体来布局。</p>
+</li>
+<li><p>交叉轴<br>默认情况下，元素会在交叉轴方向填满整个容器，也就是说交叉轴解决的是元素的<strong>对齐问题</strong>(alignment)。<br>在交叉轴上，是将每个元素作为一个个体来布局。</p>
+</li>
+</ul>
+<p>因此可以得出不同属性适用的范围：</p>
+<ul>
+<li><p><code>justify</code><br>是用来定位<strong>主轴</strong>上的元素</p>
+</li>
+<li><p><code>align</code><br>是用来定位<strong>价差轴</strong>上的元素</p>
+</li>
+<li><p><code>content</code><br>指定的是<strong>一组</strong>可以被分布的元素</p>
+</li>
+<li><p><code>items</code><br>指定的是<strong>单个</strong>元素</p>
+</li>
+</ul>
+<p>也因为主轴和交叉轴有不一样的使命，所以：</p>
+<ul>
+<li><p><code>justify-content</code>（主轴分布）独有的值：<br><code>space-between</code>/ <code>space-around</code> / <code>space-evenly</code></p>
+</li>
+<li><p><code>align-items</code>（交叉轴对齐)独有的值：<br><code>stretch</code> / <code>baseline</code></p>
+</li>
+<li><p>两者共有的值<br><code>flex-start</code> / <code>center</code> / <code>flex-end</code></p>
+</li>
+</ul>
+<p>这个时候就引出另外一个属性 —— <code>align-self</code>, 它的值和<code>align-items</code>一样，只不过它的适用范围是 _单个元素层面_，而之前的两个属性适用范围都是从 <em>容器层面</em>考虑的。</p>
+<p>以上逻辑也解释了为啥没有<code>justify-self</code>。</p>
+<h3 id="假设大小-Hypothetical-size"><a href="#假设大小-Hypothetical-size" class="headerlink" title="假设大小(Hypothetical size)"></a>假设大小(Hypothetical size)</h3><p>在讨论 flexbox 种元素的放大缩小以及额外空间分配问题，先要引入一个概念<strong>假设大小</strong>。</p>
+<p>在 flow 布局中，<code>width</code>是一个<strong>硬约束</strong>（hard constraint)， 也就是说即便我们设定了一个明显超大的值，也会尽量显示出来。<br>但是在 flex 布局中，<code>width</code>不再是一个硬约束，它变成了一个可供参考的值，也就是<strong>假设大小</strong>。</p>
+<h3 id="元素的放大与缩小"><a href="#元素的放大与缩小" class="headerlink" title="元素的放大与缩小"></a>元素的放大与缩小</h3><h4 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h4><p>如果<code>flex-direction</code>为<code>row</code>， <code>flex-basis</code>就相当于<code>width</code>; 如果<code>flex-direction</code>为<code>column</code>， <code>flex-basis</code>就相当于<code>height</code>。</p>
+<p>我们通过<code>flex-basis</code>来设置<strong>主轴上</strong>元素的假设大小。由于设置的是假设大小，所以这个值并不是硬约束。</p>
+<h4 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h4><p>一般来说当元素在主轴分布的默认状态会有额外的空间，这个时候就可以设定<code>flex-grow</code>来填充这个空间，<code>flex-grow</code>的值为 0 。<br>如果多个元素都设置了<code>flex-grow</code>值，则按比例分配空间。</p>
+<h4 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h4><p>我们可以通过调整<code>flex-shrink</code>的值，使得容器在变小的时候，内部元素不等比缩小。<br>若想要元素不因为在缩小的时候变形，可以将元素的<code>flex-shrink</code>设置为<code>0</code>。<br>在缩小容器的时候要注意一个点，就是元素的<strong>最小尺寸</strong>，如一个输入框的最小尺寸为<code>170px-200px</code>,而一个文本的最小宽度为其中最长字符串的长度。所以即便我们把<code>flex-shrink</code>保持在默认值<code>1</code>，也就是说元素应该发生缩小，但是最终当容器小到一定程度的时候，输入框和文本会导致元素溢出。这个时候我们只需要将<code>min-width</code>修改为<code>0</code>就可以解决。<br>但是因为<code>min-width：auto</code>实际上是一个阈值，所以随意修改也会造成不必要的后果。</p>
+<h3 id="额外空间分配"><a href="#额外空间分配" class="headerlink" title="额外空间分配"></a>额外空间分配</h3><h4 id="gap"><a href="#gap" class="headerlink" title="gap"></a>gap</h4><p>使用<code>gap</code>可以调节元素之间的值。</p>
+<h4 id="margin-auto"><a href="#margin-auto" class="headerlink" title="margin: auto"></a>margin: auto</h4><p>适用这个属性可以实现导航栏，logo 和菜单分置两端：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+  <span class="token selector">ul </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">li<span class="token class">.logo</span> </span><span class="token punctuation">{</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>logo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Corpatech <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Mission <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Contact <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="wrapping"><a href="#wrapping" class="headerlink" title="wrapping"></a>wrapping</h3><p>当我们将<code>flex-wrap</code>的值设置为<code>wrap</code>之后，容器中的主轴和交叉轴就编程多个，所以对对应的属性也应该重新思考。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/">An interactive Guide to Flexbox - Josh Comeau</a></p>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/基础知识盘点/">基础知识盘点</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/css/">css</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

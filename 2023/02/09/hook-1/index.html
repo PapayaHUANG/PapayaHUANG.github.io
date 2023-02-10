@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6"><span class="toc-text">先决条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E2%80%9C%E9%97%AD%E5%8C%85%E2%80%9D%EF%BC%9F"><span class="toc-text">何为“闭包”？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9C%89%E7%8A%B6%E6%80%81%E5%87%BD%E6%95%B0-stateful-function"><span class="toc-text">闭包与有状态函数(stateful function)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%BF%E5%86%99-useState"><span class="toc-text">仿写 useState</span></a></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2023/02/09/hook-1/">
+        用代码解释闭包和React Hook
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2023-02-09 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在学习 React 的道路上，你肯定也听过“React hook 就是闭包嘛！”这样的说法，然后一脸懵逼：“怎么又是闭包！！”。<br>最好的学习办法就是实践！Get your hands dirty！不如克隆一个 React hook 来看看闭包到底发挥了什么作用。</p>
+<blockquote>
+<p>本文的内容启发来源于 Shawn Wang 在 JSconf19 上的演讲，在文章末尾我会附上所有参考文章和资料。</p>
+</blockquote>
+<h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p>想要彻底理解本文内容需要你：</p>
+<ul>
+<li>对 JS 闭包有大概了解。<br>不太了解也没关系，我会在本文回顾。</li>
+<li>读过 React Hook<a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/hooks-intro.html">文档</a>，或者使用过 React Hook。</li>
+<li>了解 ES6 解构赋值。</li>
+</ul>
+<p>那么让我们开始吧！</p>
+<h2 id="何为“闭包”？"><a href="#何为“闭包”？" class="headerlink" title="何为“闭包”？"></a>何为“闭包”？</h2><p>首先允许我引用来自《你不知道的 JavaScript》闭包的定义：</p>
+<blockquote>
+<p>当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用域之外执行。</p>
+</blockquote>
+<p>拿这句话作为面试答案的一部分大差不差，但“我能够给出答案”关“我真的懂了”什么事？想要真的理解<code>闭包</code>这个概念，推荐熟读《你不知道的 JavaScript》的<code>词法作用域</code>部分，<code>词法作用域</code>是<code>闭包</code>的前置概念。</p>
+<p>对于我个人来说，开悟的那一刻是当我把<code>闭包</code>的英文<code>closure</code>转换成动词形式<code>close over</code>来理解的那一刻。<code>close</code>就是<strong>打包了</strong>当前作用域，而<code>over</code>就是<strong>超越了</strong>自己的作用域，在作用域之外也可以执行。</p>
+<blockquote>
+<p>顺便提一句，很多概念用英文来理解会好懂很多，另一个例子是作用域的英文 scope。</p>
+</blockquote>
+<p>请看代码示例：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">addOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token function">inner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    num <span class="token operator">=</span> num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> outer <span class="token operator">=</span> <span class="token function">addOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 5</span>
+num <span class="token operator">=</span> <span class="token number">999</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// error!!</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>让我们一起看看上面的代码片段发生了什么？</p>
+<ul>
+<li>当我们在调用<code>outer</code>函数的时候，实际调用的是<code>addOne</code>的内部的<code>inner</code>函数。</li>
+<li><code>inner</code>函数引用了其作用域之外的<code>num</code>的值。</li>
+<li><code>inner</code>函数在自己的作用域（即<code>addOne</code>函数）之外（即<code>outer</code>函数）中执行。</li>
+<li>我们通过在<code>addOne</code>函数中返回<code>inner</code>函数，并在外部调用实现了一个经典的闭包。</li>
+</ul>
+<p>而通过打印到控制台的结果我们发现我们实现了两个效果：</p>
+<ol>
+<li><code>num</code>为私有变量，我们在函数外部无法修改函数。私有变量也是闭包的常用场景之一。</li>
+<li>反复调用<code>outer</code>可以实现数字的等差累加，也就是说<code>outer</code>是一个<strong>有状态的函数</strong>(stateful function)。</li>
+</ol>
+<h3 id="闭包与有状态函数-stateful-function"><a href="#闭包与有状态函数-stateful-function" class="headerlink" title="闭包与有状态函数(stateful function)"></a>闭包与有状态函数(stateful function)</h3><p>有状态函数就是利用闭包，使得函数拥有内部状态，这样每一次调用函数会基于上一次的结果产生不一样的结果。</p>
+<p>到这里你是不是想到了什么？React 不就是利用 React Hook 对组件进行<em>状态管理</em>嘛？！</p>
+<h2 id="仿写-useState"><a href="#仿写-useState" class="headerlink" title="仿写 useState"></a>仿写 useState</h2><p>那让我们进入正题，从仿写<code>useState</code>开始。<br>根据<code>useState</code>的结构，可以得出如果编写一个<code>useState</code>函数的话，大概的结构会是这个样子：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> _value <span class="token operator">=</span> initValue<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里不准确，后文会修改</span>
+  <span class="token keyword">const</span> state <span class="token operator">=</span> _value<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    _value <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>让我们看看上面的代码片段发生了什么：</p>
+<ul>
+<li><code>useState</code>函数返回了一个数组，这个数组包含两个变量<code>state</code>和一个 setter 函数<code>setState</code>。</li>
+<li><code>useState</code>函数通过内部变量<code>_value</code>记住了我们传入的初始值，<code>setState</code>引用了这个值，并做修改。</li>
+</ul>
+<p>在真实的 React 中，我们是通过<code>React.useState</code>来调用这个 hook，那我们需要调整一下这个函数的写法。<br>我们先写个简单的练手，把前文的<code>outer</code>函数改写一下：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> outer <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">addOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token function">inner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    num <span class="token operator">=</span> num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 3</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 4</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">outer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 5</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>利用 IIFE 将代码重构后和之前的输出结果一致，同理就可以把<code>useState</code>函数改写为：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> React <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _value <span class="token operator">=</span> initValue<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里不准确，后文会修改</span>
+    <span class="token keyword">const</span> state <span class="token operator">=</span> _value<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      _value <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>让我们测试一下使用：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
+<span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为什么<code>setCount</code>失效了？因为<strong>过期闭包</strong>(stale closure)！</p>
+<p>当我们调用<code>setCount</code>的时候确实对<code>useState</code>内部的变量<code>_value</code>的值做了修改，但是当我们再次在控制台打印<code>count</code>的值的时候，<code>state</code>实际上引用的是初次传入的值。</p>
+<p>让我们再回到<strong>闭包</strong>的概念：</p>
+<blockquote>
+<p>当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用域之外执行。</p>
+</blockquote>
+<p>很容易以为闭包记住的是值，但实际上闭包 close（记住）的是<strong>作用域</strong>。因为<code>state</code>和<code>_value</code>处在同一个作用域，所以不论我们通过<code>setCount</code>对<code>_value</code>修改多少次值，<code>count</code>每次记住的都是首次赋值。</p>
+<p>想要修复这个 bug 很简单，调整作用域：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> React <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _value <span class="token operator">=</span> initValue<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里不准确，后文会修改</span>
+    <span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> _value<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      _value <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对应打印到控制台的代码也要修改：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
+<span class="token function">setCount</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样调用的结果确实是我们想要的，但是为了调整作用域，我们把<code>count</code>修改为了一个函数，也不对。</p>
+<p>在真实的 React Hook 的使用场景中，我们是在一个组件函数中调用 Hook，让我们边完善边调整：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">MyReactComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//此处应该为JSX</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为了简化案例，我们把 JSX 改写为打印到控制台，这样 return 返回的对象就包含两个方法：</p>
+<ul>
+<li>一个<code>render</code>方法，可以打印出组件每一次调用组件产生的状态；</li>
+<li>一个<code>click</code>方法，模拟按钮，每次调用改变状态（在这个案例中就是给数字加 1）。</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">MyReactComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    render<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    click<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>显然我们还差一个<code>render</code>方法：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> React <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> _c <span class="token operator">=</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _c<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> _c<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> render <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>既然我们改用<code>React.render</code>这个方法来获取状态，作用域又发生了改变，我们就可以改写<code>useState</code>函数：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> MyReact <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> _val<span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> state <span class="token operator">=</span> _val <span class="token operator">||</span> initVal<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      _val <span class="token operator">=</span> newVal<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>现在完整的代码为：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> MyReact <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> _value<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//在MyReact最外层声明变量</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initValue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    _value <span class="token operator">=</span> _value <span class="token operator">||</span> initValue<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> state <span class="token operator">=</span> _value<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//不需要使用函数</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span>newValue<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      _value <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> _c <span class="token operator">=</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _c<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> _c<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> render <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">MyReactComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> MyReact<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    render<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    click<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们来查看一下调用效果：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> App <span class="token operator">=</span> MyReact<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>MyReactComponent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//1</span>
+App<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> App <span class="token operator">=</span> MyReact<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>MyReactComponent<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//2</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>简要分析一下在这个代码片段里发生了什么：</p>
+<ul>
+<li><code>MyReact.render</code>方法对我们编写的组件<code>MyReactComponent</code>进行调用，会产生一个副作用将<code>count</code>的值打印到控制台，同时也暴露了<code>click</code>方法；</li>
+<li>使用<code>MyReact.useState(1)</code>不仅给<code>count</code>赋值了，也是模块内部的<code>_val</code>记住了这个值；</li>
+<li>使用<code>click</code>方法，在非<code>setCount</code>的词法作用域调用<code>setCount</code>方法，修改了之前的<code>_val</code>值，所以当我们再次利用<code>render</code>方法打印<code>count</code>值时，从 1 变成了 2。</li>
+</ul>
+<p>但如果有两个变量呢？</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>text<span class="token punctuation">,</span> setText<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'apple'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    render<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token punctuation">,</span> text <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    click<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//假设有一个按钮</span>
+    type<span class="token punctuation">:</span> <span class="token punctuation">(</span>newText<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">setText</span><span class="token punctuation">(</span>newText<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//假设有一个输入框</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>打印控制台就会出现诡异的效果：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> App <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//{"count": 1, "text": 'apple'}</span>
+App<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> App <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//{"count": 2, "text": 2}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>这是因为我们只有<code>_val</code>这一个值来存储变量，这个时候我们就需要引入链表：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> React <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> hooks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> idx <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span>initVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> state <span class="token operator">=</span> hooks<span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">||</span> initVal<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> _idx <span class="token operator">=</span> idx<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//freeze the idx</span>
+    <span class="token keyword">const</span> setState <span class="token operator">=</span> <span class="token punctuation">(</span>newVal<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      hooks<span class="token punctuation">[</span>_idx<span class="token punctuation">]</span> <span class="token operator">=</span> newVal<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    idx<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> setState<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span>Component<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    idx <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//每一次打印的时候要回到0</span>
+    <span class="token keyword">const</span> C <span class="token operator">=</span> <span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    C<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> C<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> render <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+       
+    <span class="post-categories">
+      <i class='icon iconfont icon-icon-goodscategory'></i>
+      <a href="/categories/学习笔记/">学习笔记</a>
+    </span>
+    
+    
+       <!-- tag -->
+     
+    
+    <span class="post-tags">
+      <i class="icon iconfont icon-tag"></i>
+      <a href="/tags/react/">react</a>
+    </span>
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>

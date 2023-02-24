@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papaya HUANG</title>
+  <!-- add alifont -->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://at.alicdn.com/t/c/font_2719161_qrg05vxlp7.css"
+  />
+  <!-- add style -->
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!-- add font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+  <body>
+    <header>
+  <ul class="navbar">
+    <li>
+      <a href="/">
+        <i class="icon iconfont icon-xuanzhongshangcheng"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/about">
+        <i class="icon iconfont icon-about"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/projects">
+        <i class="icon iconfont icon-project"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/categories">
+        <i class="icon iconfont icon-case-file-full"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/archives">
+        <i class="icon iconfont icon-Artboard2"></i>
+      </a>
+    </li>
+  </ul>
+</header>
+
+    <aside>
+  <div class="menu">
+    
+
+    <a class="menu-item" href="/">Home</a>
+
+    
+
+    <a class="menu-item" href="/about">About</a>
+
+    
+
+    <a class="menu-item" href="/projects">Projects</a>
+
+    
+
+    <a class="menu-item" href="/categories">Categories</a>
+
+    
+
+    <a class="menu-item" href="/archives">Archives</a>
+
+    
+  
+  </div>
+</aside>
+
+
+    <div class="main"><div class="blog-post">
+  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">项目代码文件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-text">我的项目结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%BB%84%E4%BB%B6"><span class="toc-text">我的组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boss-No-1-%E2%80%94%E2%80%94-%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F%E6%90%AD%E5%BB%BA%E5%92%8C%E6%96%B9%E5%9D%97%E7%9A%84%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89"><span class="toc-text">Boss No.1 —— 游戏区域搭建和方块的静态映射（数组）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-text">游戏区域的搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%AA%A8%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-text">骨架的搭建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E5%9D%97%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">方块的实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%9D%97%E5%88%B0%E4%B8%BB%E6%B8%B8%E6%88%8F%E5%8C%BA%E7%9A%84%E6%98%A0%E5%B0%84"><span class="toc-text">方块到主游戏区的映射</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boss-No-2-%E5%88%A4%E6%96%AD%E8%BE%B9%E7%95%8C%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">Boss No.2 判断边界的逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E8%BE%B9%E7%95%8C"><span class="toc-text">移动边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E9%99%A4%E6%9D%A1%E4%BB%B6"><span class="toc-text">消除条件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boss-No-3-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="toc-text">Boss No.3 状态管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Redux-Tool-Kit"><span class="toc-text">使用 Redux Tool Kit</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Slice"><span class="toc-text">创建 Slice</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-store"><span class="toc-text">创建 store</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%BB%99%E5%BA%94%E7%94%A8"><span class="toc-text">将数据提供给应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE"><span class="toc-text">使用数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8useEffect-useRef-%E5%92%8CrequestAnimationFrame%E6%9D%A5%E6%8E%A7%E5%88%B6%E6%96%B9%E5%9D%97%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%90%BD"><span class="toc-text">使用useEffect useRef 和requestAnimationFrame来控制方块自动下落</span></a></li></ol></li></ol>
+  <div class='blog-main'>
+
+    <!-- title -->
+    <h2 class="blog-post-title">
+      <a href="/2023/02/24/俄罗斯方块/">
+        使用React+Redux开发俄罗斯方块游戏
+      </a>
+    </h2>
+  
+    <!-- date and author -->
+    <p class="blog-post-meta">
+      2023-02-24 
+    </p>
+  
+  
+    <!-- content -->
+    <div class="post-content">
+      <p>俄罗斯方块是一款经典小游戏。通过从零开发一款小游戏，可以更好的了解开发使用的语言，同时也得到更强烈的“所见即所得”的反馈。所以开发小游戏会是不错的练手项目。</p>
+<p>从一个主力语言是 JavaScript 的开发者角度来分析俄罗斯方块的话，方块的下落、移动、消除其实是 _复杂的状态管理和组件通信_。 这不刚好就是 React 和 Redux 的射程范围嘛！（并没有说它们适合游戏开发）</p>
+<p>我将通过这篇博文拆解实现俄罗斯方块的一些核心逻辑，以及 Redux Tool Kit 的使用。你可以在 Github 上找到项目的源码，也可以通过 Github Page 来试玩这个游戏。</p>
+<h2 id="项目代码文件结构"><a href="#项目代码文件结构" class="headerlink" title="项目代码文件结构"></a>项目代码文件结构</h2><h3 id="我的项目结构"><a href="#我的项目结构" class="headerlink" title="我的项目结构"></a>我的项目结构</h3><pre><code>|-- src
+    |-- App.js
+    |-- index.js
+    |-- store.js
+    |-- features/
+        |-- game/
+            |-- components/
+            |-- game-slice.js
+    |-- styles/
+    |-- utils/
+</code></pre>
+<p>我是通过<code>create-react-app</code>创建的项目，游戏的所有代码都在<code>src</code>路径下：</p>
+<ul>
+<li>我保留了<code>index.js</code>和<code>App.js</code>，同时添加了<code>store.js</code>来处理 Redux store 的配置代码；</li>
+<li>样式我全部放在了<code>styles</code>文件夹中，游戏运行的核心逻辑我放到了<code>utils</code>文件夹中；</li>
+<li>Redux 官方推荐在使用 RTK（Redux Tool Kit）时，创建一个<code>features</code>目录，并把不同的功能模块放在这个目录下，每一个功能模块包含自己的组件、reducer 和其他相关文件（如与后端通信的代码），所以我在<code>features</code>目录下创建了<code>componets</code>目录和<code>game-slice.js</code>；</li>
+</ul>
+<h3 id="我的组件"><a href="#我的组件" class="headerlink" title="我的组件"></a>我的组件</h3><p>我规划的组件包括：</p>
+<pre><code>|-- components/
+    |-- Board.js
+    |-- Control.js
+    |-- MessagePopup.js
+    |-- NextBlock.js
+    |-- ScoreBoard.js
+    |-- Square.js
+</code></pre>
+<ul>
+<li><code>Board.js</code>是主要的游戏区域</li>
+<li><code>Control.js</code>是游戏方向键等控制按钮</li>
+<li><code>MessagePopup.js</code>是游戏结束时弹出的消息框</li>
+<li><code>NextBlock.js</code>提示下一个方块是什么形状</li>
+<li><code>ScoreBoard.js</code>显示分数和历史最高分数</li>
+<li><code>Square.js</code>为组成主要游戏区和提示框的小方块</li>
+</ul>
+<h2 id="Boss-No-1-——-游戏区域搭建和方块的静态映射（数组）"><a href="#Boss-No-1-——-游戏区域搭建和方块的静态映射（数组）" class="headerlink" title="Boss No.1 —— 游戏区域搭建和方块的静态映射（数组）"></a>Boss No.1 —— 游戏区域搭建和方块的静态映射（数组）</h2><h3 id="游戏区域的搭建"><a href="#游戏区域的搭建" class="headerlink" title="游戏区域的搭建"></a>游戏区域的搭建</h3><h4 id="骨架的搭建"><a href="#骨架的搭建" class="headerlink" title="骨架的搭建"></a>骨架的搭建</h4><p>主游戏区是一个 10*18 的网格，可以通过一个<strong>二维数组</strong>实现：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> boardDefault <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> rows <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//共18行</span>
+  <span class="token keyword">const</span> cols <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//共10列</span>
+  <span class="token keyword">const</span> array <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span><span class="token function">Array</span><span class="token punctuation">(</span>rows<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">Array</span><span class="token punctuation">(</span>cols<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> array<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="方块的实现"><a href="#方块的实现" class="headerlink" title="方块的实现"></a>方块的实现</h4><p>既然主游戏区可以通过数组来实现，那么不同形状的方块也可以通过方块来实现：<br>设定每一种形状都用一个 4*4 的方块作为容器：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">[</span>
+
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>不同的形状的颜色也不同，所以完全可以用整数<code>1,2,3,4...</code>来区分它们，使用整数的另一个好处是可以和样式绑定，先提前设置好每个颜色对应的编号：</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token pseudo-class">:root</span> </span><span class="token punctuation">{</span>
+    <span class="token property">--color-0</span><span class="token punctuation">:</span> <span class="token hexcode">#282c34</span><span class="token punctuation">;</span>
+    <span class="token property">--color-1</span><span class="token punctuation">:</span> <span class="token hexcode">#ff6600</span><span class="token punctuation">;</span>
+    <span class="token property">--color-2</span><span class="token punctuation">:</span> <span class="token hexcode">#eec900</span><span class="token punctuation">;</span>
+    <span class="token number">...</span>
+    <span class="token property">--color-7</span><span class="token punctuation">:</span> <span class="token hexcode">#ff0000</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.color-0</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--color-<span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token selector"><span class="token class">.color-1</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--color-<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">...</span>
+
+<span class="token class">.color-7</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--color-<span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后就可以通过证书在数组中的排列来表达不同的形状了，需要注意的是每个形状还有旋转后的变形也要考虑进去：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//I</span>
+
+<span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="方块到主游戏区的映射"><a href="#方块到主游戏区的映射" class="headerlink" title="方块到主游戏区的映射"></a>方块到主游戏区的映射</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> boardSquare <span class="token operator">=</span> board<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>rowArray<span class="token punctuation">,</span> row<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> rowArray<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>square<span class="token punctuation">,</span> col<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//col（0-9）row（0-17)</span>
+    <span class="token keyword">const</span> blockX <span class="token operator">=</span> col <span class="token operator">-</span> x<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> blockY <span class="token operator">=</span> row <span class="token operator">-</span> y<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//square为0</span>
+    <span class="token keyword">let</span> color <span class="token operator">=</span> square<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//生成移动的block的颜色</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      blockX <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span>
+      blockX <span class="token operator">&lt;</span> block<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span>
+      blockY <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span>
+      blockY <span class="token operator">&lt;</span> block<span class="token punctuation">.</span>length
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      color <span class="token operator">=</span> block<span class="token punctuation">[</span>blockY<span class="token punctuation">]</span><span class="token punctuation">[</span>blockX<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> color <span class="token punctuation">:</span> blockColor<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//生成key</span>
+    <span class="token keyword">const</span> k <span class="token operator">=</span> row <span class="token operator">*</span> board<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token operator">+</span> col<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Square key<span class="token operator">=</span><span class="token punctuation">{</span>k<span class="token punctuation">}</span> color<span class="token operator">=</span><span class="token punctuation">{</span>color<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>让我们看看上面代码发生了什么：</p>
+<ul>
+<li><code>x</code>,<code>y</code>是方块起始的横轴（行）和纵轴（列）的坐标，我设定的初始值为<code>x=4, y=-5</code>，这样每一个方块的初始位置就位于主游戏区差不多正上方；</li>
+<li><code>boardSquare</code>函数实际上做了两件事： 将我们用数组表达的 10*8 区域用<code>div</code>的方式呈现出来（代码中就是<code>square</code>）；根据方块的移动来动态生成对应的方块颜色，以将方块映射到主游戏区；</li>
+<li>首先通过一组两个嵌套结构的<code>Array.map()</code>的方法，遍历主游戏区所有网格，并返回颜色为<code>0</code>的<code>Square</code>方块，形成主游戏的 UI，因为 React 要求遍历的组件包含一个独一无二的<code>key</code>所以，通过<code>row * board[0].length + col</code>生成 key；</li>
+<li>在遍历主游戏区的同时，通过 blockX 和 blockY 来锁定位于方块内部的方格，如果它的值不为<code>0</code>的话，就返回对应数字的颜色。</li>
+</ul>
+<h2 id="Boss-No-2-判断边界的逻辑"><a href="#Boss-No-2-判断边界的逻辑" class="headerlink" title="Boss No.2 判断边界的逻辑"></a>Boss No.2 判断边界的逻辑</h2><h3 id="移动边界"><a href="#移动边界" class="headerlink" title="移动边界"></a>移动边界</h3><p>方块在主游戏区的移动遵守一定的规则：</p>
+<ol>
+<li>左右下都不得超过主游戏的边界</li>
+<li>如果碰到该区域已经有其他的方块，也不得移动。</li>
+</ol>
+<p>我们只用检查方块内部每一个方格是否符合以上规则，就可以判断方块是否可以移动了。此处还需要注意的是，每一方块都被放置在 4*4 的网格中，所以要分别考虑，方格值为<code>0</code>和其他自然数的情况：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> canMoveTo <span class="token operator">=</span> <span class="token punctuation">(</span>shape<span class="token punctuation">,</span> grid<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> rotation<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> currentShape <span class="token operator">=</span> shapes<span class="token punctuation">[</span>shape<span class="token punctuation">]</span><span class="token punctuation">[</span>rotation<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> row <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> row <span class="token operator">&lt;</span> currentShape<span class="token punctuation">.</span>length<span class="token punctuation">;</span> row<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> col <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> col <span class="token operator">&lt;</span> currentShape<span class="token punctuation">[</span>row<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> col<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>currentShape<span class="token punctuation">[</span>row<span class="token punctuation">]</span><span class="token punctuation">[</span>col<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> proposedX <span class="token operator">=</span> col <span class="token operator">+</span> x<span class="token punctuation">;</span>
+        <span class="token keyword">const</span> proposedY <span class="token operator">=</span> row <span class="token operator">+</span> y<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>proposedY <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> possibleRow <span class="token operator">=</span> grid<span class="token punctuation">[</span>proposedY<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>possibleRow<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>
+            possibleRow<span class="token punctuation">[</span>proposedX<span class="token punctuation">]</span> <span class="token operator">===</span> undefined <span class="token operator">||</span>
+            possibleRow<span class="token punctuation">[</span>proposedX<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token number">0</span>
+          <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">//超越底线</span>
+          <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">//默认可以移动</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>使用<code>canMoveTo</code>函数来判断是否可以移动，函数接受<code>shape</code>（方块形状）、<code>grid</code>(主游戏区)、<code>x,y</code>(方块起始坐标)、<code>rotation</code>(旋转方向)作为参数，返回布尔值。</li>
+<li>首先默认可以移动；</li>
+<li>利用一组两个嵌套<code>Array.map()</code>遍历方块，如果方格的值为非<code>0</code>，就根据<code>x</code>和<code>y</code>的值来判断方格位于游戏主区的位置，即<code>proposedX</code>和<code>proposedY</code>；</li>
+<li>因为方块的初始情况是位于游戏主区上方，不在主区内，所以存在<code>proposedY</code>小于<code>0</code>的情况，这个时候继续遍历就好；</li>
+<li>根据<code>propsedY</code>可以推断出方格位于主游戏区的行数<code>possibleRow</code>，如果不存在<code>possibleRow</code>的话，则说明方格已经超越了主游戏区的底线，返回<code>false</code>；</li>
+<li>用<code>possibleRow[proposedX]</code>来定位方格位于该行的哪一个方格，如果值不为<code>0</code>或者为<code>undefined</code>的话，说明主键盘上已经有其他方格或者超越主游戏区左右边界，返回<code>false</code>。</li>
+</ul>
+<h3 id="消除条件"><a href="#消除条件" class="headerlink" title="消除条件"></a>消除条件</h3><p>当主游戏区一行填满了就会消除，放在数组的框架下思考，就是检查一行是否全不为<code>0</code>，如果符合条件就删除一整行，然后在数组最开始重新添加一行：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> checkRows <span class="token operator">=</span> <span class="token punctuation">(</span>board<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> row <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> row <span class="token operator">&lt;</span> board<span class="token punctuation">.</span>length<span class="token punctuation">;</span> row<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//检查是否一整行都不为'0'</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>board<span class="token punctuation">[</span>row<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//如果是，删除这一行</span>
+      board<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>row<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//同时在数组最开始添加一行新的数组</span>
+      board<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Boss-No-3-状态管理"><a href="#Boss-No-3-状态管理" class="headerlink" title="Boss No.3 状态管理"></a>Boss No.3 状态管理</h2><h3 id="使用-Redux-Tool-Kit"><a href="#使用-Redux-Tool-Kit" class="headerlink" title="使用 Redux Tool Kit"></a>使用 Redux Tool Kit</h3><p>在这个应用中，我使用 Redux Tool Kit（后文简称 RTK）来实现状态管理。<br>RTK 对比传统的 Redux 来说的优势在于：</p>
+<ol>
+<li>更少的样板代码</li>
+<li>RTK 通过 Immer 库来实现不可变数据，提高应用程序的性能。</li>
+</ol>
+<h4 id="创建-Slice"><a href="#创建-Slice" class="headerlink" title="创建 Slice"></a>创建 Slice</h4><p>在 RTK 中，将 reducer 和 action 集合到 slice 中，可以通过引用<code>createSlice</code>来实现：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span>createSlice<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@reduxjs/toolkit'</span>
+
+<span class="token keyword">const</span> gameSlice <span class="token operator">=</span> <span class="token function">createSlice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span><span class="token string">'game'</span><span class="token punctuation">,</span>
+    initialState<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    reducer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        rotate<span class="token punctuation">:</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+            <span class="token operator">...</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        moveRight<span class="token punctuation">:</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+            <span class="token operator">...</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token operator">...</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>rotate<span class="token punctuation">,</span> moveRight<span class="token punctuation">}</span> <span class="token operator">=</span> gameSlice<span class="token punctuation">.</span>actions
+<span class="token keyword">export</span> <span class="token keyword">default</span> gameSlice<span class="token punctuation">.</span>reducer<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>在传统方式中若要修改不可变数据，需要手动复制原始数据，并在副本上进行修改，由于 immer 库的存在，在编写 reducer 的时候，我们可以直接修改<code>state</code></p>
+</blockquote>
+<h4 id="创建-store"><a href="#创建-store" class="headerlink" title="创建 store"></a>创建 store</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> configureStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@reduxjs/toolkit'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> gameReducer <span class="token keyword">from</span> <span class="token string">'./features/game/game-slice'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">configureStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span> reducer<span class="token punctuation">:</span> <span class="token punctuation">{</span> game<span class="token punctuation">:</span> gameReducer <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="将数据提供给应用"><a href="#将数据提供给应用" class="headerlink" title="将数据提供给应用"></a>将数据提供给应用</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> store <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./store'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>React<span class="token punctuation">.</span>StrictMode<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Provider store<span class="token operator">=</span><span class="token punctuation">{</span>store<span class="token punctuation">}</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>React<span class="token punctuation">.</span>StrictMode<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="使用数据"><a href="#使用数据" class="headerlink" title="使用数据"></a>使用数据</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useSelector<span class="token punctuation">,</span> useDispatch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> rotate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../game-slice'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Controls</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> dispatch <span class="token operator">=</span> <span class="token function">useDispatch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> isRunning <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> state<span class="token punctuation">.</span>game<span class="token punctuation">.</span>isRunning<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> gameOver <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> state<span class="token punctuation">.</span>game<span class="token punctuation">.</span>gameOver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> handleRotate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isRunning <span class="token operator">||</span> gameOver<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">rotate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"controls"</span><span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token comment" spellcheck="true">/* rotation */</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>button
+                disabled<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">!</span>isRunning <span class="token operator">||</span> gameOver<span class="token punctuation">}</span>
+                className<span class="token operator">=</span><span class="token string">"control-button"</span>
+                onClick<span class="token operator">=</span><span class="token punctuation">{</span>handleRotate<span class="token punctuation">}</span>
+            <span class="token operator">></span>
+             Rotate
+            <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="使用useEffect-useRef-和requestAnimationFrame来控制方块自动下落"><a href="#使用useEffect-useRef-和requestAnimationFrame来控制方块自动下落" class="headerlink" title="使用useEffect useRef 和requestAnimationFrame来控制方块自动下落"></a>使用<code>useEffect</code> <code>useRef</code> 和<code>requestAnimationFrame</code>来控制方块自动下落</h3>
+    </div>
+  
+    <hr>
+    
+    
+       <!-- categories -->
+    
+    
+       <!-- tag -->
+    
+  </div>
+</div>
+
+
+</div>
+  
+  </body>
+</html>
